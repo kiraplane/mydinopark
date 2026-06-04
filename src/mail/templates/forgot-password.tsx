@@ -35,6 +35,6 @@ export default function ForgotPassword({
 ForgotPassword.PreviewProps = {
   locale: routing.defaultLocale,
   messages: defaultMessages,
-  url: 'https://www.ducksurvival.wiki',
+  url: 'https://www.universaltowerdefensex.wiki',
   name: 'username',
 };

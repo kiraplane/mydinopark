@@ -1,4 +1,4 @@
-import { ClashHomePage } from '@/components/clashofcritters/clash-home-page';
+import { UtdxHomePage } from '@/components/utdx/home-page';
 import { constructMetadata } from '@/lib/metadata';
 import type { Metadata } from 'next';
 import type { Locale } from 'next-intl';
@@ -11,14 +11,14 @@ export async function generateMetadata({
   const { locale } = await params;
 
   return constructMetadata({
-    title: 'Duck Survival Wiki - Gift Codes, Tier List and Guides',
+    title: 'Universal Tower Defense X Wiki - Codes, Tier List & Units',
     description:
-      'Duck Survival Wiki for gift codes, tier list roles, beginner guide, best skills, best team, tower defense tips, download help, and mod APK safety.',
+      'Universal Tower Defense X Wiki with active codes, tier list rankings, best units, traits, relics, Merciless God, Universal Fest P2 updates, and beginner guides.',
     locale,
     pathname: '',
   });
 }
 
 export default function HomePage() {
-  return <ClashHomePage />;
+  return <UtdxHomePage />;
 }

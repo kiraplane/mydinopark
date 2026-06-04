@@ -63,7 +63,7 @@ This is a Next.js 15 full-stack SaaS application with the following key architec
 - Customer portal for subscription management
 
 ### Feature Modules
-- **Duck Survival Wiki**: Gift codes, tier list, hero roles, teams, guides, download notes, and disclaimers
+- **Universal Tower Defense X Wiki**: codes, tier lists, units, guides, trait and relic notes, update notes, and disclaimers
 - **Newsletter**: Email subscription system
 - **Analytics**: Multiple analytics providers support
 - **Storage**: S3 integration for file uploads

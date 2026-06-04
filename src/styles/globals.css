@@ -1,7 +1,17 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-/* Duck Survival Wiki - warm, data-dense guide theme */
+/* Universal Tower Defense X Wiki - dark, data-dense guide theme */
+
+:root {
+  --font-noto-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  --font-noto-serif: Georgia, Cambria, "Times New Roman", serif;
+  --font-noto-sans-mono: "SFMono-Regular", Consolas, "Liberation Mono",
+    monospace;
+  --font-bricolage-grotesque: ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
 
 /*
  * Galmuri — open-source Korean pixel font family by Quiple (SIL OFL 1.1).
@@ -254,46 +264,46 @@
 }
 
 :root {
-  --background: #fff7e8;
-  --foreground: #2a2118;
+  --background: #060b12;
+  --foreground: #f8fafc;
   --card: #ffffff;
-  --card-foreground: #2a2118;
+  --card-foreground: #0b1220;
   --popover: #ffffff;
-  --popover-foreground: #2a2118;
+  --popover-foreground: #0b1220;
 
-  --primary: #ff7a1a;
-  --primary-foreground: #ffffff;
+  --primary: #22d3ee;
+  --primary-foreground: #07111f;
 
-  --secondary: #ffe9bd;
-  --secondary-foreground: #2a2118;
+  --secondary: #7c3aed;
+  --secondary-foreground: #ffffff;
 
-  --muted: #ffedcf;
-  --muted-foreground: #7a5b36;
+  --muted: #0b1220;
+  --muted-foreground: #aab2c0;
 
-  --accent: #2bb3a3;
-  --accent-foreground: #ffffff;
+  --accent: #263349;
+  --accent-foreground: #f8fafc;
 
   --destructive: #d94a38;
   --destructive-foreground: #ffffff;
 
-  --border: #f2d5a8;
-  --input: #f2d5a8;
-  --ring: #2bb3a3;
+  --border: #1e2a3d;
+  --input: #1e2a3d;
+  --ring: #22d3ee;
 
-  --chart-1: #ff7a1a;
-  --chart-2: #2bb3a3;
+  --chart-1: #22d3ee;
+  --chart-2: #7c3aed;
   --chart-3: #7c5cff;
   --chart-4: #d94a38;
-  --chart-5: #f2c94c;
+  --chart-5: #67e8f9;
 
-  --sidebar: #fff7e8;
-  --sidebar-foreground: #2a2118;
-  --sidebar-primary: #ff7a1a;
-  --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #ffe9bd;
-  --sidebar-accent-foreground: #2a2118;
-  --sidebar-border: #f2d5a8;
-  --sidebar-ring: #2bb3a3;
+  --sidebar: #060b12;
+  --sidebar-foreground: #f8fafc;
+  --sidebar-primary: #22d3ee;
+  --sidebar-primary-foreground: #07111f;
+  --sidebar-accent: #111827;
+  --sidebar-accent-foreground: #f8fafc;
+  --sidebar-border: #1e2a3d;
+  --sidebar-ring: #22d3ee;
   --font-sans: var(--font-noto-sans);
   --font-serif: var(--font-noto-serif);
   --font-mono: var(--font-noto-sans-mono);
@@ -379,7 +389,7 @@ body {
 }
 
 /*
- * Duck Survival theme colors
+ * Universal Tower Defense X theme colors
  */
 .theme-default {
   --primary: #ff7a1a;

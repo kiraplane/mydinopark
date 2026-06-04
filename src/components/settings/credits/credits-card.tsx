@@ -124,7 +124,7 @@ export default function CreditsCard() {
         {!isLoadingStats && creditStats && (
           <div className="text-sm text-muted-foreground space-y-2">
             {' '}
-            <div className="flex items-center gap-2 text-amber-600">
+            <div className="flex items-center gap-2 text-cyan-600">
               <span>
                 {t('expiringCredits', {
                   credits: creditStats.expiringCredits.amount,

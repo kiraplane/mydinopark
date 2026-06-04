@@ -44,10 +44,9 @@ const MARKETING_NAVBAR_KEYS = [
   'home',
   'codes',
   'tierList',
-  'critters',
-  'gameplay',
-  'team',
-  'download',
+  'units',
+  'traits',
+  'relics',
   'guides',
   'moreData',
 ] as const;
@@ -55,8 +54,8 @@ const MARKETING_NAVBAR_KEYS = [
 const MARKETING_FOOTER_KEYS = ['tagline', 'wiki', 'guides', 'legal'] as const;
 const MARKETING_FOOTER_GUIDE_ITEM_KEYS = [
   'all',
-  'bestTeam',
-  'bestTatari',
+  'beginner',
+  'mercilessGod',
   'updates',
 ] as const;
 

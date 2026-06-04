@@ -129,7 +129,7 @@ export function buildSoftwareApplicationStructuredData({
       priceCurrency: 'USD',
       availability: 'https://schema.org/InStock',
       description:
-        'The browser experience is free to open. Store availability depends on Google Play and App Store regions.',
+        'The Roblox experience is free to open where Roblox and the game are available.',
     },
     publisher: {
       '@type': 'Organization',

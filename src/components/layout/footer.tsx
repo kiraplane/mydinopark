@@ -15,7 +15,12 @@ export function Footer({ className }: React.HTMLAttributes<HTMLElement>) {
   const socialLinks = useSocialLinks();
 
   return (
-    <footer className={cn('border-t', className)}>
+    <footer
+      className={cn(
+        'border-[#1E2A3D] border-t bg-[#070B13] text-[#F8FAFC]',
+        className
+      )}
+    >
       <Container className="px-4">
         <div className="grid grid-cols-2 gap-8 py-16 md:grid-cols-6">
           <div className="flex flex-col items-start col-span-full md:col-span-2">
@@ -43,8 +48,7 @@ export function Footer({ className }: React.HTMLAttributes<HTMLElement>) {
                       target="_blank"
                       rel="noreferrer"
                       aria-label={link.title}
-                      className="border border-border inline-flex h-8 w-8 items-center
-                          justify-center rounded-full hover:bg-accent hover:text-accent-foreground"
+                      className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-cyan-300/20 text-[#AAB2C0] hover:border-cyan-300/50 hover:bg-cyan-300/10 hover:text-cyan-100"
                     >
                       <span className="sr-only">{link.title}</span>
                       {link.icon ? link.icon : null}
@@ -119,7 +123,7 @@ export function Footer({ className }: React.HTMLAttributes<HTMLElement>) {
         </div>
       </Container>
 
-      <div className="border-t py-8">
+      <div className="border-[#1E2A3D] border-t py-8">
         <Container className="px-4 flex items-center justify-between gap-x-4">
           <span className="text-muted-foreground text-sm">
             &copy; {new Date().getFullYear()} {t('Metadata.name')} All Rights
@@ -127,7 +131,8 @@ export function Footer({ className }: React.HTMLAttributes<HTMLElement>) {
           </span>
 
           <span className="text-muted-foreground text-sm">
-            Independent fan wiki. Not affiliated with Joy Nice Games.
+            Independent fan wiki. Not affiliated with Roblox or Universal Tower
+            Defense [UTD].
           </span>
         </Container>
       </div>

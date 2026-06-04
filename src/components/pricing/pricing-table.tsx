@@ -160,7 +160,7 @@ export function PricingTable({
                     <span
                       className="inline-block rounded-full px-2.5 py-0.5 text-[11px] font-semibold shadow-sm"
                       style={{
-                        background: '#fefce8',
+                        background: '#ecfeff',
                         border: '1px solid #e9b84a',
                         color: '#92240c',
                       }}

@@ -20,7 +20,7 @@ export const websiteConfig: WebsiteConfig = {
   },
   metadata: {
     images: {
-      ogImage: '/ducksurvival/guides/beginner-guide.jpg',
+      ogImage: '/logo.png',
       logoLight: '/logo.png',
       logoDark: '/logo.png',
     },
@@ -75,8 +75,9 @@ export const websiteConfig: WebsiteConfig = {
   },
   mail: {
     provider: 'resend',
-    fromEmail: 'Duck Survival Wiki <hello@ducksurvival.wiki>',
-    supportEmail: 'hello@ducksurvival.wiki',
+    fromEmail:
+      'Universal Tower Defense X Wiki <hello@universaltowerdefensex.wiki>',
+    supportEmail: 'hello@universaltowerdefensex.wiki',
   },
   newsletter: {
     enable: false,

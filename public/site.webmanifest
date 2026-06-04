@@ -1,6 +1,6 @@
 {
-  "name": "Duck Survival Wiki",
-  "short_name": "Duck Survival",
+  "name": "Universal Tower Defense X Wiki",
+  "short_name": "UTDX Wiki",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
@@ -13,7 +13,7 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#f2a93b",
-  "background_color": "#fff4dc",
+  "theme_color": "#22d3ee",
+  "background_color": "#060b12",
   "display": "standalone"
 }

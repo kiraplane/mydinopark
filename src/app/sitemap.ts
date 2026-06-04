@@ -1,5 +1,5 @@
-import { critters } from '@/data/clashofcritters/critters';
-import { guides } from '@/data/clashofcritters/guides';
+import { guides } from '@/data/utdx/guides';
+import { units } from '@/data/utdx/units';
 import { Routes } from '@/routes';
 import type { MetadataRoute } from 'next';
 import { routing } from '../i18n/routing';
@@ -8,12 +8,14 @@ import { getCanonicalBaseUrl } from '../lib/urls/urls';
 const coreRoutes = [
   Routes.Root,
   Routes.Codes,
-  Routes.Download,
   Routes.TierList,
-  Routes.Critters,
-  Routes.Gameplay,
+  Routes.Units,
+  Routes.Traits,
+  Routes.Relics,
+  Routes.Updates,
   Routes.BestTeam,
   Routes.Guides,
+  Routes.Download,
   Routes.PrivacyPolicy,
   Routes.TermsOfService,
   Routes.CookiePolicy,
@@ -21,15 +23,15 @@ const coreRoutes = [
 ];
 
 const guideRoutes = guides.map((guide) => `/guides/${guide.slug}`);
-const heroRoutes = critters.map((hero) => `/heroes/${hero.slug}`);
-const stableLastModified = new Date('2026-06-03T00:00:00.000Z');
+const unitRoutes = units.map((unit) => `/units/${unit.slug}`);
+const stableLastModified = new Date('2026-06-04T00:00:00.000Z');
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const sitemapList: MetadataRoute.Sitemap = [];
   const baseUrl = getCanonicalBaseUrl();
 
   routing.locales.forEach((locale) => {
-    [...coreRoutes, ...guideRoutes, ...heroRoutes].forEach((route) => {
+    [...coreRoutes, ...guideRoutes, ...unitRoutes].forEach((route) => {
       const localizedRoute =
         locale === routing.defaultLocale ? route : `/${locale}${route}`;
 
@@ -45,7 +47,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
                 route === Routes.Download ||
                 route === Routes.TierList
               ? 0.9
-              : route.startsWith('/guides/') || route.startsWith('/heroes/')
+              : route.startsWith('/guides/') || route.startsWith('/units/')
                 ? 0.85
                 : 0.8,
       });

@@ -171,7 +171,7 @@ export function PricingCard({
           <span
             className="inline-block rounded-full px-3 py-1 text-xs font-semibold shadow-sm"
             style={{
-              background: '#fefce8',
+              background: '#ecfeff',
               border: '1px solid #e9b84a',
               color: '#92240c',
             }}

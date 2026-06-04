@@ -84,6 +84,14 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'pub-ba45bd3ba59f468abbaa7fcd010f5954.r2.dev',
       },
+      {
+        protocol: 'https',
+        hostname: 'i.ytimg.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'img.youtube.com',
+      },
     ],
   },
 };

@@ -12,16 +12,21 @@ export enum Routes {
   TermsOfService = '/terms',
   Disclaimer = '/disclaimer',
 
-  // Duck Survival guide routes
+  // Universal Tower Defense X guide routes
   Codes = '/codes',
-  Download = '/download',
   TierList = '/tier-list',
-  Critters = '/heroes',
-  Gameplay = '/guides/best-skills',
-  BestTeam = '/best-team',
-  BestTatari = '/guides/best-skills',
+  Units = '/units',
+  Traits = '/traits',
+  Relics = '/relics',
   Guides = '/guides',
-  Updates = '/download',
+  Updates = '/updates/universal-fest-p2',
+  BeginnerGuide = '/guides/beginner-guide',
+  MercilessGod = '/guides/merciless-god',
+  BestUnits = '/guides/best-units-to-build-first',
+  RerollStrategy = '/guides/reroll-strategy',
+  StoryMode = '/guides/story-mode',
+  BestTeam = '/best-team',
+  Download = '/download',
 
   // auth routes
   Login = '/auth/login',

@@ -24,15 +24,12 @@ export function Logo({ className }: { className?: string }) {
   return (
     <Image
       src={logo}
-      alt="Duck Survival Wiki logo"
-      title="Duck Survival Wiki"
+      alt="Universal Tower Defense X Wiki logo"
+      title="Universal Tower Defense X Wiki"
       width={96}
       height={96}
       priority
-      className={cn(
-        'size-9 rounded-lg border border-[#F2D5A8] bg-white object-contain',
-        className
-      )}
+      className={cn('size-11 rounded-md bg-[#070B13] object-cover', className)}
     />
   );
 }

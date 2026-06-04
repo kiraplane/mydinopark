@@ -10,9 +10,9 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   return constructMetadata({
-    title: 'Privacy Policy | Duck Survival Wiki',
+    title: 'Privacy Policy | Universal Tower Defense X Wiki',
     description:
-      'Privacy policy for the independent Duck Survival Wiki and guide site.',
+      'Privacy policy for the independent Universal Tower Defense X Wiki and guide site.',
     locale,
     pathname: '/privacy',
   });
@@ -20,25 +20,25 @@ export async function generateMetadata({
 
 export default function PrivacyPolicyPage() {
   return (
-    <div className="bg-[#FFF7E8] py-12 text-[#2A2118]">
+    <div className="bg-[#0F1117] py-12 text-[#F8FAFC]">
       <Container className="max-w-3xl space-y-6 px-4">
         <h1 className="font-display text-4xl font-black">Privacy Policy</h1>
-        <p className="leading-8 text-[#5A4631]">
-          Duck Survival Wiki is an independent fan guide. We do not require
-          accounts for browsing gift codes, tier lists, guides, download notes,
-          or hero data.
+        <p className="leading-8 text-[#CBD5E1]">
+          Universal Tower Defense X Wiki is an independent fan guide. We do not
+          require accounts for browsing codes, tier lists, guides, trait notes,
+          relic notes, or unit data.
         </p>
-        <p className="leading-8 text-[#5A4631]">
+        <p className="leading-8 text-[#CBD5E1]">
           Standard analytics or hosting logs may record aggregate traffic data
           such as page views, referrers, device type, and approximate region. We
           use this to improve guides and fix broken pages.
         </p>
-        <p className="leading-8 text-[#5A4631]">
+        <p className="leading-8 text-[#CBD5E1]">
           Local image assets are used for faster page loading. We do not sell
           asset files or provide downloads as standalone packs.
         </p>
-        <p className="leading-8 text-[#5A4631]">
-          Privacy questions can be sent to hello@ducksurvival.wiki.
+        <p className="leading-8 text-[#CBD5E1]">
+          Privacy questions can be sent to hello@universaltowerdefensex.wiki.
         </p>
       </Container>
     </div>

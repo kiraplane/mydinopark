@@ -138,7 +138,7 @@ export function PaymentCard() {
       case 'failed':
         return <XCircleIcon className="h-12 w-12 text-red-600" />;
       case 'timeout':
-        return <AlertCircleIcon className="h-12 w-12 text-yellow-600" />;
+        return <AlertCircleIcon className="h-12 w-12 text-cyan-600" />;
       default:
         return <RefreshCwIcon className="h-12 w-12 text-gray-600" />;
     }

@@ -188,7 +188,7 @@ export default function BillingCard() {
               <Badge variant="outline" className="text-xs">
                 {subscription.status === 'trialing' ? (
                   <div className="flex items-center space-x-2">
-                    <ClockIcon className="size-3 mr-1 text-amber-600" />
+                    <ClockIcon className="size-3 mr-1 text-cyan-600" />
                     {t('status.trial')}
                   </div>
                 ) : (
@@ -231,7 +231,7 @@ export default function BillingCard() {
             )}
 
             {subscription.status === 'trialing' && trialEndDate && (
-              <div className="text-amber-600">
+              <div className="text-cyan-600">
                 {t('trialEnds')} {trialEndDate}
               </div>
             )}

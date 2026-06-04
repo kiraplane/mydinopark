@@ -33,40 +33,14 @@ const retiredPublicRouteRedirects: Array<{
   { pattern: /^\/ai-prompts(?:\/.*)?$/, target: '/' },
   { pattern: /^\/blog(?:\/.*)?$/, target: '/guides' },
   { pattern: /^\/docs(?:\/.*)?$/, target: '/' },
-  { pattern: /^\/gpt-image-2\/?$/, target: '/' },
-  { pattern: /^\/gpt-image-1-5\/?$/, target: '/' },
-  { pattern: /^\/happyhorse-.*$/, target: '/' },
-  { pattern: /^\/seedance-2-0\/?$/, target: '/' },
-  { pattern: /^\/magicui\/?$/, target: '/' },
-  { pattern: /^\/blocks(?:\/.*)?$/, target: '/' },
   { pattern: /^\/about\/?$/, target: '/' },
   { pattern: /^\/contact\/?$/, target: '/' },
-  { pattern: /^\/waitlist\/?$/, target: '/' },
-  { pattern: /^\/changelog\/?$/, target: '/' },
-  { pattern: /^\/roadmap\/?$/, target: '/' },
-  { pattern: /^\/test\/?$/, target: '/' },
-  { pattern: /^\/critters(?:\/.*)?$/, target: '/heroes' },
-  { pattern: /^\/best-tatari\/?$/, target: '/guides/best-skills' },
-  { pattern: /^\/skills\/?$/, target: '/guides/best-skills' },
-  { pattern: /^\/gameplay(?:\/.*)?$/, target: '/guides/best-skills' },
-  { pattern: /^\/updates\/?$/, target: '/download' },
-  { pattern: /^\/mod-apk\/?$/, target: '/download' },
-  { pattern: /^\/zobos\/?$/, target: '/guides/tower-defense-guide' },
-  { pattern: /^\/card-album\/?$/, target: '/guides/best-heroes' },
-  { pattern: /^\/fishing-contest\/?$/, target: '/guides' },
-  { pattern: /^\/badge-dojo\/?$/, target: '/best-team' },
-  { pattern: /^\/online\/?$/, target: '/' },
-  { pattern: /^\/girigo(?:-.+)?\/?$/, target: '/' },
-  { pattern: /^\/grigio-app\/?$/, target: '/' },
-  { pattern: /^\/gringo-app\/?$/, target: '/' },
-  { pattern: /^\/what-is-(?:girigo|kwonsiwon).+\/?$/, target: '/' },
-  { pattern: /^\/if-wishes-could-kill(?:-.+)?\/?$/, target: '/' },
-  { pattern: /^\/kwonsiwon-app\/?$/, target: '/' },
-  { pattern: /^\/download-safety\/?$/, target: '/' },
-  { pattern: /^\/wish-recorder\/?$/, target: '/' },
-  { pattern: /^\/timer\/?$/, target: '/' },
-  { pattern: /^\/rules\/?$/, target: '/' },
-  { pattern: /^\/ending-explained\/?$/, target: '/' },
+  { pattern: /^\/heroes(?:\/.*)?$/, target: '/units' },
+  { pattern: /^\/units-database\/?$/, target: '/units' },
+  { pattern: /^\/traits-guide\/?$/, target: '/traits' },
+  { pattern: /^\/skills\/?$/, target: '/traits' },
+  { pattern: /^\/codes-list\/?$/, target: '/codes' },
+  { pattern: /^\/updates\/?$/, target: '/updates/universal-fest-p2' },
 ];
 
 export default async function middleware(req: NextRequest) {
@@ -75,10 +49,10 @@ export default async function middleware(req: NextRequest) {
   const hostname = hostHeader?.split(':')[0].toLowerCase();
   const forwardedProto = req.headers.get('x-forwarded-proto');
   const productionHosts = new Set([
-    'ducksurvival.wiki',
-    'www.ducksurvival.wiki',
+    'universaltowerdefensex.wiki',
+    'www.universaltowerdefensex.wiki',
   ]);
-  const canonicalHost = 'www.ducksurvival.wiki';
+  const canonicalHost = 'www.universaltowerdefensex.wiki';
 
   if (
     hostname &&

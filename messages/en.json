@@ -1,8 +1,8 @@
 {
   "Metadata": {
-    "name": "Duck Survival Wiki",
-    "title": "Duck Survival Wiki - Gift Codes, Tier List and Guides",
-    "description": "Duck Survival Wiki for gift codes, tier list roles, beginner guide, best skills, best team, tower defense tips, download help, and mod APK safety."
+    "name": "Universal Tower Defense X Wiki",
+    "title": "Universal Tower Defense X Wiki - Codes, Tier List and Guides",
+    "description": "Universal Tower Defense X Wiki for active codes, unit tier lists, traits, relics, update notes, beginner routes, and Roblox play safety."
   },
   "Common": {
     "premium": "Premium",
@@ -54,7 +54,7 @@
   },
   "PricingPage": {
     "title": "Pricing",
-    "description": "Optional supporter plans for keeping Duck Survival Wiki maintained",
+    "description": "Optional supporter plans for keeping Universal Tower Defense X Wiki maintained",
     "subtitle": "Simple support options for readers who want to help maintain guides and data updates",
     "monthly": "Monthly",
     "yearly": "Yearly",
@@ -80,11 +80,11 @@
   "PricePlans": {
     "free": {
       "name": "Free",
-      "description": "Browse Duck Survival Wiki with no payment required",
+      "description": "Browse Universal Tower Defense X Wiki with no payment required",
       "features": {
-        "feature-1": "Duck Survival gift codes and redemption notes",
-        "feature-2": "Duck Survival tier list and hero role guidance",
-        "feature-3": "Guides for skills, teams, tower defense, and downloads",
+        "feature-1": "Universal Tower Defense X codes and redemption notes",
+        "feature-2": "UTDX tier list and unit role guidance",
+        "feature-3": "Guides for traits, relics, teams, and Roblox safety",
         "feature-4": "Core pages updated as game information changes"
       },
       "limits": {
@@ -99,7 +99,7 @@
       "description": "For readers who want to support ongoing guide updates",
       "features": {
         "feature-1": "Support site maintenance",
-        "feature-2": "Help fund future Duck Survival data checks",
+        "feature-2": "Help fund future UTDX data checks",
         "feature-3": "Keep gift code and guide pages fresh",
         "feature-4": "Support cleaner walkthrough coverage",
         "feature-5": "Help improve page speed and hosting stability",
@@ -113,7 +113,7 @@
     },
     "max": {
       "name": "Backer",
-      "description": "For heavier support of Duck Survival Wiki maintenance",
+      "description": "For heavier support of Universal Tower Defense X Wiki maintenance",
       "features": {
         "feature-1": "Support expanded guide coverage",
         "feature-2": "Help fund more frequent source reviews",
@@ -291,22 +291,19 @@
         "title": "Home"
       },
       "codes": {
-        "title": "Gift Codes"
+        "title": "Codes"
       },
       "tierList": {
         "title": "Tier List"
       },
-      "critters": {
-        "title": "Tier Roles"
+      "units": {
+        "title": "Units"
       },
-      "gameplay": {
-        "title": "Best Skills"
+      "traits": {
+        "title": "Traits"
       },
-      "team": {
-        "title": "Best Team"
-      },
-      "download": {
-        "title": "Download"
+      "relics": {
+        "title": "Relics"
       },
       "guides": {
         "title": "Guides"
@@ -315,50 +312,51 @@
         "title": "More",
         "items": {
           "zobos": {
-            "title": "Zobos",
-            "description": "Enemy types, skills, elements, and battle notes."
+            "title": "Units",
+            "description": "Text-first unit names, roles, rarity, and priority notes."
           },
           "cardAlbum": {
-            "title": "Card Album",
-            "description": "Pack odds, card lists, duplicates, and rewards."
+            "title": "Traits",
+            "description": "Trait tiers, best roles, and reroll stop points."
           },
           "fishingContest": {
-            "title": "Fishing Contest",
-            "description": "Fish tables, rarity chances, ticks, and event data."
+            "title": "Relics",
+            "description": "Relic sets, slots, effects, and enhance guidance."
           },
           "badgeDojo": {
-            "title": "Badge Dojo",
-            "description": "Stage tables, objectives, and badge progression."
+            "title": "Universal Fest P2",
+            "description": "Current update notes, codes, units, and relic planning."
           },
           "updates": {
-            "title": "Download",
-            "description": "Official download links and mod APK safety notes."
+            "title": "Play on Roblox",
+            "description": "Official Roblox experience link and safety notes."
           },
           "gameplayIndex": {
-            "title": "Skills Guide",
-            "description": "Best skills for wave clear, control, and boss damage."
+            "title": "Reroll Strategy",
+            "description": "Trait spending rules for DPS, support, and farm units."
           }
         }
       }
     },
     "footer": {
-      "tagline": "An independent Duck Survival Wiki for gift codes, tier list roles, beginner progression, best skills, best team, tower defense, and safe download help.",
+      "tagline": "An independent Universal Tower Defense X Wiki for codes, unit tiers, traits, relics, update notes, and beginner progression.",
       "wiki": {
         "title": "Wiki",
         "items": {
-          "codes": "Gift Codes",
+          "codes": "Codes",
           "tierList": "Tier List",
-          "critters": "Tier Roles",
-          "gameplay": "Best Skills"
+          "units": "Units",
+          "traits": "Traits",
+          "relics": "Relics"
         }
       },
       "guides": {
         "title": "Guides",
         "items": {
           "all": "All guides",
-          "bestTeam": "Best Team",
-          "bestTatari": "Best Skills",
-          "updates": "Download"
+          "beginner": "Beginner Guide",
+          "mercilessGod": "Merciless God",
+          "updates": "Universal Fest P2"
         }
       },
       "legal": {

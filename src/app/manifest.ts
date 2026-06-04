@@ -23,12 +23,12 @@ import type { MetadataRoute } from 'next';
 export default function manifest(): MetadataRoute.Manifest {
   return {
     name: defaultMessages.Metadata.name,
-    short_name: defaultMessages.Metadata.name,
+    short_name: 'UTDX Wiki',
     description: defaultMessages.Metadata.description,
     start_url: '/',
     display: 'standalone',
-    background_color: '#fff4dc',
-    theme_color: '#f2a93b',
+    background_color: '#060b12',
+    theme_color: '#22d3ee',
     icons: [
       {
         src: '/favicon-32x32.png',
