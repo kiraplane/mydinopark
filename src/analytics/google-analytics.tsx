@@ -1,7 +1,6 @@
 import Script from 'next/script';
 
-const GOOGLE_ANALYTICS_ID =
-  process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID || 'G-TZ78CDKD56';
+const GOOGLE_ANALYTICS_ID = 'G-MYDV7YKSWY';
 
 export default function GoogleAnalytics() {
   if (process.env.NODE_ENV !== 'production') {
