@@ -20,9 +20,9 @@ export const websiteConfig: WebsiteConfig = {
   },
   metadata: {
     images: {
-      ogImage: '/logo.png',
-      logoLight: '/logo.png',
-      logoDark: '/logo.png',
+      ogImage: '/dragonfire/og-image.png',
+      logoLight: '/dragonfire/logo.png',
+      logoDark: '/dragonfire/logo.png',
     },
     social: {
       github: '',
@@ -76,8 +76,8 @@ export const websiteConfig: WebsiteConfig = {
   mail: {
     provider: 'resend',
     fromEmail:
-      'Universal Tower Defense X Wiki <hello@universaltowerdefensex.wiki>',
-    supportEmail: 'hello@universaltowerdefensex.wiki',
+      'Game of Thrones Dragonfire Wiki <hello@gameofthronesdragonfire.wiki>',
+    supportEmail: 'hello@gameofthronesdragonfire.wiki',
   },
   newsletter: {
     enable: false,

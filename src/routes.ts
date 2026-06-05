@@ -12,20 +12,23 @@ export enum Routes {
   TermsOfService = '/terms',
   Disclaimer = '/disclaimer',
 
-  // Universal Tower Defense X guide routes
+  // Game of Thrones Dragonfire guide routes
   Codes = '/codes',
   TierList = '/tier-list',
-  Units = '/units',
-  Traits = '/traits',
-  Relics = '/relics',
+  Dragons = '/dragons',
+  Resources = '/resources',
+  Campaigns = '/campaigns',
+  CampaignResetGuide = '/campaigns/reset-guide',
+  Reigns = '/reigns',
+  Alliances = '/alliances',
+  Factions = '/factions',
+  Stronghold = '/stronghold',
   Guides = '/guides',
-  Updates = '/updates/universal-fest-p2',
+  Updates = '/updates',
   BeginnerGuide = '/guides/beginner-guide',
-  MercilessGod = '/guides/merciless-god',
-  BestUnits = '/guides/best-units-to-build-first',
-  RerollStrategy = '/guides/reroll-strategy',
-  StoryMode = '/guides/story-mode',
-  BestTeam = '/best-team',
+  ResourceGuide = '/guides/resource-guide',
+  AllianceGuide = '/guides/alliance-guide',
+  TierListGuide = '/guides/tier-list-best-dragons',
   Download = '/download',
 
   // auth routes

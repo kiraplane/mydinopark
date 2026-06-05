@@ -1,4 +1,4 @@
-import { UtdxHomePage } from '@/components/utdx/home-page';
+import { DragonfireHomePage } from '@/components/dragonfire/home-page';
 import { constructMetadata } from '@/lib/metadata';
 import type { Metadata } from 'next';
 import type { Locale } from 'next-intl';
@@ -11,14 +11,15 @@ export async function generateMetadata({
   const { locale } = await params;
 
   return constructMetadata({
-    title: 'Universal Tower Defense X Wiki - Codes, Tier List & Units',
+    title: 'Game of Thrones Dragonfire Wiki - Codes, Tier List & Guides',
     description:
-      'Universal Tower Defense X Wiki with active codes, tier list rankings, best units, traits, relics, Merciless God, Universal Fest P2 updates, and beginner guides.',
+      'Game of Thrones Dragonfire Wiki with codes, tier list rankings, dragon profiles, campaign reset help, resources, alliances, Reigns, and beginner guides.',
     locale,
     pathname: '',
+    image: '/dragonfire/og-image.png',
   });
 }
 
 export default function HomePage() {
-  return <UtdxHomePage />;
+  return <DragonfireHomePage />;
 }

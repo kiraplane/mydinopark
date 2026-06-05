@@ -10,9 +10,9 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   return constructMetadata({
-    title: 'Terms of Service | Universal Tower Defense X Wiki',
+    title: 'Terms of Service | Game of Thrones Dragonfire Wiki',
     description:
-      'Terms for using the independent Universal Tower Defense X Wiki and guide site.',
+      'Terms for using the unofficial Game of Thrones Dragonfire Wiki and guide site.',
     locale,
     pathname: '/terms',
   });
@@ -24,23 +24,24 @@ export default function TermsOfServicePage() {
       <Container className="max-w-3xl space-y-6 px-4">
         <h1 className="font-display text-4xl font-black">Terms of Service</h1>
         <p className="leading-8 text-[#CBD5E1]">
-          This site provides independent Universal Tower Defense X guides, data
+          This site provides unofficial Game of Thrones Dragonfire guides, data
           notes, and strategy content. It is not affiliated with, endorsed by,
-          or operated by Roblox or Universal Tower Defense [UTD].
+          sponsored by, or operated by Warner Bros. Games, HBO, Warner Bros.
+          Discovery, or the official Game of Thrones: Dragonfire team.
         </p>
         <p className="leading-8 text-[#CBD5E1]">
-          Game data can change quickly. Codes, rankings, unit builds, team
-          templates, and stage advice should be treated as guidance, not
-          official instructions.
+          Game data can change quickly. Codes, rankings, dragon profiles,
+          campaign reset notes, and stage advice should be treated as guidance,
+          not official instructions.
         </p>
         <p className="leading-8 text-[#CBD5E1]">
           Do not use this site to distribute cheats, automation scripts, copied
-          clients, account services, or other content that violates Roblox or
-          game terms.
+          clients, account services, or other content that violates game or
+          platform terms.
         </p>
         <p className="leading-8 text-[#CBD5E1]">
           Questions about these terms can be sent to
-          hello@universaltowerdefensex.wiki.
+          hello@gameofthronesdragonfire.wiki.
         </p>
       </Container>
     </div>

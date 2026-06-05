@@ -10,9 +10,9 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   return constructMetadata({
-    title: 'Cookie Policy | Universal Tower Defense X Wiki',
+    title: 'Cookie Policy | Game of Thrones Dragonfire Wiki',
     description:
-      'How Universal Tower Defense X Wiki uses essential cookies, analytics, and similar technologies.',
+      'How Game of Thrones Dragonfire Wiki uses essential cookies, analytics, and similar technologies.',
     locale,
     pathname: '/cookie',
   });
@@ -24,7 +24,7 @@ export default function CookiePolicyPage() {
       <Container className="max-w-3xl space-y-6 px-4">
         <h1 className="font-display text-4xl font-black">Cookie Policy</h1>
         <p className="leading-8 text-[#CBD5E1]">
-          Universal Tower Defense X Wiki uses essential cookies and similar
+          Game of Thrones Dragonfire Wiki uses essential cookies and similar
           technologies to keep the site working, remember basic preferences, and
           understand aggregate traffic patterns.
         </p>
@@ -41,7 +41,7 @@ export default function CookiePolicyPage() {
         </p>
         <p className="leading-8 text-[#CBD5E1]">
           Questions about this policy can be sent to
-          hello@universaltowerdefensex.wiki.
+          hello@gameofthronesdragonfire.wiki.
         </p>
       </Container>
     </div>

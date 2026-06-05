@@ -1,8 +1,8 @@
 {
   "Metadata": {
-    "name": "Universal Tower Defense X Wiki",
-    "title": "Universal Tower Defense X Wiki - Codes, Tier List and Guides",
-    "description": "Universal Tower Defense X Wiki for active codes, unit tier lists, traits, relics, update notes, beginner routes, and Roblox play safety."
+    "name": "Game of Thrones Dragonfire Wiki",
+    "title": "Game of Thrones Dragonfire Wiki - Codes, Tier List and Guides",
+    "description": "Game of Thrones Dragonfire Wiki for codes, dragon tier lists, campaign reset help, resources, alliances, Reigns, and beginner guides."
   },
   "Common": {
     "premium": "Premium",
@@ -54,7 +54,7 @@
   },
   "PricingPage": {
     "title": "Pricing",
-    "description": "Optional supporter plans for keeping Universal Tower Defense X Wiki maintained",
+    "description": "Optional supporter plans for keeping Game of Thrones Dragonfire Wiki maintained",
     "subtitle": "Simple support options for readers who want to help maintain guides and data updates",
     "monthly": "Monthly",
     "yearly": "Yearly",
@@ -80,11 +80,11 @@
   "PricePlans": {
     "free": {
       "name": "Free",
-      "description": "Browse Universal Tower Defense X Wiki with no payment required",
+      "description": "Browse Game of Thrones Dragonfire Wiki with no payment required",
       "features": {
-        "feature-1": "Universal Tower Defense X codes and redemption notes",
-        "feature-2": "UTDX tier list and unit role guidance",
-        "feature-3": "Guides for traits, relics, teams, and Roblox safety",
+        "feature-1": "Dragonfire code status and redemption notes",
+        "feature-2": "Dragon tier list and upgrade priority guidance",
+        "feature-3": "Guides for campaigns, resources, alliances, and Reigns",
         "feature-4": "Core pages updated as game information changes"
       },
       "limits": {
@@ -99,7 +99,7 @@
       "description": "For readers who want to support ongoing guide updates",
       "features": {
         "feature-1": "Support site maintenance",
-        "feature-2": "Help fund future UTDX data checks",
+        "feature-2": "Help fund future Dragonfire data checks",
         "feature-3": "Keep gift code and guide pages fresh",
         "feature-4": "Support cleaner walkthrough coverage",
         "feature-5": "Help improve page speed and hosting stability",
@@ -113,7 +113,7 @@
     },
     "max": {
       "name": "Backer",
-      "description": "For heavier support of Universal Tower Defense X Wiki maintenance",
+      "description": "For heavier support of Game of Thrones Dragonfire Wiki maintenance",
       "features": {
         "feature-1": "Support expanded guide coverage",
         "feature-2": "Help fund more frequent source reviews",
@@ -296,58 +296,35 @@
       "tierList": {
         "title": "Tier List"
       },
-      "units": {
-        "title": "Units"
+      "dragons": {
+        "title": "Dragons"
       },
-      "traits": {
-        "title": "Traits"
+      "resources": {
+        "title": "Resources"
       },
-      "relics": {
-        "title": "Relics"
+      "campaigns": {
+        "title": "Campaigns"
       },
       "guides": {
         "title": "Guides"
       },
-      "moreData": {
-        "title": "More",
-        "items": {
-          "zobos": {
-            "title": "Units",
-            "description": "Text-first unit names, roles, rarity, and priority notes."
-          },
-          "cardAlbum": {
-            "title": "Traits",
-            "description": "Trait tiers, best roles, and reroll stop points."
-          },
-          "fishingContest": {
-            "title": "Relics",
-            "description": "Relic sets, slots, effects, and enhance guidance."
-          },
-          "badgeDojo": {
-            "title": "Universal Fest P2",
-            "description": "Current update notes, codes, units, and relic planning."
-          },
-          "updates": {
-            "title": "Play on Roblox",
-            "description": "Official Roblox experience link and safety notes."
-          },
-          "gameplayIndex": {
-            "title": "Reroll Strategy",
-            "description": "Trait spending rules for DPS, support, and farm units."
-          }
-        }
+      "alliances": {
+        "title": "Alliances"
+      },
+      "download": {
+        "title": "Download"
       }
     },
     "footer": {
-      "tagline": "An independent Universal Tower Defense X Wiki for codes, unit tiers, traits, relics, update notes, and beginner progression.",
+      "tagline": "An unofficial Game of Thrones Dragonfire Wiki for codes, dragon tiers, campaigns, resources, alliances, Reigns, and beginner progression.",
       "wiki": {
         "title": "Wiki",
         "items": {
           "codes": "Codes",
           "tierList": "Tier List",
-          "units": "Units",
-          "traits": "Traits",
-          "relics": "Relics"
+          "dragons": "Dragons",
+          "resources": "Resources",
+          "campaigns": "Campaigns"
         }
       },
       "guides": {
@@ -355,8 +332,9 @@
         "items": {
           "all": "All guides",
           "beginner": "Beginner Guide",
-          "mercilessGod": "Merciless God",
-          "updates": "Universal Fest P2"
+          "tierList": "Tier List Guide",
+          "resources": "Resource Guide",
+          "alliances": "Alliance Guide"
         }
       },
       "legal": {

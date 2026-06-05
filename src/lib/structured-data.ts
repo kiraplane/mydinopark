@@ -129,7 +129,7 @@ export function buildSoftwareApplicationStructuredData({
       priceCurrency: 'USD',
       availability: 'https://schema.org/InStock',
       description:
-        'The Roblox experience is free to open where Roblox and the game are available.',
+        'The mobile game is free to install where official Android and iOS storefronts make it available.',
     },
     publisher: {
       '@type': 'Organization',

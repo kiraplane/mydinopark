@@ -1,5 +1,5 @@
-import { guides } from '@/data/utdx/guides';
-import { units } from '@/data/utdx/units';
+import { dragons } from '@/data/dragonfire/dragons';
+import { guides } from '@/data/dragonfire/guides';
 import { Routes } from '@/routes';
 import type { MetadataRoute } from 'next';
 import { routing } from '../i18n/routing';
@@ -9,12 +9,16 @@ const coreRoutes = [
   Routes.Root,
   Routes.Codes,
   Routes.TierList,
-  Routes.Units,
-  Routes.Traits,
-  Routes.Relics,
-  Routes.Updates,
-  Routes.BestTeam,
+  Routes.Dragons,
+  Routes.Resources,
+  Routes.Campaigns,
+  Routes.CampaignResetGuide,
+  Routes.Reigns,
+  Routes.Alliances,
+  Routes.Factions,
+  Routes.Stronghold,
   Routes.Guides,
+  Routes.Updates,
   Routes.Download,
   Routes.PrivacyPolicy,
   Routes.TermsOfService,
@@ -23,15 +27,15 @@ const coreRoutes = [
 ];
 
 const guideRoutes = guides.map((guide) => `/guides/${guide.slug}`);
-const unitRoutes = units.map((unit) => `/units/${unit.slug}`);
-const stableLastModified = new Date('2026-06-04T00:00:00.000Z');
+const dragonRoutes = dragons.map((dragon) => `/dragons/${dragon.slug}`);
+const stableLastModified = new Date('2026-06-05T00:00:00.000Z');
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const sitemapList: MetadataRoute.Sitemap = [];
   const baseUrl = getCanonicalBaseUrl();
 
   routing.locales.forEach((locale) => {
-    [...coreRoutes, ...guideRoutes, ...unitRoutes].forEach((route) => {
+    [...coreRoutes, ...guideRoutes, ...dragonRoutes].forEach((route) => {
       const localizedRoute =
         locale === routing.defaultLocale ? route : `/${locale}${route}`;
 
@@ -47,7 +51,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
                 route === Routes.Download ||
                 route === Routes.TierList
               ? 0.9
-              : route.startsWith('/guides/') || route.startsWith('/units/')
+              : route.startsWith('/guides/') || route.startsWith('/dragons/')
                 ? 0.85
                 : 0.8,
       });

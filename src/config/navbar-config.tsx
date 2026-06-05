@@ -4,11 +4,13 @@ import { Routes } from '@/routes';
 import type { NestedMenuItem } from '@/types';
 import {
   BookOpen,
+  Castle,
   ClipboardList,
-  Database,
-  Gem,
+  Download,
+  Flame,
   Sparkles,
   Trophy,
+  Users,
 } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 
@@ -29,28 +31,40 @@ export function useNavbarLinks(): NestedMenuItem[] {
       icon: <Trophy className="size-4" />,
     },
     {
-      title: t('units.title'),
-      href: Routes.Units,
+      title: t('dragons.title'),
+      href: Routes.Dragons,
       external: false,
-      icon: <Database className="size-4" />,
+      icon: <Flame className="size-4" />,
     },
     {
-      title: t('traits.title'),
-      href: Routes.Traits,
+      title: t('resources.title'),
+      href: Routes.Resources,
+      external: false,
+      icon: <Castle className="size-4" />,
+    },
+    {
+      title: t('campaigns.title'),
+      href: Routes.Campaigns,
       external: false,
       icon: <Sparkles className="size-4" />,
-    },
-    {
-      title: t('relics.title'),
-      href: Routes.Relics,
-      external: false,
-      icon: <Gem className="size-4" />,
     },
     {
       title: t('guides.title'),
       href: Routes.Guides,
       external: false,
       icon: <BookOpen className="size-4" />,
+    },
+    {
+      title: t('alliances.title'),
+      href: Routes.Alliances,
+      external: false,
+      icon: <Users className="size-4" />,
+    },
+    {
+      title: t('download.title'),
+      href: Routes.Download,
+      external: false,
+      icon: <Download className="size-4" />,
     },
   ];
 }

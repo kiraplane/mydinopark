@@ -44,19 +44,21 @@ const MARKETING_NAVBAR_KEYS = [
   'home',
   'codes',
   'tierList',
-  'units',
-  'traits',
-  'relics',
+  'dragons',
+  'resources',
+  'campaigns',
+  'alliances',
+  'download',
   'guides',
-  'moreData',
 ] as const;
 
 const MARKETING_FOOTER_KEYS = ['tagline', 'wiki', 'guides', 'legal'] as const;
 const MARKETING_FOOTER_GUIDE_ITEM_KEYS = [
   'all',
   'beginner',
-  'mercilessGod',
-  'updates',
+  'tierList',
+  'resources',
+  'alliances',
 ] as const;
 
 function pickKeys<T extends MessageMap, K extends readonly string[]>(

@@ -35,6 +35,6 @@ export default function ForgotPassword({
 ForgotPassword.PreviewProps = {
   locale: routing.defaultLocale,
   messages: defaultMessages,
-  url: 'https://www.universaltowerdefensex.wiki',
+  url: 'https://www.gameofthronesdragonfire.wiki',
   name: 'username',
 };

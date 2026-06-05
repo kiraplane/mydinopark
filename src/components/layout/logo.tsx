@@ -24,12 +24,15 @@ export function Logo({ className }: { className?: string }) {
   return (
     <Image
       src={logo}
-      alt="Universal Tower Defense X Wiki logo"
-      title="Universal Tower Defense X Wiki"
+      alt="Game of Thrones Dragonfire Wiki logo"
+      title="Game of Thrones Dragonfire Wiki"
       width={96}
       height={96}
       priority
-      className={cn('size-11 rounded-md bg-[#070B13] object-cover', className)}
+      className={cn(
+        'size-14 rounded-full bg-[#070302] object-contain ring-1 ring-[#7C2D12]/70',
+        className
+      )}
     />
   );
 }

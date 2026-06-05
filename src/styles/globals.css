@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-/* Universal Tower Defense X Wiki - dark, data-dense guide theme */
+/* Game of Thrones Dragonfire Wiki - dark, data-dense guide theme */
 
 :root {
   --font-noto-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
@@ -63,11 +63,11 @@
  */
 .font-display {
   font-family: var(--font-pixel);
-  letter-spacing: 0.02em;
+  letter-spacing: 0;
 }
 .font-display-lg {
   font-family: var(--font-pixel-large);
-  letter-spacing: 0.01em;
+  letter-spacing: 0;
 }
 
 /*
@@ -264,46 +264,46 @@
 }
 
 :root {
-  --background: #060b12;
-  --foreground: #f8fafc;
-  --card: #ffffff;
-  --card-foreground: #0b1220;
-  --popover: #ffffff;
-  --popover-foreground: #0b1220;
+  --background: #070302;
+  --foreground: #fff2e0;
+  --card: #150905;
+  --card-foreground: #fff2e0;
+  --popover: #150905;
+  --popover-foreground: #fff2e0;
 
-  --primary: #22d3ee;
-  --primary-foreground: #07111f;
+  --primary: #c2410c;
+  --primary-foreground: #fff2e0;
 
-  --secondary: #7c3aed;
-  --secondary-foreground: #ffffff;
+  --secondary: #f59e0b;
+  --secondary-foreground: #150905;
 
-  --muted: #0b1220;
-  --muted-foreground: #aab2c0;
+  --muted: #1f120c;
+  --muted-foreground: #c6b19f;
 
-  --accent: #263349;
-  --accent-foreground: #f8fafc;
+  --accent: #3b1609;
+  --accent-foreground: #fff2e0;
 
-  --destructive: #d94a38;
-  --destructive-foreground: #ffffff;
+  --destructive: #dc2626;
+  --destructive-foreground: #fff2e0;
 
-  --border: #1e2a3d;
-  --input: #1e2a3d;
-  --ring: #22d3ee;
+  --border: #4b2417;
+  --input: #4b2417;
+  --ring: #f97316;
 
-  --chart-1: #22d3ee;
-  --chart-2: #7c3aed;
-  --chart-3: #7c5cff;
-  --chart-4: #d94a38;
-  --chart-5: #67e8f9;
+  --chart-1: #f97316;
+  --chart-2: #f59e0b;
+  --chart-3: #dc2626;
+  --chart-4: #7c2d12;
+  --chart-5: #fde68a;
 
-  --sidebar: #060b12;
-  --sidebar-foreground: #f8fafc;
-  --sidebar-primary: #22d3ee;
-  --sidebar-primary-foreground: #07111f;
-  --sidebar-accent: #111827;
-  --sidebar-accent-foreground: #f8fafc;
-  --sidebar-border: #1e2a3d;
-  --sidebar-ring: #22d3ee;
+  --sidebar: #070302;
+  --sidebar-foreground: #fff2e0;
+  --sidebar-primary: #c2410c;
+  --sidebar-primary-foreground: #fff2e0;
+  --sidebar-accent: #1f120c;
+  --sidebar-accent-foreground: #fff2e0;
+  --sidebar-border: #4b2417;
+  --sidebar-ring: #f97316;
   --font-sans: var(--font-noto-sans);
   --font-serif: var(--font-noto-serif);
   --font-mono: var(--font-noto-sans-mono);
@@ -389,11 +389,11 @@ body {
 }
 
 /*
- * Universal Tower Defense X theme colors
+ * Game of Thrones Dragonfire theme colors
  */
 .theme-default {
-  --primary: #ff7a1a;
-  --primary-foreground: #ffffff;
+  --primary: #c2410c;
+  --primary-foreground: #fff2e0;
 }
 
 .theme-blue {

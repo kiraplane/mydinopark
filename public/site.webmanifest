@@ -1,7 +1,17 @@
 {
-  "name": "Universal Tower Defense X Wiki",
-  "short_name": "UTDX Wiki",
+  "name": "Game of Thrones Dragonfire Wiki",
+  "short_name": "Dragonfire Wiki",
+  "description": "Game of Thrones Dragonfire Wiki for codes, dragon tier lists, campaign reset help, resources, alliances, Reigns, and beginner guides.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#070302",
+  "theme_color": "#c2410c",
   "icons": [
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
     {
       "src": "/android-chrome-192x192.png",
       "sizes": "192x192",
@@ -11,9 +21,12 @@
       "src": "/android-chrome-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
-  ],
-  "theme_color": "#22d3ee",
-  "background_color": "#060b12",
-  "display": "standalone"
+  ]
 }

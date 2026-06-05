@@ -53,9 +53,9 @@ export function Navbar({ scroll }: NavBarProps) {
         'sticky inset-x-0 top-0 z-40 py-4 text-foreground transition-all duration-300',
         scroll
           ? scrolled
-            ? 'border-cyan-300/20 border-b bg-[#070B13]/90 backdrop-blur-md supports-backdrop-filter:bg-[#070B13]/90'
+            ? 'border-[#3A2721] border-b bg-[#080707]/90 backdrop-blur-md supports-backdrop-filter:bg-[#080707]/90'
             : 'bg-transparent'
-          : 'border-cyan-300/20 border-b bg-[#070B13]/90 backdrop-blur-md'
+          : 'border-[#3A2721] border-b bg-[#080707]/90 backdrop-blur-md'
       )}
     >
       <Container className="px-4">

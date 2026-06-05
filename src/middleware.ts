@@ -35,12 +35,11 @@ const retiredPublicRouteRedirects: Array<{
   { pattern: /^\/docs(?:\/.*)?$/, target: '/' },
   { pattern: /^\/about\/?$/, target: '/' },
   { pattern: /^\/contact\/?$/, target: '/' },
-  { pattern: /^\/heroes(?:\/.*)?$/, target: '/units' },
-  { pattern: /^\/units-database\/?$/, target: '/units' },
-  { pattern: /^\/traits-guide\/?$/, target: '/traits' },
-  { pattern: /^\/skills\/?$/, target: '/traits' },
+  { pattern: /^\/heroes(?:\/.*)?$/, target: '/dragons' },
+  { pattern: /^\/units-database\/?$/, target: '/dragons' },
+  { pattern: /^\/traits-guide\/?$/, target: '/resources' },
+  { pattern: /^\/skills\/?$/, target: '/resources' },
   { pattern: /^\/codes-list\/?$/, target: '/codes' },
-  { pattern: /^\/updates\/?$/, target: '/updates/universal-fest-p2' },
 ];
 
 export default async function middleware(req: NextRequest) {
@@ -49,10 +48,10 @@ export default async function middleware(req: NextRequest) {
   const hostname = hostHeader?.split(':')[0].toLowerCase();
   const forwardedProto = req.headers.get('x-forwarded-proto');
   const productionHosts = new Set([
-    'universaltowerdefensex.wiki',
-    'www.universaltowerdefensex.wiki',
+    'gameofthronesdragonfire.wiki',
+    'www.gameofthronesdragonfire.wiki',
   ]);
-  const canonicalHost = 'www.universaltowerdefensex.wiki';
+  const canonicalHost = 'www.gameofthronesdragonfire.wiki';
 
   if (
     hostname &&
