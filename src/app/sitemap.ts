@@ -7,8 +7,10 @@ const coreRoutes = [
   Routes.Root,
   Routes.Play,
   Routes.AllEndings,
+  Routes.SavePoints,
   Routes.Ending20,
   Routes.SilasRoute,
+  Routes.HeLetYouGo,
   Routes.KyleRoute,
   Routes.MiniGames,
   Routes.ContentWarnings,
@@ -47,7 +49,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             : route === Routes.Play
               ? 0.95
               : route === Routes.AllEndings ||
+                  route === Routes.SavePoints ||
                   route === Routes.Ending20 ||
+                  route === Routes.HeLetYouGo ||
                   route === Routes.Download ||
                   route === Routes.ItchIo
                 ? 0.9

@@ -91,10 +91,12 @@ const secondaryLinks = [
 const routeLabels: Record<string, string> = {
   '/': 'Game overview',
   '/all-endings': 'All endings walkthrough',
+  '/save-points': 'Save points guide',
   '/ending-20': 'Ending 20 route',
   '/guides': 'Guide index',
   '/play-online': 'Play online',
   '/silas-route': 'Silas route',
+  '/he-let-you-go': 'He Let You Go ending',
   '/kyle-route': 'Kyle route',
   '/mini-games': 'Mini-games',
   '/download': 'Download guide',

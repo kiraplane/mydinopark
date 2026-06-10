@@ -15,6 +15,27 @@ const videos = {
     publishedAt: '2026-06-07',
     checkedAt,
   },
+  englishAllEndings: {
+    id: 'AoA1yeeLoKQ',
+    title:
+      'Insane Yandere Farm Boy Is In Love With YOU | The False Sun - ALL ENDINGS | Yandere Dating Sim',
+    channel: 'Hello Yinny',
+    url: 'https://www.youtube.com/watch?v=AoA1yeeLoKQ',
+    thumbnailUrl: videoCover('AoA1yeeLoKQ'),
+    publishedAt: '2026-06-09',
+    viewCountLabel: '6.5K+ views',
+    checkedAt,
+  },
+  ritsuPartOne: {
+    id: 'phQ-IF0zPGg',
+    title: 'The False Sun walkthrough, all endings part 1',
+    channel: 'ritsu',
+    url: 'https://www.youtube.com/watch?v=phQ-IF0zPGg',
+    thumbnailUrl: videoCover('phQ-IF0zPGg'),
+    publishedAt: '2026-06-03',
+    viewCountLabel: '22K+ views',
+    checkedAt,
+  },
   ritsu: {
     id: '9iG-Ho_Uas8',
     title: 'The False Sun walkthrough, all endings part 2',
@@ -41,7 +62,7 @@ export const guides: Guide[] = [
       'Start here if your gallery is stuck. This all endings guide groups the 20 slots by route, save point, and confidence instead of pretending every branch is already perfectly named.',
     category: 'Endings',
     difficulty: 'Spoiler Heavy',
-    coverImageUrl: videos.allEndings.thumbnailUrl,
+    coverImageUrl: videos.englishAllEndings.thumbnailUrl,
     publishedAt: checkedAt,
     updatedAt: checkedAt,
     sourceStrategy: 'user_intent_youtube',
@@ -51,13 +72,15 @@ export const guides: Guide[] = [
       'The False Sun ending 20',
     ],
     sourceNotes:
-      'Built from official itch details, recent player demand, and two all-endings video cross-checks. Ending labels are route notes, not official gallery names.',
-    video: videos.allEndings,
+      'Built from official itch details and current all-endings video cross-checks. The 2026-06-09 English all-endings upload is the primary player-facing reference; ending labels are route notes, not official gallery names.',
+    video: videos.englishAllEndings,
     tags: ['20 Endings', 'Walkthrough', 'Spoilers'],
     relatedRoutes: [
       '/play-online',
+      '/save-points',
       '/ending-20',
       '/silas-route',
+      '/he-let-you-go',
       '/kyle-route',
       '/mini-games',
     ],
@@ -139,6 +162,122 @@ export const guides: Guide[] = [
     ],
   },
   {
+    slug: 'save-points',
+    path: '/save-points',
+    title: 'The False Sun Save Points Guide',
+    seoTitle: 'The False Sun Save Points Guide - Puzzle, Farm and Route Saves',
+    seoDescription:
+      'Plan The False Sun saves before farm tasks, puzzles, swimming, route choices, and Ending 20 so you can test endings without full restarts.',
+    summary:
+      'A practical save map for players who keep replaying too much of The False Sun. Use it before farm tasks, path choices, puzzle-like scenes, and late Silas route checks.',
+    category: 'Route',
+    difficulty: 'Intermediate',
+    coverImageUrl: videos.englishAllEndings.thumbnailUrl,
+    publishedAt: checkedAt,
+    updatedAt: checkedAt,
+    sourceStrategy: 'user_intent_youtube',
+    videoSearchQueries: [
+      'The False Sun walkthrough',
+      'The False Sun puzzle',
+      'The False Sun save points',
+    ],
+    sourceNotes:
+      'Created for GSC walkthrough and puzzle demand, using the current English all-endings walkthrough as route cross-check material.',
+    video: videos.englishAllEndings,
+    tags: ['Save Points', 'Puzzle', 'Walkthrough'],
+    relatedRoutes: [
+      '/all-endings',
+      '/ending-20',
+      '/silas-route',
+      '/he-let-you-go',
+      '/mini-games',
+    ],
+    body: [
+      {
+        heading: 'Build saves around route families',
+        paragraphs: [
+          'The biggest time sink in The False Sun is not one hard puzzle. It is losing track of which emotional route you are testing, then replaying an hour of early scenes just to reach the same ending again. A good save map turns the story into short branches instead of one long mystery.',
+          'Use separate saves for route families: early farm setup, fear answers, escape attempts, Silas warmth, Kyle or farm aftermath, and the rare farm accident path. If a save name only says "test" or "ending", it will stop being useful after two attempts. Name saves by the scene and the tone you are testing.',
+        ],
+        bullets: [
+          'Early setup save: before farm chores and first tone-setting choices.',
+          'Farm-state save: before animal or chicken interactions.',
+          'Escape save: before path, water, road, or bridge decisions.',
+          'Silas warmth save: before the gentler affection chain begins.',
+          'Late dream save: before the final sequence that branches several outcomes.',
+        ],
+      },
+      {
+        heading: 'Farm and chicken saves matter early',
+        paragraphs: [
+          'The farm scenes can look like pacing, but they are exactly where repeated ending hunters need clean saves. Ending 20 appears to be tied to the chicken or farm accident branch, so saving after the outcome is already decided can trap you in a loop that never changes.',
+          'Keep one save before the first farm task and another before the chicken interaction itself. If the same result repeats many times, move one save earlier. Do not change late romance answers while testing a farm trigger, because that mixes two different problems and makes the result harder to read.',
+        ],
+        bullets: [
+          'Save before the farm task starts, then keep a separate save after finishing it.',
+          'For Ending 20 attempts, reload from before the chicken interaction, not after the scene resolves.',
+          'If ten attempts repeat the same route, move earlier instead of rewriting the final dream choices.',
+        ],
+      },
+      {
+        heading: 'Path, water, and road choices split escape outcomes',
+        paragraphs: [
+          'Several endings are easiest to understand as movement or escape outcomes. When the story asks you to go toward a road, water, bridge, or isolated path, treat that as a hard checkpoint. These scenes can produce fast bad endings, but they can also tell you which route family you have not cleaned up.',
+          'Do not overwrite an escape save with an affection-route save. Escape testing is about distance, hesitation, and survival logic. Silas testing is about trust, fear, and reassurance. Mixing them often creates a route that reaches one known ending and teaches you nothing new.',
+        ],
+      },
+      {
+        heading: 'Puzzle-like moments need before-and-after saves',
+        paragraphs: [
+          'The False Sun is a visual novel, but players still search for puzzle help because some scenes behave like puzzle states: farm chores, navigation, accident triggers, and repeated route checks. The cleanest habit is a before-and-after pair.',
+          'Before the scene, save with a name like "before chicken" or "before road". After the result, save in another slot only if the outcome is useful. If the outcome is wrong, do not keep building on it. Return to the before save and test one change at a time.',
+        ],
+        bullets: [
+          'Use "before" saves for testing.',
+          'Use "after" saves only when the branch is worth preserving.',
+          'Never overwrite your only clean save after a new ending unlocks.',
+          'Write down the one changed choice, especially when testing late Silas outcomes.',
+        ],
+      },
+      {
+        heading: 'Silas saves should be cleaner than the route feels',
+        paragraphs: [
+          'Silas outcomes can feel emotionally messy, but your save structure should be boring and clear. Keep one fear route, one confrontation route, one escape route, and one warm route. The warm route is especially fragile because several small reassurances can matter before the ending appears.',
+          'If you are aiming for calmer Silas branches such as a separation-style ending, start from a clean warm save instead of trying to repair a fear route at the last choice. Late kindness usually cannot undo a route that spent the earlier scenes escalating distance or panic.',
+        ],
+      },
+      {
+        heading: 'Browser saves versus downloaded builds',
+        paragraphs: [
+          'If you are playing online, make sure the browser is not clearing site data between sessions. If saves vanish, switch to the official downloadable build from itch.io before doing serious ending cleanup. A full all-endings run is too much work to risk on a temporary browser state.',
+          'Use browser play for quick route checks or first impressions. Use the official Windows, macOS, Linux, or Android build when you want reliable local saves and repeated testing.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: 'Where should I save first in The False Sun?',
+        answer:
+          'Save before the first farm task and again before the route starts changing tone around Silas. Those two saves prevent most full restarts.',
+      },
+      {
+        question: 'Is The False Sun puzzle-heavy?',
+        answer:
+          'Not like a traditional puzzle game, but some farm, navigation, and route-state moments behave like puzzles when you are hunting every ending.',
+      },
+      {
+        question: 'Why do I keep getting the same ending?',
+        answer:
+          'Your save may already be locked into that route family. Move to an earlier save and change only one important branch at a time.',
+      },
+      {
+        question: 'Should I use browser play or a download for all endings?',
+        answer:
+          'Use browser play for quick checks, but use the official downloadable build if you are doing a serious all-endings cleanup and care about stable saves.',
+      },
+    ],
+  },
+  {
     slug: 'ending-20',
     path: '/ending-20',
     title: 'The False Sun Ending 20 Guide',
@@ -165,6 +304,7 @@ export const guides: Guide[] = [
     relatedRoutes: [
       '/play-online',
       '/all-endings',
+      '/save-points',
       '/mini-games',
       '/kyle-route',
       '/download',
@@ -263,6 +403,8 @@ export const guides: Guide[] = [
     relatedRoutes: [
       '/play-online',
       '/all-endings',
+      '/save-points',
+      '/he-let-you-go',
       '/ending-20',
       '/kyle-route',
       '/content-warnings',
@@ -329,6 +471,117 @@ export const guides: Guide[] = [
     ],
   },
   {
+    slug: 'he-let-you-go',
+    path: '/he-let-you-go',
+    title: 'The False Sun He Let You Go Guide',
+    seoTitle: 'The False Sun He Let You Go Guide - Silas Route Ending',
+    seoDescription:
+      'Reach The False Sun He Let You Go ending with a clean Silas route plan, save points, affection choices, and warnings about mixed route states.',
+    summary:
+      'A focused Silas ending guide for the calmer separation branch. Use it when the broad Silas route page is too general and you need a cleaner plan for one specific ending.',
+    category: 'Route',
+    difficulty: 'Spoiler Heavy',
+    coverImageUrl: videos.englishAllEndings.thumbnailUrl,
+    publishedAt: checkedAt,
+    updatedAt: checkedAt,
+    sourceStrategy: 'user_intent_youtube',
+    videoSearchQueries: [
+      'The False Sun He Let You Go',
+      'The False Sun Silas ending',
+      'The False Sun all endings Silas',
+    ],
+    sourceNotes:
+      'Built from current English all-endings chapter structure and Silas route demand. The guide avoids copied script and presents a clean route plan.',
+    video: videos.englishAllEndings,
+    tags: ['Silas', 'Ending', 'Affection Route'],
+    relatedRoutes: [
+      '/silas-route',
+      '/all-endings',
+      '/save-points',
+      '/kyle-route',
+      '/content-warnings',
+    ],
+    body: [
+      {
+        heading: 'What this ending is testing',
+        paragraphs: [
+          'He Let You Go reads like a Silas ending built around trust, restraint, and the possibility of separation without the darkest route collapse. That means it should not be tested from a save where the protagonist has already pushed the route into panic, direct escape, or hard confrontation.',
+          'Use this page for one purpose: keep the Silas route warm enough to reach a calmer branch, while still preserving saves that let you return to darker outcomes later. If you only need the full ending list, start with all endings. If you specifically want this Silas outcome, build the run from a clean warm save.',
+        ],
+      },
+      {
+        heading: 'Start from a clean warm Silas save',
+        paragraphs: [
+          'The safest setup is a save before the route begins asking how much emotional distance you want from Silas. From there, keep the tone consistent. Do not alternate between reassurance and panic just to see every scene in one run. Mixed tone is the easiest way to land in a different ending family.',
+          'A clean warm route usually means choosing answers that keep the conversation open, avoiding unnecessary escalation, and letting the story register that the protagonist is not only trying to run or attack. It does not mean ignoring danger. It means testing the branch where Silas can still respond to trust.',
+        ],
+        bullets: [
+          'Save before the first major Silas tone choice.',
+          'Save again before the pier or path scene.',
+          'Save before the tree or memory answer.',
+          'Save before the late dream sequence.',
+          'Keep every save, even after unlocking the ending, so you can branch backward.',
+        ],
+      },
+      {
+        heading: 'Keep the route from splitting into danger endings',
+        paragraphs: [
+          'Danger endings often come from fear, hesitation, route escape, or confrontation. Those branches are useful for the gallery, but they are poor starting points for He Let You Go. If the story is already treating the protagonist as trapped in a panic route, return to an earlier save instead of trying to fix the final answer.',
+          'The best test is boring on purpose: choose a consistent warm tone, avoid aggressive course changes, and only change one answer after you know the route reaches a Silas ending. If one altered answer produces a darker ending, mark that save as a separate branch and reload the clean warm route.',
+        ],
+      },
+      {
+        heading: 'Where this fits in the ending cleanup order',
+        paragraphs: [
+          'Do not hunt this ending before you have stable saves. First, finish one all-endings pass or at least map the major route families. Second, confirm your farm and Ending 20 saves are preserved. Third, use the Silas route page to separate fear, confrontation, escape, and affection branches. Then use this page to refine the warm branch.',
+          'That order matters because Silas endings can look similar when you only remember the final scene. With clean saves, He Let You Go becomes one branch in a route tree instead of a vague hope that the next replay will somehow land differently.',
+        ],
+      },
+      {
+        heading: 'When the ending still does not appear',
+        paragraphs: [
+          'If you keep reaching another Silas ending, do not rewrite every choice at once. Go back to the earliest save where the route tone could have changed and adjust one scene. If you are still stuck, compare whether you accidentally kept an escape choice, a confrontation choice, or a farm-state result from another test.',
+          'A good troubleshooting pass has three notes: the save you loaded, the one choice you changed, and the ending you reached. After three attempts, patterns become visible. Without notes, every run feels different even when the same hidden state is repeating.',
+        ],
+        bullets: [
+          'Same dark ending again: move earlier and soften the first tone-setting choice.',
+          'Same escape ending again: separate path and road choices from the warm Silas save.',
+          'No new gallery slot: confirm you did not overwrite the clean pre-route save.',
+          'Different late outcome: keep that save and branch from it later instead of deleting it.',
+        ],
+      },
+      {
+        heading: 'Where to go after this ending',
+        paragraphs: [
+          'After unlocking He Let You Go, move back to the broader all-endings tracker. The next useful checks are the darker Silas confrontation endings, the Kyle or farm aftermath route, and Ending 20 if your gallery is still missing the rare accident branch.',
+          'Keep this ending save as a warm Silas baseline. It is one of the best starting points for testing nearby relationship outcomes without rebuilding the whole visual novel.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: 'Is He Let You Go a Silas ending?',
+        answer:
+          'Yes, it is best treated as a Silas route ending focused on a calmer separation-style outcome rather than a farm accident or Kyle aftermath branch.',
+      },
+      {
+        question: 'Can I reach it from a fear route save?',
+        answer:
+          'That is unlikely to be efficient. Start from an earlier warm Silas save so the route tone stays consistent before the late branch.',
+      },
+      {
+        question: 'Why do I keep getting darker Silas endings?',
+        answer:
+          'Your route probably split earlier through fear, escape, or confrontation choices. Move to an earlier save and change one branch at a time.',
+      },
+      {
+        question: 'Should I read the all endings page first?',
+        answer:
+          'Yes if you are missing many slots. Use this page when you already know you are cleaning up a Silas-specific ending.',
+      },
+    ],
+  },
+  {
     slug: 'kyle-route',
     path: '/kyle-route',
     title: 'The False Sun Kyle Route Guide',
@@ -356,6 +609,7 @@ export const guides: Guide[] = [
     relatedRoutes: [
       '/play-online',
       '/all-endings',
+      '/save-points',
       '/ending-20',
       '/mini-games',
       '/silas-route',
@@ -440,6 +694,7 @@ export const guides: Guide[] = [
     relatedRoutes: [
       '/play-online',
       '/ending-20',
+      '/save-points',
       '/all-endings',
       '/download',
       '/content-warnings',

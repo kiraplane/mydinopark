@@ -15,8 +15,10 @@ export enum Routes {
   // The False Sun walkthrough routes
   Play = '/play-online',
   AllEndings = '/all-endings',
+  SavePoints = '/save-points',
   Ending20 = '/ending-20',
   SilasRoute = '/silas-route',
+  HeLetYouGo = '/he-let-you-go',
   KyleRoute = '/kyle-route',
   MiniGames = '/mini-games',
   ContentWarnings = '/content-warnings',

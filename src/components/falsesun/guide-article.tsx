@@ -21,8 +21,10 @@ import Image from 'next/image';
 const relatedRouteLabels: Record<string, string> = {
   '/play-online': 'Play Online',
   '/all-endings': 'All Endings',
+  '/save-points': 'Save Points',
   '/ending-20': 'Ending 20',
   '/silas-route': 'Silas Route',
+  '/he-let-you-go': 'He Let You Go',
   '/kyle-route': 'Kyle Route',
   '/mini-games': 'Mini-Games',
   '/download': 'Download',

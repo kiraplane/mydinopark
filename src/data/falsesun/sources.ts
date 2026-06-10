@@ -72,6 +72,22 @@ export const sources: DataSource[] = [
     note: 'Recent players asked about Ending 20, all endings, mini-game skipping, iOS support, and language availability.',
   },
   {
+    type: 'youtube',
+    label: 'Hello Yinny English all endings video',
+    url: 'https://www.youtube.com/watch?v=AoA1yeeLoKQ',
+    checkedAt,
+    confidence: 'medium',
+    note: 'Recent English all-endings video with chaptered ending names; used as a route cross-check, not as transcript material.',
+  },
+  {
+    type: 'youtube',
+    label: 'ritsu all endings part 1',
+    url: 'https://www.youtube.com/watch?v=phQ-IF0zPGg',
+    checkedAt,
+    confidence: 'medium',
+    note: 'Russian all-endings walkthrough part 1 used only for community cross-checking route families.',
+  },
+  {
     type: 'transcript',
     label: 'PVpgRF8nC1M all endings transcript',
     url: 'https://sozai.app/transcript/he-just-wanted-love-finale-endings/',
@@ -144,6 +160,30 @@ export const keywordMatrix: KeywordMatrixItem[] = [
     notes: 'Homepage and guide index should answer this query quickly.',
   },
   {
+    keyword: 'the false sun puzzle',
+    intent:
+      'Find route-state and puzzle-like scene help without replaying from the start.',
+    route: '/save-points',
+    priority: 'P1',
+    status: 'keep',
+    evidence:
+      'GSC 7D showed puzzle impressions alongside walkthrough and guide queries.',
+    notes:
+      'Use a save-points page instead of pretending the game has a traditional puzzle database.',
+  },
+  {
+    keyword: 'the false sun save points',
+    intent:
+      'Plan saves before farm tasks, road/water choices, and late Silas branches.',
+    route: '/save-points',
+    priority: 'P1',
+    status: 'keep',
+    evidence:
+      'Derived from GSC walkthrough/puzzle behavior and all-endings cleanup needs.',
+    notes:
+      'Supports the all-endings page without changing its title or description.',
+  },
+  {
     keyword: 'play the false sun online',
     intent: 'Launch the browser version before reading route spoilers.',
     route: '/play-online',
@@ -161,6 +201,29 @@ export const keywordMatrix: KeywordMatrixItem[] = [
     status: 'keep',
     evidence: 'Community reactions and videos focus heavily on Silas outcomes.',
     notes: 'Spoiler-marked route guide, not a character wiki page.',
+  },
+  {
+    keyword: 'the false sun he let you go',
+    intent: 'Reach a specific calmer Silas ending branch.',
+    route: '/he-let-you-go',
+    priority: 'P1',
+    status: 'keep',
+    evidence:
+      'Current English all-endings video chapters include the ending name, and GSC shows Silas/endings demand.',
+    notes:
+      'Dedicated route page is safer than changing the existing Silas route title.',
+  },
+  {
+    keyword: 'the false sun silas ending',
+    intent:
+      'Find specific Silas ending outcomes instead of the broad route hub.',
+    route: '/he-let-you-go',
+    priority: 'P1',
+    status: 'keep',
+    evidence:
+      'GSC 7D showed 264 impressions for "the false sun silas" and related ending queries.',
+    notes:
+      'Use the broad Silas route for route families and this page for one named ending branch.',
   },
   {
     keyword: 'the false sun kyle route',
