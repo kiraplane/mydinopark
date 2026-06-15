@@ -1,9 +1,17 @@
 import type { GuideFaq } from '@/data/falsesun/types';
 
-export function FaqSection({ items }: { items: GuideFaq[] }) {
+export function FaqSection({
+  items,
+  title = 'FAQ',
+}: {
+  items: GuideFaq[];
+  title?: string;
+}) {
   return (
     <section className="space-y-4">
-      <h2 className="font-display text-2xl font-bold text-[#F7E8C9]">FAQ</h2>
+      <h2 className="font-display text-2xl font-bold text-[#F7E8C9]">
+        {title}
+      </h2>
       <div className="grid gap-3">
         {items.map((item) => (
           <details

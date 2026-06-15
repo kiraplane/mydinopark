@@ -3,7 +3,11 @@ import { FaqSection } from '@/components/falsesun/faq-section';
 import Container from '@/components/layout/container';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { guides } from '@/data/falsesun/guides';
+import {
+  getGuideArticleUi,
+  getGuidesIndexContent,
+  getLocalizedGuides,
+} from '@/data/falsesun/localized';
 import { LocaleLink } from '@/i18n/navigation';
 import { constructMetadata } from '@/lib/metadata';
 import type { Metadata } from 'next';
@@ -16,30 +20,37 @@ export async function generateMetadata({
   params: Promise<{ locale: Locale }>;
 }): Promise<Metadata> {
   const { locale } = await params;
+  const content = getGuidesIndexContent(locale);
+  const guides = getLocalizedGuides(locale);
+
   return constructMetadata({
-    title: 'The False Sun Guides - All Endings, Routes and Download',
-    description:
-      'Browse The False Sun guides for all endings, Ending 20, Silas route, Kyle route, mini-games, safe downloads, and content warnings.',
+    title: content.title,
+    description: content.intro,
     locale,
     pathname: '/guides',
     image: guides[0]?.coverImageUrl,
   });
 }
 
-export default function GuidesPage() {
+export default async function GuidesPage({
+  params,
+}: {
+  params: Promise<{ locale: Locale }>;
+}) {
+  const { locale } = await params;
+  const content = getGuidesIndexContent(locale);
+  const guideUi = getGuideArticleUi(locale);
+  const guides = getLocalizedGuides(locale);
+
   return (
     <div className="bg-[#0A0F0C] py-12 text-[#F7E8C9]">
       <Container className="space-y-8 px-4">
         <header className="max-w-3xl space-y-4">
-          <Badge className="bg-[#D9B56A] text-[#15110B]">Guides</Badge>
+          <Badge className="bg-[#D9B56A] text-[#15110B]">{content.badge}</Badge>
           <h1 className="font-display text-4xl font-black md:text-6xl">
-            The False Sun Guides
+            {content.title}
           </h1>
-          <p className="text-lg leading-8 text-[#C7BAA7]">
-            Route-first walkthrough pages for ending cleanup, Silas and Kyle
-            branches, farm mini-games, official downloads, and mature-content
-            warnings.
-          </p>
+          <p className="text-lg leading-8 text-[#C7BAA7]">{content.intro}</p>
         </header>
 
         <AdsterraAdFrame
@@ -64,7 +75,7 @@ export default function GuidesPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0A0F0C]/80 to-transparent" />
                 <Badge className="absolute top-4 left-4 bg-[#D9B56A] text-[#15110B]">
-                  {guide.category}
+                  {guideUi.categoryLabels[guide.category]}
                 </Badge>
               </div>
               <div className="p-5">
@@ -73,7 +84,7 @@ export default function GuidesPage() {
                     variant="outline"
                     className="border-[#D9B56A]/50 text-[#F7E8C9]"
                   >
-                    {guide.difficulty}
+                    {guideUi.difficultyLabels[guide.difficulty]}
                   </Badge>
                   {guide.tags.slice(0, 2).map((tag) => (
                     <Badge
@@ -95,32 +106,14 @@ export default function GuidesPage() {
                   asChild
                   className="mt-5 bg-[#D9B56A] text-[#15110B] hover:bg-[#E7C77C]"
                 >
-                  <LocaleLink href={guide.path}>Read guide</LocaleLink>
+                  <LocaleLink href={guide.path}>{content.readGuide}</LocaleLink>
                 </Button>
               </div>
             </article>
           ))}
         </div>
 
-        <FaqSection
-          items={[
-            {
-              question: 'Which The False Sun guide should I read first?',
-              answer:
-                'Start with the all endings guide. If you only miss one gallery slot, use Ending 20, Silas route, or Kyle route based on the missing branch.',
-            },
-            {
-              question: 'Are these pages a traditional wiki?',
-              answer:
-                'No. The False Sun is better served by route walkthroughs and ending cleanup pages than by empty database pages.',
-            },
-            {
-              question: 'Do the guides copy YouTube transcripts?',
-              answer:
-                'No. Videos are used as cross-check sources, while articles are written as practical route logic and save-point advice.',
-            },
-          ]}
-        />
+        <FaqSection items={content.faq} title={guideUi.faqTitle} />
       </Container>
     </div>
   );

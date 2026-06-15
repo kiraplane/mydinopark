@@ -1,18 +1,22 @@
 import { GuideArticle } from '@/components/falsesun/guide-article';
-import { getGuide } from '@/data/falsesun/guides';
+import { getLocalizedGuide } from '@/data/falsesun/localized';
 import { constructMetadata } from '@/lib/metadata';
 import type { Metadata } from 'next';
 import type { Locale } from 'next-intl';
 import { notFound } from 'next/navigation';
 
-export function renderGuidePage(slug: string, pathname: string) {
-  const guide = getGuide(slug);
+export function renderGuidePage(
+  slug: string,
+  pathname: string,
+  locale?: Locale
+) {
+  const guide = getLocalizedGuide(slug, locale);
 
   if (!guide) {
     notFound();
   }
 
-  return <GuideArticle guide={guide} pathname={pathname} />;
+  return <GuideArticle guide={guide} locale={locale} pathname={pathname} />;
 }
 
 export function buildGuideMetadata(
@@ -20,7 +24,7 @@ export function buildGuideMetadata(
   locale: Locale,
   pathname: string
 ): Metadata {
-  const guide = getGuide(slug);
+  const guide = getLocalizedGuide(slug, locale);
 
   if (!guide) {
     return {};

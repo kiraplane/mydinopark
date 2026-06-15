@@ -7,7 +7,12 @@ import Container from '@/components/layout/container';
 import { JsonLd } from '@/components/seo/json-ld';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { contentWarnings, siteFacts } from '@/data/falsesun/sources';
+import {
+  getGuideArticleUi,
+  getHomeContent,
+  getLocalizedContentWarnings,
+} from '@/data/falsesun/localized';
+import { siteFacts } from '@/data/falsesun/sources';
 import type { Guide } from '@/data/falsesun/types';
 import { LocaleLink } from '@/i18n/navigation';
 import {
@@ -16,23 +21,8 @@ import {
   ExternalLink,
   ShieldCheck,
 } from 'lucide-react';
+import type { Locale } from 'next-intl';
 import Image from 'next/image';
-
-const relatedRouteLabels: Record<string, string> = {
-  '/play-online': 'Play Online',
-  '/all-endings': 'All Endings',
-  '/save-points': 'Save Points',
-  '/ending-20': 'Ending 20',
-  '/silas-route': 'Silas Route',
-  '/he-let-you-go': 'He Let You Go',
-  '/kyle-route': 'Kyle Route',
-  '/mini-games': 'Mini-Games',
-  '/download': 'Download',
-  '/itch-io': 'itch.io Page',
-  '/content-warnings': 'Content Warnings',
-  '/guides': 'All Guides',
-  '/disclaimer': 'Disclaimer',
-};
 
 function toSectionId(heading: string) {
   return heading
@@ -41,9 +31,12 @@ function toSectionId(heading: string) {
     .replace(/^-|-$/g, '');
 }
 
-function getRelatedRouteLabel(route: string) {
+function getRelatedRouteLabel(
+  route: string,
+  routeLabels: Record<string, string>
+) {
   return (
-    relatedRouteLabels[route] ??
+    routeLabels[route] ??
     route
       .replace(/^\/+/, '')
       .split('/')
@@ -60,11 +53,19 @@ function getRelatedRouteLabel(route: string) {
 
 export function GuideArticle({
   guide,
+  locale,
   pathname,
 }: {
   guide: Guide;
+  locale?: Locale;
   pathname: string;
 }) {
+  const ui = getGuideArticleUi(locale);
+  const contentWarnings = getLocalizedContentWarnings(locale);
+  const routeLabels = {
+    ...getHomeContent(locale).routeLabels,
+    '/disclaimer': 'Disclaimer',
+  };
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -100,13 +101,13 @@ export function GuideArticle({
             <div className="absolute inset-x-0 bottom-0 p-5 md:p-8">
               <div className="flex flex-wrap gap-2">
                 <Badge className="bg-[#D9B56A] text-[#15110B]">
-                  {guide.category}
+                  {ui.categoryLabels[guide.category]}
                 </Badge>
                 <Badge
                   variant="outline"
                   className="border-[#E7C77C]/60 bg-[#0A0F0C]/60 text-[#F7E8C9]"
                 >
-                  {guide.difficulty}
+                  {ui.difficultyLabels[guide.difficulty]}
                 </Badge>
                 {guide.tags.map((tag) => (
                   <Badge
@@ -133,12 +134,10 @@ export function GuideArticle({
                 <AlertTriangle className="mt-1 size-5 shrink-0 text-[#E7C77C]" />
                 <div>
                   <h2 className="font-display text-xl font-bold">
-                    Spoiler and mature-content note
+                    {ui.spoilerTitle}
                   </h2>
                   <p className="mt-2 text-sm leading-7 text-[#D5C5AF]">
-                    The False Sun is intended for mature audiences. Route pages
-                    include story spoilers and may discuss violent or disturbing
-                    outcomes without explicit adult scene detail.
+                    {ui.spoilerBody}
                   </p>
                 </div>
               </div>
@@ -147,11 +146,10 @@ export function GuideArticle({
             <section className="mb-8 grid gap-4 rounded-lg border border-[#493A34] bg-[#0D1310] p-4 md:grid-cols-[1fr_1fr]">
               <div>
                 <h2 className="font-display text-xl font-bold">
-                  Where to start on this page
+                  {ui.startTitle}
                 </h2>
                 <p className="mt-2 text-sm leading-7 text-[#C7BAA7]">
-                  Pick the branch or platform problem you are solving, then use
-                  the related pages instead of replaying unrelated routes.
+                  {ui.startBody}
                 </p>
                 <div className="mt-4 flex flex-wrap gap-2">
                   {guide.relatedRoutes.slice(0, 4).map((route) => (
@@ -163,7 +161,7 @@ export function GuideArticle({
                       className="border-[#493A34] bg-[#111612] text-[#F7E8C9] hover:bg-[#182019]"
                     >
                       <LocaleLink href={route}>
-                        {getRelatedRouteLabel(route)}
+                        {getRelatedRouteLabel(route, routeLabels)}
                       </LocaleLink>
                     </Button>
                   ))}
@@ -171,7 +169,7 @@ export function GuideArticle({
               </div>
               <div>
                 <h2 className="font-display text-xl font-bold">
-                  Page sections
+                  {ui.sectionsTitle}
                 </h2>
                 <div className="mt-3 grid gap-2">
                   {guide.body.slice(0, 5).map((section) => (
@@ -197,7 +195,7 @@ export function GuideArticle({
                   allowFullScreen
                 />
                 <div className="bg-[#141916] px-4 py-3 text-sm leading-6 text-[#C7BAA7]">
-                  Video cross-check:{' '}
+                  {ui.videoPrefix}{' '}
                   <a
                     href={guide.video.url}
                     target="_blank"
@@ -206,8 +204,7 @@ export function GuideArticle({
                   >
                     {guide.video.title}
                   </a>{' '}
-                  by {guide.video.channel}. The article is hand-written and not
-                  a transcript rewrite.
+                  {guide.video.channel}. {ui.videoSuffix}
                 </div>
               </section>
             ) : null}
@@ -249,22 +246,19 @@ export function GuideArticle({
                 <ShieldCheck className="mt-1 size-5 shrink-0 text-[#6EA69A]" />
                 <div>
                   <h2 className="font-display text-xl font-bold">
-                    Official page and safe downloads
+                    {ui.officialTitle}
                   </h2>
                   <p className="mt-2 text-sm leading-7 text-[#C7BAA7]">
-                    Use the creator&apos;s itch.io page for game files, platform
-                    availability, and updates. This fan guide does not host game
-                    builds, modified clients, or APK mirrors.
+                    {ui.officialBody}
                   </p>
                   <p className="mt-2 text-sm leading-7 text-[#C7BAA7]">
-                    Official creator page:{' '}
                     <a
                       href={siteFacts.officialItchUrl}
                       target="_blank"
                       rel="noreferrer"
                       className="inline-flex items-center gap-1 text-[#E7C77C] underline underline-offset-4"
                     >
-                      Oniray on itch.io
+                      {ui.officialLinkLabel}
                       <ExternalLink className="size-3" />
                     </a>
                   </p>
@@ -273,14 +267,16 @@ export function GuideArticle({
             </section>
 
             <div className="mt-10">
-              <FaqSection items={guide.faq} />
+              <FaqSection items={guide.faq} title={ui.faqTitle} />
             </div>
           </div>
         </article>
 
         <aside className="space-y-4 lg:sticky lg:top-24 lg:h-fit">
           <div className="rounded-lg border border-[#493A34] bg-[#111612] p-5">
-            <h2 className="font-display text-xl font-bold">Related pages</h2>
+            <h2 className="font-display text-xl font-bold">
+              {ui.relatedTitle}
+            </h2>
             <div className="mt-4 grid gap-2">
               {guide.relatedRoutes.map((route) => (
                 <Button
@@ -290,7 +286,7 @@ export function GuideArticle({
                   className="h-auto justify-between border-[#493A34] bg-[#0A0F0C] py-3 text-left text-[#F7E8C9] hover:bg-[#182019]"
                 >
                   <LocaleLink href={route}>
-                    {getRelatedRouteLabel(route)}
+                    {getRelatedRouteLabel(route, routeLabels)}
                     <ArrowRight className="size-4" />
                   </LocaleLink>
                 </Button>
@@ -300,7 +296,7 @@ export function GuideArticle({
 
           <div className="rounded-lg border border-[#493A34] bg-[#111612] p-5">
             <h2 className="font-display text-xl font-bold">
-              Official warnings
+              {ui.warningsTitle}
             </h2>
             <ul className="mt-4 grid gap-2 text-sm text-[#C7BAA7]">
               {contentWarnings.slice(0, 5).map((warning) => (
@@ -315,7 +311,9 @@ export function GuideArticle({
               variant="outline"
               className="mt-5 w-full border-[#493A34] bg-[#0A0F0C]"
             >
-              <LocaleLink href="/content-warnings">Read warnings</LocaleLink>
+              <LocaleLink href="/content-warnings">
+                {ui.readWarnings}
+              </LocaleLink>
             </Button>
           </div>
         </aside>

@@ -11,6 +11,11 @@ export async function generateMetadata({
   return buildGuideMetadata('itch-io', locale, '/itch-io');
 }
 
-export default function ItchIoPage() {
-  return renderGuidePage('itch-io', '/itch-io');
+export default async function ItchIoPage({
+  params,
+}: {
+  params: Promise<{ locale: Locale }>;
+}) {
+  const { locale } = await params;
+  return renderGuidePage('itch-io', '/itch-io', locale);
 }

@@ -11,6 +11,11 @@ export async function generateMetadata({
   return buildGuideMetadata('silas-route', locale, '/silas-route');
 }
 
-export default function SilasRoutePage() {
-  return renderGuidePage('silas-route', '/silas-route');
+export default async function SilasRoutePage({
+  params,
+}: {
+  params: Promise<{ locale: Locale }>;
+}) {
+  const { locale } = await params;
+  return renderGuidePage('silas-route', '/silas-route', locale);
 }

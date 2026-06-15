@@ -11,6 +11,11 @@ export async function generateMetadata({
   return buildGuideMetadata('content-warnings', locale, '/content-warnings');
 }
 
-export default function ContentWarningsPage() {
-  return renderGuidePage('content-warnings', '/content-warnings');
+export default async function ContentWarningsPage({
+  params,
+}: {
+  params: Promise<{ locale: Locale }>;
+}) {
+  const { locale } = await params;
+  return renderGuidePage('content-warnings', '/content-warnings', locale);
 }

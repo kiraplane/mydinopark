@@ -11,6 +11,11 @@ export async function generateMetadata({
   return buildGuideMetadata('ending-20', locale, '/ending-20');
 }
 
-export default function Ending20Page() {
-  return renderGuidePage('ending-20', '/ending-20');
+export default async function Ending20Page({
+  params,
+}: {
+  params: Promise<{ locale: Locale }>;
+}) {
+  const { locale } = await params;
+  return renderGuidePage('ending-20', '/ending-20', locale);
 }

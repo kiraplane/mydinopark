@@ -6,14 +6,14 @@ import Container from '@/components/layout/container';
 import { JsonLd } from '@/components/seo/json-ld';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { endingChecklist } from '@/data/falsesun/endings';
-import { featuredGuides, siteDescription } from '@/data/falsesun/guides';
 import {
-  contentWarnings,
-  gameFacts,
-  keywordMatrix,
-  siteFacts,
-} from '@/data/falsesun/sources';
+  getHomeContent,
+  getLocalizedContentWarnings,
+  getLocalizedFeaturedGuides,
+  getLocalizedGameFacts,
+  getLocalizedSiteDescription,
+} from '@/data/falsesun/localized';
+import { siteFacts } from '@/data/falsesun/sources';
 import { LocaleLink } from '@/i18n/navigation';
 import {
   ArrowRight,
@@ -26,92 +26,64 @@ import {
   ShieldAlert,
   Sparkles,
 } from 'lucide-react';
+import type { Locale } from 'next-intl';
 import Image from 'next/image';
 
-const primaryLinks = [
-  {
-    title: 'Play Online',
-    body: 'Start the game before opening spoilers.',
-    href: '/play-online',
-    icon: Gamepad2,
-  },
-  {
-    title: 'All Endings',
-    body: 'Track all 20 route slots with save points and confidence notes.',
-    href: '/all-endings',
-    icon: ListChecks,
-  },
-  {
-    title: 'Ending 20',
-    body: 'The rare chicken accident branch and retry loop.',
-    href: '/ending-20',
-    icon: Sparkles,
-  },
-  {
-    title: 'Silas Route',
-    body: 'Fear, confrontation, escape, and affection-chain branches.',
-    href: '/silas-route',
-    icon: HeartPulse,
-  },
-  {
-    title: 'Mini-Games',
-    body: 'Farm task saves, chicken retries, and safe no-mod advice.',
-    href: '/mini-games',
-    icon: Film,
-  },
-];
-
-const secondaryLinks = [
-  {
-    title: 'Kyle Route',
-    href: '/kyle-route',
-    body: 'Farm aftermath and promise-to-return route notes.',
-    icon: BookOpen,
-  },
-  {
-    title: 'Download',
-    href: '/download',
-    body: 'Official itch.io, Android, Mac, Windows, and Linux guidance.',
-    icon: Download,
-  },
-  {
-    title: 'itch.io Page',
-    href: '/itch-io',
-    body: 'Official Oniray page, included files, comments, and safe access notes.',
-    icon: Download,
-  },
-  {
-    title: 'Content Warnings',
-    href: '/content-warnings',
-    body: 'Spoiler-light mature-audience and safety notes.',
-    icon: ShieldAlert,
-  },
-];
-
-const routeLabels: Record<string, string> = {
-  '/': 'Game overview',
-  '/all-endings': 'All endings walkthrough',
-  '/save-points': 'Save points guide',
-  '/ending-20': 'Ending 20 route',
-  '/guides': 'Guide index',
-  '/play-online': 'Play online',
-  '/silas-route': 'Silas route',
-  '/he-let-you-go': 'He Let You Go ending',
-  '/kyle-route': 'Kyle route',
-  '/mini-games': 'Mini-games',
-  '/download': 'Download guide',
-  '/itch-io': 'Official itch.io page',
-  '/content-warnings': 'Content warnings',
-};
-
-export function FalseSunHomePage() {
-  const coreRouteItems = keywordMatrix
-    .filter((item) => item.status === 'keep')
-    .filter(
-      (item, index, items) =>
-        items.findIndex((candidate) => candidate.route === item.route) === index
-    )
-    .slice(0, 6);
+export function FalseSunHomePage({ locale }: { locale?: Locale }) {
+  const content = getHomeContent(locale);
+  const primaryLinks = [
+    {
+      ...content.primaryLinks.play,
+      href: '/play-online',
+      icon: Gamepad2,
+    },
+    {
+      ...content.primaryLinks.allEndings,
+      href: '/all-endings',
+      icon: ListChecks,
+    },
+    {
+      ...content.primaryLinks.ending20,
+      href: '/ending-20',
+      icon: Sparkles,
+    },
+    {
+      ...content.primaryLinks.silas,
+      href: '/silas-route',
+      icon: HeartPulse,
+    },
+    {
+      ...content.primaryLinks.miniGames,
+      href: '/mini-games',
+      icon: Film,
+    },
+  ];
+  const secondaryLinks = [
+    {
+      ...content.secondaryLinks.kyle,
+      href: '/kyle-route',
+      icon: BookOpen,
+    },
+    {
+      ...content.secondaryLinks.download,
+      href: '/download',
+      icon: Download,
+    },
+    {
+      ...content.secondaryLinks.itchIo,
+      href: '/itch-io',
+      icon: Download,
+    },
+    {
+      ...content.secondaryLinks.warnings,
+      href: '/content-warnings',
+      icon: ShieldAlert,
+    },
+  ];
+  const contentWarnings = getLocalizedContentWarnings(locale);
+  const featuredGuides = getLocalizedFeaturedGuides(locale);
+  const gameFacts = getLocalizedGameFacts(locale);
+  const siteDescription = getLocalizedSiteDescription(locale);
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -148,15 +120,13 @@ export function FalseSunHomePage() {
         <Container className="relative px-4 py-14 md:py-20 lg:min-h-[560px] lg:py-24">
           <div className="max-w-3xl space-y-6">
             <Badge className="bg-[#D9B56A] text-[#15110B]">
-              Unofficial walkthrough guide
+              {content.badge}
             </Badge>
             <h1 className="font-display text-4xl font-black leading-tight sm:text-5xl md:text-7xl">
-              The False Sun Walkthrough & All Endings Guide
+              {content.title}
             </h1>
             <p className="max-w-2xl text-lg leading-8 text-[#E1D2B9] md:text-xl">
-              A lightweight guide hub for all 20 endings, Ending 20, Silas and
-              Kyle route cleanup, play online, farm mini-games, safe downloads,
-              and spoiler-marked mature-content notes.
+              {content.intro}
             </p>
             <div className="flex flex-wrap gap-3">
               <Button
@@ -164,7 +134,7 @@ export function FalseSunHomePage() {
                 className="bg-[#D9B56A] text-[#15110B] hover:bg-[#E7C77C]"
               >
                 <LocaleLink href="/all-endings">
-                  Open all endings
+                  {content.primaryCta}
                   <ArrowRight className="size-4" />
                 </LocaleLink>
               </Button>
@@ -173,7 +143,7 @@ export function FalseSunHomePage() {
                 variant="outline"
                 className="border-[#E7C77C] bg-[#0A0F0C]/50 text-[#F7E8C9] hover:bg-[#1B231D]"
               >
-                <LocaleLink href="/ending-20">Solve Ending 20</LocaleLink>
+                <LocaleLink href="/ending-20">{content.ending20Cta}</LocaleLink>
               </Button>
               <Button
                 asChild
@@ -182,7 +152,7 @@ export function FalseSunHomePage() {
               >
                 <LocaleLink href="/play-online">
                   <Gamepad2 className="size-4" />
-                  Play online
+                  {content.playCta}
                 </LocaleLink>
               </Button>
               <Button
@@ -192,13 +162,12 @@ export function FalseSunHomePage() {
               >
                 <LocaleLink href="/itch-io">
                   <Download className="size-4" />
-                  Official itch.io
+                  {content.itchCta}
                 </LocaleLink>
               </Button>
             </div>
             <p className="text-sm leading-6 text-[#C7BAA7]">
-              This fan site covers Oniray&apos;s visual novel, not unrelated
-              book, comic, or Risk of Rain search results using similar words.
+              {content.scopeNote}
             </p>
           </div>
 
@@ -228,16 +197,13 @@ export function FalseSunHomePage() {
         <Container className="grid gap-6 px-4 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
             <p className="font-semibold uppercase tracking-[0.18em] text-[#D9B56A]">
-              Site shape
+              {content.siteShapeEyebrow}
             </p>
             <h2 className="mt-2 font-display text-3xl font-black">
-              This is a walkthrough site, not a database wiki
+              {content.siteShapeTitle}
             </h2>
             <p className="mt-4 text-sm leading-7 text-[#C7BAA7]">
-              The False Sun does not need codes, tier lists, hero databases, or
-              empty character pages. The highest-value pages are route
-              decisions, ending cleanup, platform questions, and content
-              warnings.
+              {content.siteShapeBody}
             </p>
           </div>
           <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-4">
@@ -264,22 +230,20 @@ export function FalseSunHomePage() {
         <Container className="space-y-6 px-4">
           <div className="max-w-3xl">
             <p className="font-semibold uppercase tracking-[0.18em] text-[#D9B56A]">
-              Ending tracker
+              {content.endingEyebrow}
             </p>
             <h2 className="mt-2 font-display text-3xl font-black">
-              Start with clusters, then clean up exact gallery slots
+              {content.endingTitle}
             </h2>
             <p className="mt-3 text-sm leading-7 text-[#C7BAA7]">
-              Current tracker labels are route notes rather than official ending
-              names. That keeps the guide useful while the community is still
-              verifying exact English gallery labels.
+              {content.endingBody}
             </p>
           </div>
           <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-4">
-            {endingChecklist.slice(0, 8).map((ending) => (
+            {content.coreRouteItems.slice(0, 6).map((item) => (
               <LocaleLink
-                key={ending.number}
-                href={ending.pageHref ?? '/all-endings'}
+                key={item.keyword}
+                href={item.route}
                 className="rounded-lg border border-[#493A34] bg-[#111612] p-4 transition hover:border-[#D9B56A]"
               >
                 <div className="flex items-center justify-between gap-3">
@@ -287,17 +251,17 @@ export function FalseSunHomePage() {
                     variant="outline"
                     className="border-[#D9B56A]/60 text-[#F7E8C9]"
                   >
-                    #{ending.number}
+                    {item.priority}
                   </Badge>
                   <span className="text-xs uppercase tracking-[0.14em] text-[#6EA69A]">
-                    {ending.confidence}
+                    {item.keyword}
                   </span>
                 </div>
                 <h3 className="mt-3 font-display text-lg font-bold">
-                  {ending.label}
+                  {item.label}
                 </h3>
                 <p className="mt-2 line-clamp-3 text-sm leading-6 text-[#C7BAA7]">
-                  {ending.routeFocus}
+                  {item.intent}
                 </p>
               </LocaleLink>
             ))}
@@ -316,14 +280,14 @@ export function FalseSunHomePage() {
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div className="max-w-3xl">
               <p className="font-semibold uppercase tracking-[0.18em] text-[#D9B56A]">
-                Core guides
+                {content.coreGuidesEyebrow}
               </p>
               <h2 className="mt-2 font-display text-3xl font-black">
-                Read the page that matches the missing slot
+                {content.coreGuidesTitle}
               </h2>
             </div>
             <Button asChild variant="outline">
-              <LocaleLink href="/guides">All guides</LocaleLink>
+              <LocaleLink href="/guides">{content.allGuidesButton}</LocaleLink>
             </Button>
           </div>
           <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
@@ -363,7 +327,9 @@ export function FalseSunHomePage() {
       <section className="py-12">
         <Container className="grid gap-6 px-4 lg:grid-cols-2">
           <div className="rounded-lg border border-[#493A34] bg-[#111612] p-6">
-            <h2 className="font-display text-2xl font-bold">Current facts</h2>
+            <h2 className="font-display text-2xl font-bold">
+              {content.currentFactsTitle}
+            </h2>
             <div className="mt-5 grid gap-3">
               {gameFacts.map((fact) => (
                 <div
@@ -381,10 +347,10 @@ export function FalseSunHomePage() {
 
           <div className="rounded-lg border border-[#493A34] bg-[#111612] p-6">
             <h2 className="font-display text-2xl font-bold">
-              Find the right walkthrough page
+              {content.findPageTitle}
             </h2>
             <div className="mt-5 grid gap-3">
-              {coreRouteItems.map((item) => (
+              {content.coreRouteItems.map((item) => (
                 <LocaleLink
                   key={item.keyword}
                   href={item.route}
@@ -397,9 +363,7 @@ export function FalseSunHomePage() {
                     >
                       {item.priority}
                     </Badge>
-                    <span className="text-sm font-semibold">
-                      {routeLabels[item.route] ?? item.keyword}
-                    </span>
+                    <span className="text-sm font-semibold">{item.label}</span>
                   </div>
                   <p className="mt-2 text-sm leading-6 text-[#C7BAA7]">
                     {item.intent}
@@ -415,7 +379,7 @@ export function FalseSunHomePage() {
         <Container className="px-4">
           <div className="rounded-lg border border-[#6F3A42] bg-[#201418] p-6">
             <h2 className="font-display text-2xl font-bold">
-              Before you open route spoilers
+              {content.spoilerTitle}
             </h2>
             <div className="mt-4 flex flex-wrap gap-2">
               {contentWarnings.map((warning) => (
@@ -429,10 +393,7 @@ export function FalseSunHomePage() {
               ))}
             </div>
             <p className="mt-4 max-w-3xl text-sm leading-7 text-[#C7BAA7]">
-              This site is unofficial, spoiler-marked, and written for route
-              clarity. It keeps official downloadable builds on itch.io and does
-              not copy scripts, publish explicit adult scene walkthroughs, or
-              recommend unsafe APKs.
+              {content.spoilerBody}
             </p>
           </div>
         </Container>

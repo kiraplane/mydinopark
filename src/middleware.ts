@@ -115,6 +115,22 @@ export default async function middleware(req: NextRequest) {
       ? pathnameWithoutLocale.replace(/\/$/, '')
       : pathnameWithoutLocale;
 
+  const guideSlugRoute = normalizedPathnameWithoutLocale.match(
+    /^\/guides\/([a-z0-9-]+)$/
+  );
+
+  if (guideSlugRoute) {
+    const locale = getLocaleFromPathname(nextUrl.pathname, LOCALES);
+    const target = `/${guideSlugRoute[1]}`;
+    const localizedTarget =
+      locale && locale !== DEFAULT_LOCALE ? `/${locale}${target}` : target;
+
+    return NextResponse.redirect(
+      new URL(`${localizedTarget}${nextUrl.search}`, nextUrl),
+      308
+    );
+  }
+
   const retiredRoute = retiredPublicRouteRedirects.find(({ pattern }) =>
     pattern.test(pathnameWithoutLocale)
   );

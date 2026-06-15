@@ -1,4 +1,9 @@
 import { FalseSunHomePage } from '@/components/falsesun/home-page';
+import {
+  getHomeContent,
+  getLocalizedSiteDescription,
+} from '@/data/falsesun/localized';
+import { siteFacts } from '@/data/falsesun/sources';
 import { constructMetadata } from '@/lib/metadata';
 import type { Metadata } from 'next';
 import type { Locale } from 'next-intl';
@@ -9,18 +14,22 @@ export async function generateMetadata({
   params: Promise<{ locale: Locale }>;
 }): Promise<Metadata | undefined> {
   const { locale } = await params;
+  const content = getHomeContent(locale);
 
   return constructMetadata({
-    title: 'The False Sun - Walkthrough, All Endings & Route Guide',
-    description:
-      'The False Sun guide for all endings, Ending 20, Silas and Kyle routes, play online, mini-games, official itch.io downloads, and content warnings.',
+    title: content.title,
+    description: getLocalizedSiteDescription(locale),
     locale,
-    pathname: '',
-    image:
-      'https://img.itch.zone/aW1nLzI3NTUxNjgxLmpwZw==/original/96%2Fy%2FZ.jpg',
+    pathname: '/',
+    image: siteFacts.officialCoverImage,
   });
 }
 
-export default function HomePage() {
-  return <FalseSunHomePage />;
+export default async function HomePage({
+  params,
+}: {
+  params: Promise<{ locale: Locale }>;
+}) {
+  const { locale } = await params;
+  return <FalseSunHomePage locale={locale} />;
 }

@@ -11,6 +11,11 @@ export async function generateMetadata({
   return buildGuideMetadata('download', locale, '/download');
 }
 
-export default function DownloadPage() {
-  return renderGuidePage('download', '/download');
+export default async function DownloadPage({
+  params,
+}: {
+  params: Promise<{ locale: Locale }>;
+}) {
+  const { locale } = await params;
+  return renderGuidePage('download', '/download', locale);
 }

@@ -60,8 +60,6 @@ export function generateAlternates(href: Href) {
   const hreflangUrls = generateHreflangUrls(href);
 
   return {
-    languages: Object.fromEntries(
-      Object.entries(hreflangUrls).filter(([key]) => key !== 'x-default')
-    ),
+    languages: hreflangUrls,
   };
 }
