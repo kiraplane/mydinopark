@@ -1050,6 +1050,182 @@ export const guides: Guide[] = [
       },
     ],
   },
+  {
+    slug: 'visual-novel-guide',
+    path: '/visual-novel',
+    title: 'The False Sun Visual Novel Guide',
+    seoTitle: 'The False Sun Visual Novel Guide - Routes, Endings and Safety',
+    seoDescription:
+      'Understand The False Sun as a mature visual novel with route choices, Silas and Kyle branches, all endings, save points, and spoiler-safe reading order.',
+    summary:
+      'The False Sun is best approached as a route-and-save visual novel: read for tone first, then use spoiler pages only when a gallery slot is missing.',
+    category: 'Safety',
+    difficulty: 'Beginner',
+    coverImageUrl: localGuideCover('visual-novel-guide'),
+    publishedAt: checkedAt,
+    updatedAt: '2026-06-16',
+    sourceStrategy: 'official',
+    videoSearchQueries: [
+      'the false sun visual novel',
+      'the false sun vn',
+      'the false sun game',
+    ],
+    sourceNotes:
+      'Created for visual novel and VN long-tail demand using official itch.io positioning and existing route coverage.',
+    tags: ['Visual Novel', 'VN', 'Routes'],
+    relatedRoutes: [
+      '/all-endings',
+      '/silas-route',
+      '/kyle-route',
+      '/content-warnings',
+    ],
+    body: [
+      {
+        heading: 'Read it like a route game',
+        paragraphs: [
+          'The False Sun works best when you treat it as a visual novel with route pressure, save points, and mature-content expectations. The first playthrough should focus on tone and choices rather than completing every ending immediately.',
+          'Once you know which route family you are missing, use the ending pages. That keeps the first experience from becoming a checklist too early.',
+        ],
+      },
+      {
+        heading: 'Choose spoiler depth before opening guides',
+        paragraphs: [
+          'The all-endings, Ending 20, Silas, and Kyle pages are intentionally spoiler-heavy. If you only want to know whether the game is for you, start with content warnings and the itch.io page instead.',
+          'If you are already route-cleaning, make named saves before major choices and test one branch family at a time.',
+        ],
+      },
+      {
+        heading: 'Where to go next',
+        paragraphs: [
+          'Use Silas route for relationship branches, Kyle route for farm aftermath, Ending 20 for the rare farm-task failure route, and itch.io download pages for safe platform checks.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: 'Is The False Sun a visual novel?',
+        answer:
+          'Yes. The site covers it as a mature visual novel with route choices, endings, save points, and spoiler-heavy walkthrough pages.',
+      },
+      {
+        question: 'Should I start with the all-endings guide?',
+        answer:
+          'Only if you are comfortable with spoilers. New players should start with the game or content warning page first.',
+      },
+    ],
+  },
+  {
+    slug: 'bakker-reference-guide',
+    path: '/bakker',
+    title: 'The False Sun Bakker Search Guide',
+    seoTitle: 'The False Sun Bakker - Search Intent and Game Match Guide',
+    seoDescription:
+      'Use this The False Sun Bakker search guide to avoid confusing the visual novel with unrelated book, author, or web search results.',
+    summary:
+      'Some Bakker searches appear near The False Sun demand, but this page keeps the game route separate from unrelated author or book results.',
+    category: 'Safety',
+    difficulty: 'Beginner',
+    coverImageUrl: localGuideCover('bakker-reference-guide'),
+    publishedAt: checkedAt,
+    updatedAt: '2026-06-16',
+    sourceStrategy: 'manual_data',
+    videoSearchQueries: ['the false sun bakker', 'the false sun novel'],
+    sourceNotes:
+      'Created for a search-confusion long-tail cluster. It intentionally avoids making unsupported story or authorship claims.',
+    tags: ['Search Help', 'Bakker', 'Confusion'],
+    relatedRoutes: ['/visual-novel', '/itch-io', '/content-warnings'],
+    body: [
+      {
+        heading: 'Do not merge unrelated False Sun results',
+        paragraphs: [
+          'The phrase The False Sun can appear beside unrelated novel, author, or web results. If your intent is the Oniray visual novel, use pages that name the game, routes, itch.io, Silas, Kyle, or endings.',
+          'This page exists to keep that search clean. It does not claim that unrelated Bakker results are part of the game.',
+        ],
+      },
+      {
+        heading: 'How to confirm you found the game',
+        paragraphs: [
+          'Look for the official itch.io page, Oniray as creator, platform file notes, and route terms from the game. If a result is about a different book, fandom, or author, it is probably not the same intent.',
+        ],
+      },
+      {
+        heading: 'Where game players should go',
+        paragraphs: [
+          'Use the visual novel guide for a spoiler-light overview, the itch.io page for official download direction, and route pages only after you are ready for spoilers.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: 'Is Bakker an official The False Sun game page?',
+        answer:
+          'No. Treat Bakker-related results as search-confusion unless they clearly reference the Oniray visual novel.',
+      },
+      {
+        question: 'How do I find the actual game?',
+        answer:
+          'Use the official itch.io page and this site’s visual novel, route, and download pages.',
+      },
+    ],
+  },
+  {
+    slug: 'itch-io-download-guide',
+    path: '/itch-io-download',
+    title: 'The False Sun itch.io Download Guide',
+    seoTitle: 'The False Sun itch.io Download - Official Page and Safe Files',
+    seoDescription:
+      'Open The False Sun itch.io page safely, check official platform files, avoid unsafe mirrors, and choose whether to play online or download.',
+    summary:
+      'Use itch.io as the official download source, then choose browser play or platform files without trusting mirrors or copied builds.',
+    category: 'Download',
+    difficulty: 'Beginner',
+    coverImageUrl: localGuideCover('itch-io-download-guide'),
+    publishedAt: checkedAt,
+    updatedAt: '2026-06-16',
+    sourceStrategy: 'official',
+    videoSearchQueries: [
+      'the false sun itch io download',
+      'the false sun download',
+      'the false sun android',
+    ],
+    sourceNotes:
+      'Created to cover itch.io download long-tail demand without changing the existing itch.io bridge page title.',
+    tags: ['itch.io', 'Download', 'Safety'],
+    relatedRoutes: ['/itch-io', '/play-online', '/content-warnings'],
+    body: [
+      {
+        heading: 'Use itch.io as the source of truth',
+        paragraphs: [
+          'The official itch.io page is the safest place to check current files, platform notes, creator identity, and mature-content warnings. Do not use mirrors that repackage the game or hide downloads behind fake update buttons.',
+          'If you only want to sample the game before downloading, use the play-online route on this site first, then return to itch.io for official files.',
+        ],
+      },
+      {
+        heading: 'Check platform fit before downloading',
+        paragraphs: [
+          'Confirm whether you need Windows, macOS, Linux, Android, or browser play. If a file does not match your device, do not force it through a random converter or APK mirror.',
+        ],
+      },
+      {
+        heading: 'Keep route guides separate from download pages',
+        paragraphs: [
+          'Download safely first. Once the game runs, use the route pages, all-endings guide, and content warnings according to your spoiler tolerance.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: 'Where should I download The False Sun?',
+        answer:
+          'Use the official itch.io page from Oniray or the play-online route linked by this site.',
+      },
+      {
+        question: 'Should I use APK mirrors for The False Sun?',
+        answer:
+          'No. Check official itch.io files and avoid repackaged downloads.',
+      },
+    ],
+  },
 ];
 
 export const featuredGuides = guides.slice(0, 6);
