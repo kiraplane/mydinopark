@@ -41,6 +41,7 @@ const keywordLinks = [
   ['nophenia ending explained', '/guides/walkthrough-ending'],
   ['nophenia 100% guide', '/guides/achievements-100-percent'],
   ['nophenia Steam', '/steam'],
+  ['nophenia demo', '/demo'],
   ['nophenia browser game', '/play-online'],
   ['nophenia community', '/community'],
 ] as const;
@@ -81,6 +82,7 @@ const coreModules = [
     links: [
       ['Play online', '/play-online'],
       ['Steam release', '/steam'],
+      ['Steam demo', '/demo'],
       ['Browser version', '/browser-version'],
     ],
   },
@@ -465,6 +467,7 @@ export function NopheniaHomePage({ locale }: { locale?: Locale }) {
                   {[
                     ['Play online', '/play-online'],
                     ['Steam', '/steam'],
+                    ['Demo', '/demo'],
                     ['Achievements', '/guides/achievements-100-percent'],
                     ['Community', '/community'],
                     ['Comfort', '/comfort'],

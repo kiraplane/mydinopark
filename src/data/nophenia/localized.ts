@@ -243,6 +243,7 @@ export const routeLabels: Record<string, string> = {
   '/guides/walkthrough-ending': 'Walkthrough and Ending',
   '/guides/achievements-100-percent': '100% Achievements',
   '/steam': 'Steam Release',
+  '/demo': 'Steam Demo',
   '/download': 'Download Safety',
   '/browser-version': 'Browser Version',
   '/itch-io': 'Browser Version',

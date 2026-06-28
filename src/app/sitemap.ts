@@ -9,6 +9,7 @@ const coreRoutes = [
   Routes.Play,
   Routes.Guides,
   Routes.Steam,
+  Routes.Demo,
   Routes.Download,
   Routes.BrowserVersion,
   Routes.Community,
@@ -52,6 +53,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
               ? 0.95
               : route === Routes.Guides ||
                   route === Routes.Steam ||
+                  route === Routes.Demo ||
                   route === Routes.Download ||
                   route === Routes.Community ||
                   route === Routes.Comfort

@@ -114,6 +114,7 @@ export function GuideArticle({
     label: section.heading,
   }));
   const nextRoutes = guide.relatedRoutes.slice(0, 4);
+  const showPlayOnlineCta = guide.path === '/demo';
 
   return (
     <div className="bg-[#070911] py-10 text-[#F6F0EA]">
@@ -150,6 +151,29 @@ export function GuideArticle({
               <p className="mt-4 max-w-3xl text-base leading-8 text-[#D8E8EF] md:text-lg">
                 {guide.summary}
               </p>
+
+              {showPlayOnlineCta ? (
+                <div className="mt-5 flex flex-wrap gap-3">
+                  <Button
+                    asChild
+                    className="bg-[#6DDFC4] font-semibold text-[#06120F] hover:bg-[#8FF5DE]"
+                  >
+                    <LocaleLink href="/play-online">
+                      Play nophenia Online
+                      <ArrowRight className="size-4" />
+                    </LocaleLink>
+                  </Button>
+                  <Button
+                    asChild
+                    variant="outline"
+                    className="border-[#26384A] bg-[#070911] text-[#F6F0EA] hover:border-[#F6D089] hover:bg-[#1C2936]"
+                  >
+                    <LocaleLink href="/browser-version">
+                      Compare Browser Version
+                    </LocaleLink>
+                  </Button>
+                </div>
+              ) : null}
 
               <div className="mt-5">
                 <MobileWikiNav

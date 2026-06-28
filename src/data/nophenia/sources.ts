@@ -9,6 +9,7 @@ export const siteFacts = {
   gameName: 'nophenia',
   creator: 'lane',
   officialSteamUrl: 'https://store.steampowered.com/app/3979330/nophenia/',
+  officialSteamDemoUrl: 'https://store.steampowered.com/app/4172800/nophenia_Demo/',
   officialItchUrl: 'https://emiwa.itch.io/nophenia',
   officialSiteUrl: 'https://nophenia.net/',
   officialTwitterUrl: 'https://x.com/emiwau',
@@ -63,11 +64,27 @@ export const sourceList: DataSource[] = [
   },
   {
     type: 'official',
+    label: 'Steam demo page',
+    url: siteFacts.officialSteamDemoUrl,
+    checkedAt,
+    confidence: 'high',
+    note: 'Used for the current Steam demo route and demo/full-game distinction.',
+  },
+  {
+    type: 'official',
     label: 'Official itch.io demo page',
     url: siteFacts.officialItchUrl,
     checkedAt,
     confidence: 'high',
     note: 'Used for browser demo source, HTML5 embed, controls, screenshots, warning tone, itch color direction, and self-hosted build assets.',
+  },
+  {
+    type: 'manual_review',
+    label: 'SteamDB nophenia Demo app',
+    url: 'https://steamdb.info/app/4172800/',
+    checkedAt,
+    confidence: 'medium',
+    note: 'Used as a cross-check for demo app id, demo release date, supported systems, language list, and parent app relationship.',
   },
   {
     type: 'official',
@@ -188,13 +205,14 @@ export const keywordMatrix: KeywordMatrixItem[] = [
   },
   {
     keyword: 'nophenia demo',
-    intent: 'Find and understand browser play.',
-    route: '/browser-version',
+    intent: 'Find the Steam Demo, browser-play option, and full release difference.',
+    route: '/demo',
     priority: 'P0',
     status: 'keep',
     evidence:
       'Serper autocomplete includes nophenia demo and browser-play variants.',
-    notes: 'Route this demand into the browser-play explanation.',
+    notes:
+      'Dedicated demo page now separates the Steam Demo, browser play, and full Steam release decision.',
   },
   {
     keyword: 'nophenia controls',

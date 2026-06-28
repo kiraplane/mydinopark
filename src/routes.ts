@@ -20,6 +20,7 @@ export enum Routes {
   Walkthrough = '/guides/walkthrough-ending',
   Achievements = '/guides/achievements-100-percent',
   Steam = '/steam',
+  Demo = '/demo',
   Download = '/download',
   BrowserVersion = '/browser-version',
   Community = '/community',

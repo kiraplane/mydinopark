@@ -199,6 +199,91 @@ export const guides: Guide[] = [
     ],
   },
   {
+    slug: 'demo-guide',
+    path: '/demo',
+    title: 'nophenia Demo Guide',
+    seoTitle: 'nophenia Demo - Steam Demo, Browser Play and Full Game',
+    seoDescription:
+      'Use the nophenia demo guide to compare Steam Demo, browser play, itch.io, and the full Steam release before choosing where to start.',
+    summary:
+      'nophenia now has several entry points. Use the Steam Demo when you want a store-native trial, browser play when you want an instant first walk, and Steam when you want the full release.',
+    category: 'Start',
+    difficulty: 'Status',
+    coverImageUrl: screenshotCover('nophenia-steam-2.jpg'),
+    publishedAt: checkedAt,
+    updatedAt: checkedAt,
+    sourceStrategy: 'official',
+    videoSearchQueries: [
+      'nophenia demo',
+      'nophenia steam demo',
+      'nophenia itch demo',
+    ],
+    sourceNotes:
+      'Built from the official Steam app, Steam Demo app, itch.io browser demo page, and SteamDB demo app cross-check.',
+    video: videos.officialTrailer,
+    tags: ['Demo', 'Steam', 'Browser'],
+    relatedRoutes: [
+      '/play-online',
+      '/browser-version',
+      '/steam',
+      '/download',
+      '/guides/controls-and-comfort',
+    ],
+    body: [
+      {
+        heading: 'Choose the demo path that matches your goal',
+        paragraphs: [
+          'The clean way to start nophenia depends on what you want from the first session. Use the Steam Demo if you want a store-native trial, controller and desktop behavior, and a path that stays close to the full Steam release. Use browser play if you only want to feel the mood quickly without opening Steam. Use the full Steam page when you already know you want the complete release and achievement tracking.',
+          'All three routes are useful, but they answer different questions. The demo answers whether nophenia is your kind of slow dream explorer. Browser play answers whether the atmosphere catches you in the first few minutes. The full game answers the ending, achievement, and completion questions.',
+        ],
+        bullets: [
+          'Steam Demo: best first choice if you are already using Steam.',
+          'Browser play: fastest way to try the movement and mood.',
+          'Full Steam release: best for achievements, community hub, and completion.',
+          'Random mirrors or APK claims: skip them unless the creator links them directly.',
+        ],
+      },
+      {
+        heading: 'What the Steam Demo is good for',
+        paragraphs: [
+          'The Steam Demo is the safest demo route for players who want the official desktop experience. Use the separate demo entry on Steam when you want a trial path that stays tied to the main release rather than a reupload or random mirror.',
+          'Use it when you care about install behavior, controller setup, language display, and how the game feels outside a browser frame. If the demo lands for you, the jump to the full Steam release is straightforward.',
+        ],
+      },
+      {
+        heading: 'What browser play is good for',
+        paragraphs: [
+          'Browser play is better for a quick mood check. It loads inside this wiki and keeps the controls, beginner guide, and comfort notes nearby. That matters because nophenia is quiet enough that first-session friction can easily feel like confusion.',
+          'If the browser frame loses focus, click inside the game again, use Shift instead of Ctrl for running, and press Tab if you need to show the cursor. These are browser-context issues, not necessarily game issues.',
+        ],
+      },
+      {
+        heading: 'When to stop demoing and buy or finish the full release',
+        paragraphs: [
+          'Move to the full Steam release when you know you want the ending route, achievements, community screenshots, or a more stable replay path. The demo is not the best place for 100 percent cleanup. It is a decision tool.',
+          'A good sequence is simple: try the demo, read the controls guide if movement feels odd, then either stop because the mood is not for you or continue on Steam with the walkthrough and achievement pages as light backup.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: 'Does nophenia have a Steam Demo?',
+        answer:
+          'Yes. Steam exposes a separate nophenia Demo page connected to the main game.',
+      },
+      {
+        question: 'Is the browser version the same as the Steam Demo?',
+        answer:
+          'No. Browser play is the fastest trial inside this wiki. The Steam Demo is the official Steam-side trial path.',
+      },
+      {
+        question: 'Should I use the demo or the full game first?',
+        answer:
+          'Use the demo if you are still deciding. Use the full Steam release when you want endings, achievements, and a complete route.',
+      },
+    ],
+  },
+  {
     slug: 'controls-and-comfort',
     path: '/guides/controls-and-comfort',
     title: 'nophenia Controls and Comfort Guide',
