@@ -21,13 +21,13 @@ export const siteFacts = {
   browserGameUrl: '/games/nophenia/index.html',
   genre: 'Lo-fi 3D dream exploration',
   releaseSnapshot:
-    'Steam lists nophenia by lane as released on Jun 26, 2026. The official itch.io HTML5 page is a slightly outdated demo and remains the source for the self-hosted browser build.',
+    'Steam lists nophenia by lane as released on Jun 26, 2026. This site also gives players a browser-play route for trying the game online.',
   positioning:
-    'An independent guide hub for nophenia wiki, play online, controls, walkthrough, ending, achievements, Steam, itch.io demo, community, and comfort/safety questions.',
+    'A nophenia wiki guide hub for play online, controls, walkthrough, ending, Steam, community, and comfort questions.',
 } as const;
 
 export const siteDescription =
-  'nophenia wiki with play online, controls, walkthrough, ending, achievements, Steam, itch.io demo, community, and safety help.';
+  'nophenia wiki guides for play online, controls, walkthrough, ending, Steam, community, and comfort help.';
 
 export const gameFacts: GameFact[] = [
   {
@@ -36,19 +36,19 @@ export const gameFacts: GameFact[] = [
       'A lo-fi 3D dream explorer about wandering through brutalist, liminal, and familiar-feeling spaces as a small wolf girl.',
   },
   {
-    label: 'Official release',
+    label: 'Steam release',
     value:
       'Steam lists nophenia as released on Jun 26, 2026 by developer and publisher lane.',
   },
   {
     label: 'Playable here',
     value:
-      'The play-online page self-hosts the official itch.io HTML5 demo build with permission from the project requirements.',
+      'The play-online page launches nophenia in your browser from inside the nophenia wiki.',
   },
   {
     label: 'Main guide clusters',
     value:
-      'Play online, controls, comfort, walkthrough and ending, 100% achievements, Steam release, itch.io demo, community, and safe download guidance.',
+      'Play online, controls, comfort, walkthrough and ending, 100% route help, Steam release, community, and download guidance.',
   },
 ];
 
@@ -129,7 +129,7 @@ export const keywordMatrix: KeywordMatrixItem[] = [
     evidence:
       'Serper autocomplete includes nophenia, nophenia game, nophenia steam, nophenia demo, and nophenia twitter.',
     notes:
-      'Homepage should be a wiki-style hub with official links and guide routes.',
+      'Homepage should be a wiki-style hub with play online and guide routes.',
   },
   {
     keyword: 'nophenia wiki',
@@ -156,13 +156,13 @@ export const keywordMatrix: KeywordMatrixItem[] = [
   },
   {
     keyword: 'nophenia play online',
-    intent: 'Launch the HTML5 demo directly in a browser.',
+    intent: 'Launch nophenia directly in a browser.',
     route: '/play-online',
     priority: 'P0',
     status: 'keep',
     evidence:
       'Serper autocomplete includes play online free, play online game, play online unblocked, and play online.',
-    notes: 'Canonical play page self-hosts the authorized itch.io demo build.',
+    notes: 'Canonical play page lets users play nophenia online.',
   },
   {
     keyword: 'nophenia paly online',
@@ -178,23 +178,23 @@ export const keywordMatrix: KeywordMatrixItem[] = [
   {
     keyword: 'nophenia steam',
     intent:
-      'Find official Steam page, release date, languages, and full version context.',
+      'Find Steam page, release date, languages, and full version context.',
     route: '/steam',
     priority: 'P0',
     status: 'keep',
     evidence:
       'Steam is the top organic result and lists the Jun 26, 2026 release by lane.',
-    notes: 'Dedicated official bridge page.',
+    notes: 'Dedicated Steam bridge page.',
   },
   {
     keyword: 'nophenia demo',
-    intent: 'Find and understand the official itch.io demo.',
-    route: '/itch-io',
+    intent: 'Find and understand browser play.',
+    route: '/browser-version',
     priority: 'P0',
     status: 'keep',
     evidence:
-      'Serper autocomplete includes nophenia demo and itch.io appears as an official organic result.',
-    notes: 'Explain demo status and self-hosted browser build.',
+      'Serper autocomplete includes nophenia demo and browser-play variants.',
+    notes: 'Route this demand into the browser-play explanation.',
   },
   {
     keyword: 'nophenia controls',

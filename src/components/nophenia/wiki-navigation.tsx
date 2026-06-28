@@ -55,9 +55,9 @@ const wikiNavRoutes = [
     ],
   },
   {
-    title: 'Official Sources',
+    title: 'Game Links',
     icon: Compass,
-    routes: ['/steam', '/itch-io', '/download'],
+    routes: ['/steam', '/browser-version', '/download'],
   },
   {
     title: 'Community & Safety',

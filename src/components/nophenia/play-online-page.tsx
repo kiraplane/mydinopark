@@ -11,7 +11,6 @@ import { LocaleLink } from '@/i18n/navigation';
 import {
   ArrowRight,
   BookOpen,
-  ExternalLink,
   Gamepad2,
   ShieldAlert,
   Sparkles,
@@ -57,7 +56,7 @@ export function NopheniaPlayOnlinePage({ locale }: { locale?: Locale }) {
         genre: ['Adventure', 'Casual', 'Indie', 'Simulation'],
         gamePlatform: ['Web Browser', 'Windows'],
         url: `${siteFacts.domain}/play-online`,
-        sameAs: [siteFacts.officialSteamUrl, siteFacts.officialItchUrl],
+        sameAs: [siteFacts.officialSteamUrl],
       },
       {
         '@type': 'HowTo',
@@ -73,7 +72,7 @@ export function NopheniaPlayOnlinePage({ locale }: { locale?: Locale }) {
       },
       {
         '@type': 'VideoObject',
-        '@id': `${siteFacts.domain}/play-online#official-trailer`,
+        '@id': `${siteFacts.domain}/play-online#trailer`,
         name: content.media.video.title,
         description: content.media.body,
         thumbnailUrl: [videoThumbnailUrl],
@@ -175,15 +174,6 @@ export function NopheniaPlayOnlinePage({ locale }: { locale?: Locale }) {
               {content.downloadGuide}
               <ArrowRight className="size-3" />
             </LocaleLink>
-            <a
-              href={siteFacts.officialItchUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="mt-2 inline-flex items-center gap-1 text-sm font-semibold text-[#F6D089] underline underline-offset-4"
-            >
-              {content.officialItch}
-              <ExternalLink className="size-3" />
-            </a>
           </div>
         </Container>
       </section>
@@ -224,7 +214,7 @@ export function NopheniaPlayOnlinePage({ locale }: { locale?: Locale }) {
       </section>
 
       <section
-        id="official-media"
+        id="game-media"
         className="border-[#26384A] border-b bg-[#111827] py-12"
       >
         <Container className="space-y-8 px-4">

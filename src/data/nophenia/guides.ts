@@ -33,7 +33,7 @@ const videos = {
   },
   demoWalkthrough: {
     id: 'ImxzKzGgva4',
-    title: 'nophenia Demo Gameplay Walkthrough [4K 60FPS] - No Commentary',
+    title: 'nophenia Browser Gameplay Walkthrough [4K 60FPS] - No Commentary',
     channel: 'YashimaGaming',
     url: 'https://www.youtube.com/watch?v=ImxzKzGgva4',
     thumbnailUrl: videoCover('ImxzKzGgva4'),
@@ -50,7 +50,7 @@ export const guides: Guide[] = [
     title: 'nophenia Beginner Guide',
     seoTitle: 'nophenia Beginner Guide - First Session and What To Do',
     seoDescription:
-      'Start nophenia with the right expectations: explore slowly, learn the controls, read dream spaces, and know when to switch from demo to Steam.',
+      'Start nophenia with the right expectations: explore slowly, learn controls, read dream spaces, and know when to switch from browser play to Steam.',
     summary:
       'nophenia is less about combat or winning a route quickly and more about reading quiet spaces. Start slowly, learn how the game handles movement, and let odd rooms pull you forward.',
     category: 'Start',
@@ -58,14 +58,14 @@ export const guides: Guide[] = [
     coverImageUrl: screenshotCover('nophenia-steam-1.jpg'),
     publishedAt: checkedAt,
     updatedAt: checkedAt,
-    sourceStrategy: 'official',
+    sourceStrategy: 'manual_data',
     videoSearchQueries: [
       'nophenia beginner guide',
       'nophenia guide',
-      'nophenia demo gameplay',
+      'nophenia browser gameplay',
     ],
     sourceNotes:
-      'Built from the official Steam and itch.io descriptions, Serper guide demand, and demo/full-game walkthrough checks.',
+      'Built from Steam release details, Serper guide demand, and browser/full-game walkthrough checks.',
     video: videos.officialTrailer,
     tags: ['Beginner', 'Exploration', 'Steam'],
     relatedRoutes: [
@@ -83,7 +83,7 @@ export const guides: Guide[] = [
         ],
         bullets: [
           'Use Steam for the current full release.',
-          'Use the play-online page for the official itch.io HTML5 demo build.',
+          'Use the play-online page to try nophenia in the browser.',
           'Expect a mood piece with secrets, achievements, and route discovery rather than enemies or combat.',
           'Take breaks if isolation or liminal spaces start feeling uncomfortable.',
         ],
@@ -91,7 +91,7 @@ export const guides: Guide[] = [
       {
         heading: 'Learn movement before hunting secrets',
         paragraphs: [
-          'Spend the first few minutes simply moving, turning, jumping, pausing, and recovering the mouse cursor. The official itch demo gives the whole keyboard baseline: WASD or arrows for movement, Shift or Ctrl to run, Space to jump, Z, Enter, or left click to interact, P or Escape to pause, Tab to show the cursor, C to sit, and H to howl.',
+          'Spend the first few minutes simply moving, turning, jumping, pausing, and recovering the mouse cursor. The browser control baseline is WASD or arrows for movement, Shift or Ctrl to run, Space to jump, Z, Enter, or left click to interact, P or Escape to pause, Tab to show the cursor, C to sit, and H to howl.',
           'In a browser, prefer Shift for running when possible. Ctrl can conflict with browser shortcuts on some systems, and losing focus during a quiet exploration game is the fastest way to make the first session feel broken.',
         ],
       },
@@ -103,9 +103,9 @@ export const guides: Guide[] = [
         ],
       },
       {
-        heading: 'Know when to move from demo to Steam',
+        heading: 'Know when to move from browser play to Steam',
         paragraphs: [
-          'The self-hosted browser build comes from the official itch.io demo. It is useful because it lets you try the mood immediately. The current Steam release is the official full game, listed as released on Jun 26, 2026, and should be your main version if you want the complete ending path and achievements.',
+          'The browser version is useful because it lets you try the mood immediately. The current Steam release is the full game, listed as released on Jun 26, 2026, and should be your main version if you want the complete ending path and completion tracking.',
           'Use the browser version to learn whether the tone works for you. Use Steam when you want a stable full-session route, controller support, community screenshots, and achievement tracking.',
         ],
       },
@@ -122,7 +122,7 @@ export const guides: Guide[] = [
           'Learn movement, interact with obvious thresholds, explore slowly, and check the controls page before chasing achievements.',
       },
       {
-        question: 'Should I start with Steam or the browser demo?',
+        question: 'Should I start with Steam or browser play?',
         answer:
           'Start with browser play if you want a quick taste. Use Steam for the current full release and achievements.',
       },
@@ -132,37 +132,37 @@ export const guides: Guide[] = [
     slug: 'play-online',
     path: '/play-online',
     title: 'nophenia Play Online',
-    seoTitle: 'nophenia Play Online - Free Browser Demo and Controls',
+    seoTitle: 'nophenia Play Online - Browser Game and Controls',
     seoDescription:
-      'Play nophenia online with the self-hosted itch.io HTML5 demo, then learn controls, browser focus tips, and when Steam is the better version.',
+      'Play nophenia online in the browser, then learn controls, browser focus tips, and when Steam is the better version.',
     summary:
-      'Launch the authorized itch.io demo in your browser, then use the controls and beginner links below it to make the quiet exploration easier to read.',
+      'Launch nophenia in your browser, then use the controls and beginner links below it to make the quiet exploration easier to read.',
     category: 'Start',
     difficulty: 'Status',
     coverImageUrl: localCover('nophenia-og.png'),
     publishedAt: checkedAt,
     updatedAt: checkedAt,
-    sourceStrategy: 'official',
+    sourceStrategy: 'manual_data',
     videoSearchQueries: [
       'nophenia play online',
       'nophenia play online free',
-      'nophenia demo',
+      'nophenia browser game',
     ],
     sourceNotes:
-      'The HTML5 build is sourced from the official itch.io page. The user states permission was obtained for self-hosting.',
-    tags: ['Play Online', 'HTML5', 'Demo'],
+      'The HTML5 build is hosted for browser play. The user states permission was obtained for self-hosting.',
+    tags: ['Play Online', 'HTML5', 'Browser'],
     relatedRoutes: [
       '/guides/beginner-guide',
       '/guides/controls-and-comfort',
       '/steam',
-      '/itch-io',
+      '/browser-version',
     ],
     body: [
       {
         heading: 'What the online version is for',
         paragraphs: [
-          'The online version is best for trying nophenia quickly. It runs inside the browser and keeps the first session close to the official itch.io demo source instead of sending you through unrelated game mirrors.',
-          'The demo is intentionally smaller than the Steam release. If you want the complete game, ending route, and achievement tracking, use Steam after trying the browser build.',
+          'The online version is best for trying nophenia quickly. It runs inside the browser and keeps the first session inside the nophenia wiki instead of sending you through unrelated game mirrors.',
+          'Browser play is best for a quick first read. If you want the complete game, ending route, and achievement tracking, use Steam after trying the browser build.',
         ],
       },
       {
@@ -183,12 +183,12 @@ export const guides: Guide[] = [
       {
         question: 'Can I play nophenia online here?',
         answer:
-          'Yes. The play-online page self-hosts the official itch.io HTML5 demo build with permission from the project requirements.',
+          'Yes. The play-online page launches nophenia in the browser with guide links nearby.',
       },
       {
         question: 'Is the browser build the full Steam game?',
         answer:
-          'No. The itch page describes the browser build as a slightly outdated demo. Steam is the current full release.',
+          'No. Steam is the current full release, while browser play is best for a quick first walk.',
       },
       {
         question: 'Why does the game need time to load?',
@@ -205,29 +205,29 @@ export const guides: Guide[] = [
     seoDescription:
       'Learn nophenia controls for movement, running, sitting, howling, interacting, pausing, cursor focus, and comfort settings for liminal spaces.',
     summary:
-      'The controls are simple, but the browser context can make them feel strange. Use this page before assuming the demo is broken.',
+      'The controls are simple, but the browser context can make them feel strange. Use this page before assuming the game is broken.',
     category: 'Start',
     difficulty: 'Beginner',
     coverImageUrl: screenshotCover('nophenia-itch-1.png'),
     publishedAt: checkedAt,
     updatedAt: checkedAt,
-    sourceStrategy: 'official',
-    videoSearchQueries: ['nophenia controls', 'nophenia demo controls'],
+    sourceStrategy: 'manual_data',
+    videoSearchQueries: ['nophenia controls', 'nophenia browser controls'],
     sourceNotes:
-      'Uses the official itch.io control list and comfort notice checked during the build pass.',
+      'Uses the control list and comfort notice checked during the build pass.',
     video: videos.demoWalkthrough,
     tags: ['Controls', 'Browser', 'Comfort'],
     relatedRoutes: [
       '/play-online',
       '/guides/beginner-guide',
       '/comfort',
-      '/itch-io',
+      '/browser-version',
     ],
     body: [
       {
-        heading: 'Keyboard controls from the official demo',
+        heading: 'Keyboard controls for browser play',
         paragraphs: [
-          'The official itch.io page lists a compact control set. Movement works with WASD or arrow keys. Run with Shift or Ctrl. Jump with Space. Interact with Z, Enter, or left click. Pause with P or Escape. Show the cursor with Tab.',
+          'nophenia uses a compact control set. Movement works with WASD or arrow keys. Run with Shift or Ctrl. Jump with Space. Interact with Z, Enter, or left click. Pause with P or Escape. Show the cursor with Tab.',
           'nophenia also gives the wolf girl expressive buttons: C to sit and H to howl. These are not throwaway jokes. In a quiet walking game, expressive actions help you check the mood of a room and can be relevant when achievement hunting.',
         ],
         bullets: [
@@ -251,7 +251,7 @@ export const guides: Guide[] = [
       {
         heading: 'Comfort is part of the route',
         paragraphs: [
-          'The itch page warns that nophenia does not rely on conventional horror elements, but liminality, isolation, and escapism can still feel difficult. If the atmosphere gets under your skin, lower the volume, take a short break, or switch from fullscreen to windowed play.',
+          'The comfort note explains that nophenia does not rely on conventional horror elements, but liminality, isolation, and escapism can still feel difficult. If the atmosphere gets under your skin, lower the volume, take a short break, or switch from fullscreen to windowed play.',
           'This is not failure. Dreamlike exploration games work by making ordinary spaces feel loaded. The best session is the one you can actually enjoy and remember.',
         ],
       },
@@ -264,8 +264,7 @@ export const guides: Guide[] = [
       },
       {
         question: 'How do I sit or howl?',
-        answer:
-          'Press C to sit and H to howl in the official demo control layout.',
+        answer: 'Press C to sit and H to howl in the browser control layout.',
       },
       {
         question: 'Why does running feel unreliable in browser play?',
@@ -400,7 +399,7 @@ export const guides: Guide[] = [
         heading: 'Treat names as hints, not proof',
         paragraphs: [
           'achievement_howl strongly points you toward the howl button, and achievement_mattress points you toward a bed or rest-like scene. achievement_meow suggests a cat-like interaction or sound cue. achievement_??? is intentionally opaque, so it should be handled as a secret-space check rather than a guessed objective.',
-          'Because public API names are not full descriptions, the safest guide language is hint-first. If an exact trigger is later verified through official notes or repeatable testing, this page can become a precise table.',
+          'Because public API names are not full descriptions, the safest guide language is hint-first. If an exact trigger is later verified through repeatable testing, this page can become a precise table.',
         ],
       },
       {
@@ -425,9 +424,9 @@ export const guides: Guide[] = [
           'The public Steam percentages endpoint returned four identifiers during this build pass.',
       },
       {
-        question: 'Can I 100% nophenia from the browser demo?',
+        question: 'Can I 100% nophenia from the browser version?',
         answer:
-          'No. Use Steam for achievement tracking. The browser demo is for trying the game.',
+          'No. Use Steam for achievement tracking. The browser version is for trying the game.',
       },
       {
         question: 'Does this page spoil exact achievement triggers?',
@@ -442,23 +441,23 @@ export const guides: Guide[] = [
     title: 'nophenia Steam Guide',
     seoTitle: 'nophenia Steam - Release Date, Languages and Full Game',
     seoDescription:
-      'Find the official nophenia Steam page, Jun 26 2026 release status, supported languages, genres, achievements, and how Steam differs from the demo.',
+      'Find the nophenia Steam page, Jun 26 2026 release status, supported languages, genres, achievements, and how Steam differs from browser play.',
     summary:
-      'Steam is the current full-release home for nophenia, with the official release date, store screenshots, community hub, and achievement tracking.',
+      'Steam is the current full-release home for nophenia, with the release date, store screenshots, community hub, and achievement tracking.',
     category: 'Official',
     difficulty: 'Status',
     coverImageUrl: localCover('nophenia-steam-header.jpg'),
     publishedAt: checkedAt,
     updatedAt: checkedAt,
-    sourceStrategy: 'official',
+    sourceStrategy: 'manual_data',
     videoSearchQueries: ['nophenia steam', 'nophenia release date'],
     sourceNotes:
-      'Uses the official Steam store API response and store page checked during the build pass.',
+      'Uses the Steam store API response and store page checked during the build pass.',
     video: videos.officialTrailer,
-    tags: ['Steam', 'Release', 'Official'],
+    tags: ['Steam', 'Release', 'Full Game'],
     relatedRoutes: [
       '/download',
-      '/itch-io',
+      '/browser-version',
       '/guides/walkthrough-ending',
       '/guides/achievements-100-percent',
     ],
@@ -467,7 +466,7 @@ export const guides: Guide[] = [
         heading: 'Use Steam for the full release',
         paragraphs: [
           'Steam lists nophenia as released on Jun 26, 2026, with lane as both developer and publisher. The store categories include single-player and controller support, and the game appears under Adventure, Casual, Indie, and Simulation.',
-          'The Steam page is the right place for the full build, achievements, reviews, screenshots, and community discussions. The browser page on this site is based on the official itch.io demo and should not be treated as a full replacement.',
+          'The Steam page is the right place for the full build, achievements, reviews, screenshots, and community discussions. The browser page on this site is a quick way to try nophenia and should not be treated as a full replacement.',
         ],
       },
       {
@@ -478,9 +477,9 @@ export const guides: Guide[] = [
         ],
       },
       {
-        heading: 'Why Steam and demo pages both matter',
+        heading: 'Why Steam and browser play both matter',
         paragraphs: [
-          'The demo lets players test the atmosphere instantly. Steam gives the complete release context. A strong route is to try the demo, read the beginner and comfort guides, then move to Steam if the mood lands for you.',
+          'Browser play lets players test the atmosphere instantly. Steam gives the complete release context. A strong route is to play online, read the beginner and comfort guides, then move to Steam if the mood lands for you.',
         ],
       },
     ],
@@ -494,32 +493,32 @@ export const guides: Guide[] = [
         answer: 'Steam lists lane as developer and publisher.',
       },
       {
-        question: 'Is Steam different from the browser demo?',
+        question: 'Is Steam different from browser play?',
         answer:
-          'Yes. Steam is the full release; the itch.io browser build is described as a slightly outdated demo.',
+          'Yes. Steam is the full release; browser play is a quick way to try the game online.',
       },
     ],
   },
   {
     slug: 'itch-io',
-    path: '/itch-io',
-    title: 'nophenia itch.io Demo Guide',
-    seoTitle: 'nophenia itch.io - Official Demo, Controls and Screenshots',
+    path: '/browser-version',
+    title: 'nophenia Browser Version Guide',
+    seoTitle: 'nophenia Browser Version - Controls and Screenshots',
     seoDescription:
-      'Use the official nophenia itch.io page for the HTML5 demo, controls, screenshots, trailer, update status, and browser-play context.',
+      'Use the nophenia browser version guide for HTML5 play, controls, screenshots, trailer, update status, and browser-play context.',
     summary:
-      'The itch.io page is the official demo source and the basis for this site’s self-hosted play-online build.',
-    category: 'Official',
+      'The browser version guide explains how online play fits with controls, screenshots, and Steam release context.',
+    category: 'Start',
     difficulty: 'Status',
     coverImageUrl: localCover('nophenia-og.png'),
     publishedAt: checkedAt,
     updatedAt: checkedAt,
-    sourceStrategy: 'official',
-    videoSearchQueries: ['nophenia demo', 'nophenia itch io'],
+    sourceStrategy: 'manual_data',
+    videoSearchQueries: ['nophenia browser game', 'nophenia play online'],
     sourceNotes:
-      'Uses the official lane itch.io page and embedded HTML5 build details.',
+      'Uses browser build details and Steam release context checked during the build pass.',
     video: videos.officialTrailer,
-    tags: ['itch.io', 'Demo', 'HTML5'],
+    tags: ['Browser', 'Play Online', 'HTML5'],
     relatedRoutes: [
       '/play-online',
       '/guides/controls-and-comfort',
@@ -528,41 +527,41 @@ export const guides: Guide[] = [
     ],
     body: [
       {
-        heading: 'The itch page is the browser demo source',
+        heading: 'What the browser version is for',
         paragraphs: [
-          'The official itch.io page describes the demo as slightly outdated and asks players not to expect the full release. That warning is useful. The demo is still valuable because it captures the walking, atmosphere, and early dreamlike presentation quickly.',
-          'This site self-hosts that HTML5 build so the play-online page can load inside the wiki experience, with guide links and screenshots placed directly below the frame.',
+          'The browser version is valuable because it captures the walking pace, atmosphere, and early dreamlike presentation quickly.',
+          'This site hosts the HTML5 build so the play-online page can load inside the wiki experience, with guide links and screenshots placed directly below the frame.',
         ],
       },
       {
-        heading: 'What the itch page tells you that Steam does not',
+        heading: 'What browser notes tell you that Steam does not',
         paragraphs: [
-          'The itch page gives the direct control list, the comfort warning, the creator contact style, the trailer embed, screenshots, and demo-specific context. Steam is better for release status; itch is better for understanding the demo.',
-          'For browser play, follow the itch controls exactly and expect a smaller build than Steam.',
+          'Browser notes give the direct control list, comfort framing, trailer reference, screenshots, and play-online context. Steam is better for release status; this page is better for understanding browser play.',
+          'For browser play, follow the controls exactly and expect a smaller build than Steam.',
         ],
       },
       {
-        heading: 'Use official links before mirrors',
+        heading: 'Use the built-in play page first',
         paragraphs: [
-          'If you want to support the creator or verify the demo, use the official itch page. If you want the full game, use Steam. Avoid random reuploads that copy the HTML5 build without context or permission.',
+          'If you want to try nophenia online, start with the play-online page. If you want the full game, use Steam. Random reuploads add confusion and can make the version situation harder to understand.',
         ],
       },
     ],
     faq: [
       {
-        question: 'Is the nophenia itch.io page official?',
+        question: 'What is the nophenia browser version?',
         answer:
-          'Yes. It is published by lane under the emiwa itch.io account and is the source for the browser demo.',
+          'It is the online browser version used by the play-online page so you can try nophenia before choosing a full Steam session.',
       },
       {
-        question: 'Is the itch demo the full game?',
+        question: 'Is browser play the full game?',
         answer:
-          'No. The page describes it as a slightly outdated demo. Use Steam for the full release.',
+          'No. Use Steam for the full release and browser play for a quick first walk.',
       },
       {
         question: 'Where do the screenshots below the game come from?',
         answer:
-          'They are sourced from the official Steam and itch.io media shown during the build pass.',
+          'They come from the game media collected during the build pass.',
       },
     ],
   },
@@ -570,39 +569,39 @@ export const guides: Guide[] = [
     slug: 'download',
     path: '/download',
     title: 'nophenia Download and Safety Guide',
-    seoTitle: 'nophenia Download - Steam, itch.io Demo and Mirror Safety',
+    seoTitle: 'nophenia Download - Steam, Browser Play and Mirror Safety',
     seoDescription:
-      'Download or play nophenia safely through official Steam and itch.io paths, avoid APK/mirror claims, and understand browser save limitations.',
+      'Download or play nophenia through Steam or browser play, avoid APK/mirror claims, and understand browser save limitations.',
     summary:
-      'Use Steam for the full game and itch.io for the official demo. Avoid APK mirrors, unofficial browser rehosts, and files that claim to be newer than Steam.',
+      'Use Steam for the full game and the play-online page for browser play. Avoid APK mirrors, browser rehosts, and files that claim to be newer than Steam.',
     category: 'Safety',
     difficulty: 'Status',
     coverImageUrl: screenshotCover('nophenia-steam-4.jpg'),
     publishedAt: checkedAt,
     updatedAt: checkedAt,
-    sourceStrategy: 'official',
+    sourceStrategy: 'manual_data',
     videoSearchQueries: [
       'nophenia download',
       'nophenia steam',
       'nophenia play online free',
     ],
     sourceNotes:
-      'Download guidance is based on official Steam and itch.io pages. No third-party mirrors are recommended.',
+      'Download guidance is based on Steam and browser-play checks. No third-party mirrors are recommended.',
     tags: ['Download', 'Safety', 'Steam'],
-    relatedRoutes: ['/steam', '/itch-io', '/play-online', '/comfort'],
+    relatedRoutes: ['/steam', '/browser-version', '/play-online', '/comfort'],
     body: [
       {
-        heading: 'Choose the official path for your goal',
+        heading: 'Choose the path for your goal',
         paragraphs: [
-          'Use Steam when you want the current full game, achievements, controller support, and community hub. Use itch.io when you want the official demo source and browser-play context. Use this site’s play-online page when you want to try the authorized demo inside a guide hub.',
+          'Use Steam when you want the current full game, achievements, controller support, and community hub. Use this site’s play-online page when you want to try nophenia inside a guide hub.',
           'Those three paths cover the useful cases. A random mirror does not add value, and it can make the version situation harder to understand.',
         ],
       },
       {
         heading: 'Avoid APK and mirror claims',
         paragraphs: [
-          'No official mobile or APK source was verified during this build pass. Treat APK pages, modded clients, file mirrors, and “unlocked” downloads as unsafe or unsupported. For a small indie release, the safest answer is often the simplest: Steam for full game, itch for demo.',
-          'If a third-party page claims to have a newer build than Steam or itch.io, do not trust it without an official creator link.',
+          'No mobile or APK source was verified during this build pass. Treat APK pages, modded clients, file mirrors, and “unlocked” downloads as unsafe or unsupported. For a small indie release, the simplest route is Steam for the full game and this site for browser play.',
+          'If a third-party page claims to have a newer build than Steam, do not trust it without a creator-owned link.',
         ],
       },
       {
@@ -616,7 +615,7 @@ export const guides: Guide[] = [
       {
         question: 'Where should I download nophenia?',
         answer:
-          'Use Steam for the full release or itch.io for the official browser demo.',
+          'Use Steam for the full release or this site’s play-online page for browser play.',
       },
       {
         question: 'Does this site provide an APK?',
@@ -625,20 +624,19 @@ export const guides: Guide[] = [
       },
       {
         question: 'Can I play without downloading?',
-        answer:
-          'Yes. Use the play-online page for the official itch.io HTML5 demo build.',
+        answer: 'Yes. Use the play-online page for the browser version.',
       },
     ],
   },
   {
     slug: 'community',
     path: '/community',
-    title: 'nophenia Community and Official Links',
-    seoTitle: 'nophenia Community - Steam, itch.io, Twitter and Updates',
+    title: 'nophenia Community and Update Links',
+    seoTitle: 'nophenia Community - Steam, Twitter and Updates',
     seoDescription:
-      'Find nophenia community and official links: Steam Community, itch.io comments, creator social signals, official site, and where to ask questions.',
+      'Find nophenia community links: Steam Community, creator social signals, update links, and where to ask questions.',
     summary:
-      'Use Steam Community for launch discussion, itch.io comments for demo feedback, and creator-owned links for official signals.',
+      'Use Steam Community for launch discussion, browser feedback, and creator-owned links for update signals.',
     category: 'Community',
     difficulty: 'Status',
     coverImageUrl: screenshotCover('nophenia-steam-2.jpg'),
@@ -651,11 +649,11 @@ export const guides: Guide[] = [
       'nophenia steam community',
     ],
     sourceNotes:
-      'Serper surfaced twitter, reddit, Steam Community, and Steam guide demand. The itch page metadata lists @emiwau as creator.',
+      'Serper surfaced twitter, reddit, Steam Community, and Steam guide demand. Creator social signals were checked during the build pass.',
     tags: ['Community', 'Steam', 'Twitter'],
     relatedRoutes: [
       '/steam',
-      '/itch-io',
+      '/browser-version',
       '/guides/achievements-100-percent',
       '/download',
     ],
@@ -663,29 +661,29 @@ export const guides: Guide[] = [
       {
         heading: 'Use the right community surface',
         paragraphs: [
-          'Steam Community is best for launch discussions, screenshots, reviews, and achievement questions tied to the full release. The itch.io comment section is better for demo-specific feedback and HTML5 browser issues.',
-          'Search results also show social and Reddit interest. Treat those as demand signals, not final facts. For release status, always return to Steam, itch.io, or creator-owned pages.',
+          'Steam Community is best for launch discussions, screenshots, reviews, and achievement questions tied to the full release. Browser feedback is better kept close to the play-online page and controls guide.',
+          'Search results also show social and Reddit interest. Treat those as demand signals, not final facts. For release status, return to Steam or creator-owned pages.',
         ],
       },
       {
         heading: 'Ask version-specific questions',
         paragraphs: [
-          'When asking for help, say whether you are playing Steam or the browser demo. Mention the room, action, or achievement you are stuck on. “What do I do next?” is harder to answer than “I reached a chess-like space and cannot find the next transition.”',
+          'When asking for help, say whether you are playing Steam or the browser version. Mention the room, action, or achievement you are stuck on. “What do I do next?” is harder to answer than “I reached a chess-like space and cannot find the next transition.”',
           'For achievement cleanup, say which public identifier is still locked if Steam exposes it to you. That makes community answers more useful and less spoilery.',
         ],
       },
       {
-        heading: 'Do not invent an official Discord',
+        heading: 'Use verified Discord signals',
         paragraphs: [
-          'This build pass did not verify an official nophenia Discord. If one appears later through the official site, Steam page, or itch page, it can be added. Until then, this page uses community links that have visible source support.',
+          'This build pass did not verify a nophenia Discord link. If one appears later through Steam or creator-owned pages, it can be added. Until then, this page uses community links that have visible source support.',
         ],
       },
     ],
     faq: [
       {
-        question: 'Is there an official nophenia Discord?',
+        question: 'Is there a nophenia Discord?',
         answer:
-          'No official Discord was verified during this build pass. Use Steam Community, itch.io comments, and creator-owned links for now.',
+          'No Discord link was verified during this build pass. Use Steam Community and creator-owned links for now.',
       },
       {
         question: 'Where should I ask achievement questions?',
@@ -695,7 +693,7 @@ export const guides: Guide[] = [
       {
         question: 'Is Reddit a source of truth for nophenia?',
         answer:
-          'No. Reddit is useful for player reactions and demand signals, but official facts should be checked against Steam, itch.io, or creator-owned pages.',
+          'No. Reddit is useful for player reactions and demand signals, but release facts should be checked against Steam or creator-owned pages.',
       },
     ],
   },
@@ -713,14 +711,14 @@ export const guides: Guide[] = [
     coverImageUrl: screenshotCover('nophenia-itch-3.png'),
     publishedAt: checkedAt,
     updatedAt: checkedAt,
-    sourceStrategy: 'official',
+    sourceStrategy: 'manual_data',
     videoSearchQueries: [
       'nophenia horror',
       'nophenia comfort',
       'nophenia liminal space',
     ],
     sourceNotes:
-      'Uses the official itch.io comfort notice about liminality, isolation, and escapism.',
+      'Uses the comfort notice about liminality, isolation, and escapism checked during the build pass.',
     tags: ['Comfort', 'Liminal', 'Safety'],
     relatedRoutes: [
       '/play-online',
@@ -732,7 +730,7 @@ export const guides: Guide[] = [
       {
         heading: 'The game can feel unsettling without using horror rules',
         paragraphs: [
-          'The official itch page says the software does not contain conventional horror elements, but liminality, isolation, and escapism may still evoke unsettling feelings. That is the right way to think about nophenia: it can be quiet, soft, strange, and difficult all at once.',
+          'nophenia does not rely on conventional horror elements, but liminality, isolation, and escapism may still evoke unsettling feelings. That is the right way to think about the game: it can be quiet, soft, strange, and difficult all at once.',
           'If you are sensitive to empty spaces, dreamlike loops, or lonely audio, start in windowed mode and keep the volume comfortable.',
         ],
       },
@@ -755,7 +753,7 @@ export const guides: Guide[] = [
       {
         question: 'Does nophenia contain jumpscares?',
         answer:
-          'No conventional jumpscare or combat loop was verified from official material, but the atmosphere can still feel unsettling.',
+          'No conventional jumpscare or combat loop was verified, but the atmosphere can still feel unsettling.',
       },
       {
         question: 'What should I do if the game feels too intense?',

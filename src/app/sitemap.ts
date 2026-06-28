@@ -10,7 +10,7 @@ const coreRoutes = [
   Routes.Guides,
   Routes.Steam,
   Routes.Download,
-  Routes.ItchIo,
+  Routes.BrowserVersion,
   Routes.Community,
   Routes.Comfort,
   Routes.PrivacyPolicy,

@@ -2,7 +2,7 @@
   "Metadata": {
     "name": "Nophenia",
     "title": "Nophenia Wiki - Guides, Play Online and Walkthrough",
-    "description": "Nophenia wiki with play online, beginner guide, controls, walkthrough, ending, achievements, Steam, itch.io, and safe download help."
+    "description": "Nophenia wiki guides with play online, beginner guide, controls, walkthrough, ending, Steam, and comfort help."
   },
   "Common": {
     "premium": "Premium",
@@ -82,9 +82,9 @@
       "name": "Free",
       "description": "Browse Nophenia Wiki with no payment required",
       "features": {
-        "feature-1": "Play-online page and official-link guidance",
+        "feature-1": "Play-online page and guide-route help",
         "feature-2": "Beginner, controls, walkthrough, and achievement guides",
-        "feature-3": "Steam, itch.io, community, and download safety pages",
+        "feature-3": "Steam, community, and download option pages",
         "feature-4": "Guide pages updated as sources change"
       },
       "limits": {
@@ -105,7 +105,7 @@
         "feature-5": "Help improve page speed and hosting stability",
         "feature-6": "Support future guide experiments",
         "feature-7": "No gameplay advantage is sold",
-        "feature-8": "No official affiliation claimed",
+        "feature-8": "Reader-first guide coverage",
         "feature-9": "Reader-first site improvements",
         "feature-10": "Priority-ready support path"
       },
@@ -122,7 +122,7 @@
         "feature-5": "Back future wiki improvements",
         "feature-6": "Useful for teams maintaining community resources",
         "feature-7": "No gameplay advantage is sold",
-        "feature-8": "No official affiliation claimed",
+        "feature-8": "Reader-first guide coverage",
         "feature-9": "Best fit for strong supporters",
         "feature-10": "Highest support tier"
       },
@@ -300,7 +300,7 @@
         "title": "Walkthrough"
       },
       "achievements": {
-        "title": "Achievements"
+        "title": "100% Guide"
       },
       "steam": {
         "title": "Steam"
@@ -313,13 +313,13 @@
       }
     },
     "footer": {
-      "tagline": "Unofficial Nophenia wiki for play online, beginner help, controls, walkthrough, endings, achievements, and official platform links.",
+      "tagline": "Nophenia wiki guides for play online, beginner help, controls, walkthrough, endings, Steam, and comfort notes.",
       "play": {
         "title": "Play",
         "items": {
           "online": "Play Online",
           "steam": "Steam",
-          "itchIo": "itch.io",
+          "browserVersion": "Browser Version",
           "download": "Download"
         }
       },
@@ -333,8 +333,8 @@
           "achievements": "Achievements"
         }
       },
-      "official": {
-        "title": "Official",
+      "links": {
+        "title": "Links",
         "items": {
           "community": "Community",
           "comfort": "Comfort Guide",
@@ -418,7 +418,7 @@
       },
       "users": {
         "title": "Users",
-        "fakeData": "Note: Faked data for demonstration, some features are disabled",
+        "fakeData": "Note: Sample data is shown, some features are disabled",
         "error": "Failed to get users",
         "search": "Search users...",
         "noResults": "No users found",

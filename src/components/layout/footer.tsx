@@ -131,8 +131,8 @@ export function Footer({ className }: React.HTMLAttributes<HTMLElement>) {
           </span>
 
           <span className="text-muted-foreground text-sm">
-            Unofficial Nophenia wiki. Not affiliated with lane, Steam, or
-            itch.io.
+            Nophenia wiki guides for play online, controls, walkthrough, and
+            Steam release help.
           </span>
         </Container>
       </div>

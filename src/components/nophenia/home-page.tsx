@@ -32,22 +32,24 @@ const keywordLinks = [
   ['nophenia', '/'],
   ['nophenia wiki', '/'],
   ['nophenia guide', '/guides'],
+  ['nophenia wiki guide', '/guides'],
   ['nophenia play online', '/play-online'],
+  ['nophenia paly online', '/play-online'],
   ['nophenia beginner guide', '/guides/beginner-guide'],
   ['nophenia controls', '/guides/controls-and-comfort'],
   ['nophenia walkthrough', '/guides/walkthrough-ending'],
   ['nophenia ending explained', '/guides/walkthrough-ending'],
   ['nophenia 100% guide', '/guides/achievements-100-percent'],
   ['nophenia Steam', '/steam'],
-  ['nophenia demo', '/itch-io'],
+  ['nophenia browser game', '/play-online'],
   ['nophenia community', '/community'],
 ] as const;
 
 const beginnerJourney = [
   {
-    title: 'Play the official demo',
+    title: 'Play nophenia online',
     href: '/play-online',
-    body: 'Start the self-hosted itch.io HTML5 build and check browser focus.',
+    body: 'Launch the browser game and check input focus before exploring.',
   },
   {
     title: 'Read the first-session route',
@@ -65,9 +67,9 @@ const beginnerJourney = [
     body: 'Find the next transition without flattening the whole ending.',
   },
   {
-    title: 'Clean up achievements',
+    title: 'Use the completion checklist',
     href: '/guides/achievements-100-percent',
-    body: 'Use Steam tracking after one normal completion.',
+    body: 'Use Steam tracking after one normal completion path.',
   },
 ] as const;
 
@@ -75,11 +77,11 @@ const coreModules = [
   {
     title: 'Play and Version',
     icon: Gamepad2,
-    body: 'Try the official demo in browser, then use Steam for the full release, community hub, and achievement tracking.',
+    body: 'Play nophenia online in the browser, then use Steam for the full release, community hub, and completion tracking.',
     links: [
       ['Play online', '/play-online'],
       ['Steam release', '/steam'],
-      ['itch.io demo', '/itch-io'],
+      ['Browser version', '/browser-version'],
     ],
   },
   {
@@ -105,11 +107,11 @@ const coreModules = [
   {
     title: 'Community Signals',
     icon: Sparkles,
-    body: 'Use Steam Community, itch comments, and creator-owned links without inventing unverified official channels.',
+    body: 'Use Steam Community, player comments, and creator-owned links when you want update signals or player help.',
     links: [
       ['Community', '/community'],
       ['Steam', '/steam'],
-      ['Official itch', '/itch-io'],
+      ['Browser notes', '/browser-version'],
     ],
   },
 ] as const;
@@ -154,15 +156,11 @@ export function NopheniaHomePage({ locale }: { locale?: Locale }) {
         genre: ['Adventure', 'Casual', 'Indie', 'Simulation'],
         gamePlatform: ['Windows', 'Web Browser'],
         url: siteFacts.officialSteamUrl,
-        sameAs: [
-          siteFacts.officialSteamUrl,
-          siteFacts.officialItchUrl,
-          siteFacts.officialSiteUrl,
-        ],
+        sameAs: [siteFacts.officialSteamUrl, siteFacts.officialSiteUrl],
       },
       {
         '@type': 'VideoObject',
-        '@id': `${siteFacts.domain}/#official-trailer`,
+        '@id': `${siteFacts.domain}/#trailer`,
         name: homeTrailer.title,
         thumbnailUrl: ['https://i.ytimg.com/vi/brHDlSkKQMQ/hq720.jpg'],
         url: homeTrailer.watchUrl,
@@ -234,7 +232,7 @@ export function NopheniaHomePage({ locale }: { locale?: Locale }) {
           </div>
 
           <aside
-            aria-label="nophenia official trailer"
+            aria-label="nophenia trailer"
             className="min-w-0 overflow-hidden rounded-lg border border-white/15 bg-[#111827]/88 shadow-2xl shadow-black/30 backdrop-blur"
           >
             <div className="aspect-video bg-black">
@@ -263,7 +261,7 @@ export function NopheniaHomePage({ locale }: { locale?: Locale }) {
                       Current game status
                     </p>
                     <h2 className="mt-1 font-display text-xl font-bold text-white">
-                      Official snapshot
+                      Game snapshot
                     </h2>
                   </div>
                   <a
@@ -337,8 +335,8 @@ export function NopheniaHomePage({ locale }: { locale?: Locale }) {
                 </h2>
                 <p className="mt-4 text-sm leading-7 text-[#D8E8EF]">
                   The launch set follows current demand: play online, guide,
-                  controls, walkthrough, ending, achievements, Steam, demo,
-                  community, and comfort/safety.
+                  controls, walkthrough, ending, Steam, browser play, community,
+                  and comfort notes.
                 </p>
               </div>
               <div className="flex flex-wrap gap-3">
@@ -456,9 +454,10 @@ export function NopheniaHomePage({ locale }: { locale?: Locale }) {
                   </h2>
                 </div>
                 <p className="mt-4 text-sm leading-7 text-[#D8E8EF]">
-                  If you are deciding whether to try the demo, buy on Steam,
-                  hunt achievements, or ask the community, use these route pages
-                  before relying on unsafe mirrors or unsourced spoilers.
+                  If you are deciding whether to play nophenia online, buy on
+                  Steam, finish a completion path, or ask the community, use
+                  these route pages before jumping between random search
+                  results.
                 </p>
                 <div className="mt-5 flex flex-wrap gap-2">
                   {[
@@ -486,18 +485,21 @@ export function NopheniaHomePage({ locale }: { locale?: Locale }) {
                 <div className="flex items-center gap-3">
                   <BadgeAlert className="size-5 text-[#F6D089]" />
                   <h2 className="font-display text-2xl font-bold text-white">
-                    Demo clarity
+                    Browser play clarity
                   </h2>
                 </div>
                 <p className="mt-4 text-sm leading-7 text-[#FFE6B9]">
-                  The browser version is the official itch.io HTML5 demo. Steam
-                  is the current full release for completion and achievements.
+                  The browser version lets you play nophenia online inside this
+                  nophenia wiki. Steam is the current full release for
+                  completion and the full route.
                 </p>
                 <Button
                   asChild
                   className="mt-5 bg-[#F6D089] text-[#17100B] hover:bg-[#FFE1A8]"
                 >
-                  <LocaleLink href="/itch-io">Read demo notes</LocaleLink>
+                  <LocaleLink href="/browser-version">
+                    Read browser notes
+                  </LocaleLink>
                 </Button>
               </div>
             </section>

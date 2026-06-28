@@ -173,7 +173,7 @@ export function NopheniaGameFrame({
           <iframe
             ref={iframeRef}
             key={frameKey}
-            title="nophenia online demo"
+            title="nophenia online game"
             src={src}
             allow="fullscreen; autoplay; gamepad; cross-origin-isolated"
             allowFullScreen
@@ -196,15 +196,15 @@ export function NopheniaGameFrame({
             <div className="absolute inset-x-0 bottom-0 p-5 md:p-8">
               <div className="max-w-2xl rounded-lg border border-[#6DDFC4]/40 bg-[#070911]/90 p-5 backdrop-blur">
                 <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#6DDFC4]">
-                  Browser demo
+                  Browser play
                 </p>
                 <h2 className="mt-2 font-display text-2xl font-bold text-[#F6F0EA] md:text-3xl">
                   Try nophenia in your browser
                 </h2>
                 <p className="mt-3 text-sm leading-7 text-[#D8E8EF]">
                   The first launch downloads the Godot HTML5 runtime and game
-                  pack. Use Steam for the full release and this page for the
-                  official demo.
+                  pack. Start here when you want to play nophenia online, then
+                  use the guide links for controls and route help.
                 </p>
                 <Button
                   type="button"

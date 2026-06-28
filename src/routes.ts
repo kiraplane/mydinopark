@@ -21,7 +21,7 @@ export enum Routes {
   Achievements = '/guides/achievements-100-percent',
   Steam = '/steam',
   Download = '/download',
-  ItchIo = '/itch-io',
+  BrowserVersion = '/browser-version',
   Community = '/community',
   Comfort = '/comfort',
 

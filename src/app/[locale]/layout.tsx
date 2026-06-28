@@ -54,7 +54,7 @@ const MARKETING_FOOTER_KEYS = [
   'tagline',
   'play',
   'guides',
-  'official',
+  'links',
   'legal',
 ] as const;
 const MARKETING_FOOTER_GUIDE_ITEM_KEYS = [
@@ -67,10 +67,10 @@ const MARKETING_FOOTER_GUIDE_ITEM_KEYS = [
 const MARKETING_FOOTER_PLAY_ITEM_KEYS = [
   'online',
   'steam',
-  'itchIo',
+  'browserVersion',
   'download',
 ] as const;
-const MARKETING_FOOTER_OFFICIAL_ITEM_KEYS = [
+const MARKETING_FOOTER_LINK_ITEM_KEYS = [
   'community',
   'comfort',
   'disclaimer',
@@ -93,8 +93,8 @@ function pickMarketingFooter(footer: MessageMap | undefined) {
   const playItems = play?.items as MessageMap | undefined;
   const guides = selectedFooter.guides as MessageMap | undefined;
   const guideItems = guides?.items as MessageMap | undefined;
-  const official = selectedFooter.official as MessageMap | undefined;
-  const officialItems = official?.items as MessageMap | undefined;
+  const links = selectedFooter.links as MessageMap | undefined;
+  const linkItems = links?.items as MessageMap | undefined;
 
   if (play && playItems) {
     selectedFooter.play = {
@@ -110,10 +110,10 @@ function pickMarketingFooter(footer: MessageMap | undefined) {
     };
   }
 
-  if (official && officialItems) {
-    selectedFooter.official = {
-      ...official,
-      items: pickKeys(officialItems, MARKETING_FOOTER_OFFICIAL_ITEM_KEYS),
+  if (links && linkItems) {
+    selectedFooter.links = {
+      ...links,
+      items: pickKeys(linkItems, MARKETING_FOOTER_LINK_ITEM_KEYS),
     };
   }
 

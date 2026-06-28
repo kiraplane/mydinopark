@@ -44,9 +44,10 @@ const retiredPublicRouteRedirects: Array<{
   { pattern: /^\/tier-list(?:\/.*)?$/, target: '/guides' },
   { pattern: /^\/save-editor(?:\/.*)?$/, target: '/guides' },
   { pattern: /^\/updates(?:\/.*)?$/, target: '/guides' },
-  { pattern: /^\/itchio\/?$/, target: '/itch-io' },
-  { pattern: /^\/itch-io-nophenia\/?$/, target: '/itch-io' },
-  { pattern: /^\/nophenia-itch-io\/?$/, target: '/itch-io' },
+  { pattern: /^\/itch-io\/?$/, target: '/browser-version' },
+  { pattern: /^\/itchio\/?$/, target: '/browser-version' },
+  { pattern: /^\/itch-io-nophenia\/?$/, target: '/browser-version' },
+  { pattern: /^\/nophenia-itch-io\/?$/, target: '/browser-version' },
   { pattern: /^\/nophenia-play-online\/?$/, target: '/play-online' },
   { pattern: /^\/paly-online\/?$/, target: '/play-online' },
   { pattern: /^\/nophenia-paly-online\/?$/, target: '/play-online' },
@@ -88,6 +89,10 @@ export default async function middleware(req: NextRequest) {
   const forwardedProto = req.headers.get('x-forwarded-proto');
   const productionHosts = new Set(['nophenia.wiki', 'www.nophenia.wiki']);
   const canonicalHost = 'www.nophenia.wiki';
+
+  if (nextUrl.pathname.startsWith('/games/')) {
+    return NextResponse.next();
+  }
 
   if (
     hostname &&
@@ -244,5 +249,5 @@ function getLocaleFromPathname(
 }
 
 export const config = {
-  matcher: ['/((?!api|_next|_vercel|.*\\..*).*)'],
+  matcher: ['/((?!api|_next|_vercel|games|.*\\..*).*)'],
 };

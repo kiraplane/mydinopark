@@ -22,8 +22,8 @@ export function useFooterLinks(): NestedMenuItem[] {
           external: false,
         },
         {
-          title: t('play.items.itchIo'),
-          href: Routes.ItchIo,
+          title: t('play.items.browserVersion'),
+          href: Routes.BrowserVersion,
           external: false,
         },
         {
@@ -64,20 +64,20 @@ export function useFooterLinks(): NestedMenuItem[] {
       ],
     },
     {
-      title: t('official.title'),
+      title: t('links.title'),
       items: [
         {
-          title: t('official.items.community'),
+          title: t('links.items.community'),
           href: Routes.Community,
           external: false,
         },
         {
-          title: t('official.items.comfort'),
+          title: t('links.items.comfort'),
           href: Routes.Comfort,
           external: false,
         },
         {
-          title: t('official.items.disclaimer'),
+          title: t('links.items.disclaimer'),
           href: Routes.Disclaimer,
           external: false,
         },

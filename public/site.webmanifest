@@ -1,7 +1,7 @@
 {
   "name": "Nophenia Wiki",
   "short_name": "Nophenia",
-  "description": "Nophenia wiki for play online, beginner guides, controls, walkthrough, endings, achievements, Steam, itch.io, and safe downloads.",
+  "description": "Nophenia wiki guides for play online, beginner guides, controls, walkthrough, endings, Steam, and comfort help.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#070911",
