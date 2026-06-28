@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-/* Orb of Creation - arcane incremental guide theme */
+/* Nophenia - dream-explorer guide theme */
 
 :root {
   --font-noto-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
@@ -389,11 +389,11 @@ body {
 }
 
 /*
- * Orb of Creation theme colors
+ * Nophenia theme colors
  */
 .theme-default {
-  --primary: #ffb68a;
-  --primary-foreground: #2a1720;
+  --primary: #6ddfc4;
+  --primary-foreground: #071017;
 }
 
 .theme-blue {

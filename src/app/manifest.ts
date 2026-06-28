@@ -23,12 +23,12 @@ import type { MetadataRoute } from 'next';
 export default function manifest(): MetadataRoute.Manifest {
   return {
     name: defaultMessages.Metadata.name,
-    short_name: 'Orb Wiki',
+    short_name: 'nophenia',
     description: defaultMessages.Metadata.description,
     start_url: '/',
     display: 'standalone',
-    background_color: '#111915',
-    theme_color: '#FFB68A',
+    background_color: '#070911',
+    theme_color: '#6DDFC4',
     icons: [
       {
         src: '/favicon-32x32.png',

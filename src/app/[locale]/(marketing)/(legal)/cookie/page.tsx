@@ -10,9 +10,9 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   return constructMetadata({
-    title: 'Cookie Policy | Orb of Creation Wiki',
+    title: 'Cookie Policy | Nophenia Wiki',
     description:
-      'How Orb of Creation Wiki uses essential cookies, analytics, and similar technologies.',
+      'How Nophenia Wiki uses essential cookies, analytics, and similar technologies.',
     locale,
     pathname: '/cookie',
   });
@@ -20,13 +20,13 @@ export async function generateMetadata({
 
 export default function CookiePolicyPage() {
   return (
-    <div className="bg-[#111915] py-12 text-[#F3EDE1]">
+    <div className="bg-[#070911] py-12 text-[#F6F0EA]">
       <Container className="max-w-3xl space-y-6 px-4">
         <h1 className="font-display text-4xl font-black">Cookie Policy</h1>
         <p className="leading-8 text-[#CDEAE7]">
-          Orb of Creation Wiki uses essential cookies and similar technologies
-          to keep the site working, remember basic preferences, and understand
-          aggregate traffic patterns.
+          Nophenia Wiki uses essential cookies and similar technologies to keep
+          the site working, remember basic preferences, and understand aggregate
+          traffic patterns.
         </p>
         <p className="leading-8 text-[#CDEAE7]">
           Analytics or advertising partners may set limited cookies to measure
@@ -40,7 +40,7 @@ export default function CookiePolicyPage() {
           work as expected when cookies are disabled.
         </p>
         <p className="leading-8 text-[#CDEAE7]">
-          Questions about this policy can be sent to hello@orbofcreation.wiki.
+          Questions about this policy can be sent to hello@nophenia.wiki.
         </p>
       </Container>
     </div>

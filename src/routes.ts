@@ -12,20 +12,18 @@ export enum Routes {
   TermsOfService = '/terms',
   Disclaimer = '/disclaimer',
 
-  // Orb of Creation wiki routes
+  // Nophenia wiki routes
   Play = '/play-online',
   Guides = '/guides',
   BeginnerGuide = '/guides/beginner-guide',
-  Spells = '/spells',
-  Research = '/research',
-  Rituals = '/rituals',
-  AlchemyDruidry = '/guides/alchemy-druidry',
-  NewGamePlus = '/guides/new-game-plus',
+  Controls = '/guides/controls-and-comfort',
+  Walkthrough = '/guides/walkthrough-ending',
+  Achievements = '/guides/achievements-100-percent',
   Steam = '/steam',
   Download = '/download',
   ItchIo = '/itch-io',
-  Discord = '/discord',
-  Mobile = '/mobile',
+  Community = '/community',
+  Comfort = '/comfort',
 
   // auth routes
   Login = '/auth/login',

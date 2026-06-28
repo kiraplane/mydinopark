@@ -35,6 +35,6 @@ export default function ForgotPassword({
 ForgotPassword.PreviewProps = {
   locale: routing.defaultLocale,
   messages: defaultMessages,
-  url: 'https://www.orbofcreation.wiki',
+  url: 'https://www.nophenia.wiki',
   name: 'username',
 };

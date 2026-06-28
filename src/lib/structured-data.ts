@@ -129,7 +129,7 @@ export function buildSoftwareApplicationStructuredData({
       priceCurrency: 'USD',
       availability: 'https://schema.org/InStock',
       description:
-        'The mobile game is free to install where official Android and iOS storefronts make it available.',
+        'The browser build can be played on the site, with official Steam and itch.io links provided for supported versions.',
     },
     publisher: {
       '@type': 'Organization',

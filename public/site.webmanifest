@@ -1,11 +1,11 @@
 {
-  "name": "Orb of Creation Wiki",
-  "short_name": "Orb Wiki",
-  "description": "Orb of Creation wiki for play online, beginner guides, spells, research, rituals, Steam 1.0, itch.io, Discord, and safe downloads.",
+  "name": "Nophenia Wiki",
+  "short_name": "Nophenia",
+  "description": "Nophenia wiki for play online, beginner guides, controls, walkthrough, endings, achievements, Steam, itch.io, and safe downloads.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#111915",
-  "theme_color": "#FFB68A",
+  "background_color": "#070911",
+  "theme_color": "#6DDFC4",
   "icons": [
     {
       "src": "/favicon-32x32.png",

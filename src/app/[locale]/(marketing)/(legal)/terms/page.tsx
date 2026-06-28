@@ -10,9 +10,9 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   return constructMetadata({
-    title: 'Terms of Service | Orb of Creation Wiki',
+    title: 'Terms of Service | Nophenia Wiki',
     description:
-      'Terms for using Orb of Creation Wiki, an unofficial Orb of Creation guide site.',
+      'Terms for using Nophenia Wiki, an unofficial Nophenia guide site.',
     locale,
     pathname: '/terms',
   });
@@ -20,19 +20,19 @@ export async function generateMetadata({
 
 export default function TermsOfServicePage() {
   return (
-    <div className="bg-[#111915] py-12 text-[#F3EDE1]">
+    <div className="bg-[#070911] py-12 text-[#F6F0EA]">
       <Container className="max-w-3xl space-y-6 px-4">
         <h1 className="font-display text-4xl font-black">Terms of Service</h1>
         <p className="leading-8 text-[#CDEAE7]">
-          This site provides unofficial Orb of Creation guides, browser play
-          access, source notes, and official-link guidance. It is not affiliated
-          with, endorsed by, sponsored by, or operated by MarpleGames, Valve,
-          Steam, or itch.io.
+          This site provides unofficial Nophenia guides, browser play access,
+          source notes, and official-link guidance. It is not affiliated with,
+          endorsed by, sponsored by, or operated by lane, Valve, Steam, or
+          itch.io.
         </p>
         <p className="leading-8 text-[#CDEAE7]">
-          Mechanics, spell names, and progression details can change after game
-          updates. Treat guide pages as community-oriented guidance and verify
-          important details in your current game version.
+          Routes, interactions, achievements, and ending details can change
+          after game updates. Treat guide pages as community-oriented guidance
+          and verify important details in your current game version.
         </p>
         <p className="leading-8 text-[#CDEAE7]">
           Do not use this site to distribute unauthorized game files, unsafe
@@ -40,7 +40,7 @@ export default function TermsOfServicePage() {
           automation scripts.
         </p>
         <p className="leading-8 text-[#CDEAE7]">
-          Questions about these terms can be sent to hello@orbofcreation.wiki.
+          Questions about these terms can be sent to hello@nophenia.wiki.
         </p>
       </Container>
     </div>

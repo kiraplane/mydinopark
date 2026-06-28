@@ -20,13 +20,13 @@ export const websiteConfig: WebsiteConfig = {
   },
   metadata: {
     images: {
-      ogImage: '/orbofcreation/orb-of-creation-og.png',
+      ogImage: '/nophenia/nophenia-og.png',
       logoLight: '/logo.png',
       logoDark: '/logo.png',
     },
     social: {
       github: '',
-      twitter: '',
+      twitter: 'https://x.com/emiwau',
       blueSky: '',
       discord: '',
       mastodon: '',
@@ -59,7 +59,7 @@ export const websiteConfig: WebsiteConfig = {
     defaultLocale: 'en',
     locales: {
       en: {
-        flag: '🟣',
+        flag: '🌙',
         name: 'English',
         hreflang: 'en-US',
       },
@@ -75,8 +75,8 @@ export const websiteConfig: WebsiteConfig = {
   },
   mail: {
     provider: 'resend',
-    fromEmail: 'Orb of Creation <hello@orbofcreation.wiki>',
-    supportEmail: 'hello@orbofcreation.wiki',
+    fromEmail: 'Nophenia <hello@nophenia.wiki>',
+    supportEmail: 'hello@nophenia.wiki',
   },
   newsletter: {
     enable: false,

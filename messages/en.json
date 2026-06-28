@@ -1,8 +1,8 @@
 {
   "Metadata": {
-    "name": "Orb of Creation",
-    "title": "Orb of Creation Wiki - Guides, Play Online and Steam 1.0",
-    "description": "Orb of Creation wiki with play online, beginner guide, spells, research, rituals, alchemy, New Game+, Steam, itch.io, Discord, and safe download help."
+    "name": "Nophenia",
+    "title": "Nophenia Wiki - Guides, Play Online and Walkthrough",
+    "description": "Nophenia wiki with play online, beginner guide, controls, walkthrough, ending, achievements, Steam, itch.io, and safe download help."
   },
   "Common": {
     "premium": "Premium",
@@ -54,7 +54,7 @@
   },
   "PricingPage": {
     "title": "Pricing",
-    "description": "Optional supporter plans for keeping Orb of Creation Wiki maintained",
+    "description": "Optional supporter plans for keeping Nophenia Wiki maintained",
     "subtitle": "Simple support options for readers who want to help maintain current guides and hosting",
     "monthly": "Monthly",
     "yearly": "Yearly",
@@ -80,11 +80,11 @@
   "PricePlans": {
     "free": {
       "name": "Free",
-      "description": "Browse Orb of Creation Wiki with no payment required",
+      "description": "Browse Nophenia Wiki with no payment required",
       "features": {
         "feature-1": "Play-online page and official-link guidance",
-        "feature-2": "Beginner, spells, research, and ritual guides",
-        "feature-3": "Steam, itch.io, Discord, and mobile safety pages",
+        "feature-2": "Beginner, controls, walkthrough, and achievement guides",
+        "feature-3": "Steam, itch.io, community, and download safety pages",
         "feature-4": "Guide pages updated as sources change"
       },
       "limits": {
@@ -113,7 +113,7 @@
     },
     "max": {
       "name": "Backer",
-      "description": "For heavier support of Orb of Creation Wiki maintenance",
+      "description": "For heavier support of Nophenia Wiki maintenance",
       "features": {
         "feature-1": "Support expanded guide coverage",
         "feature-2": "Help fund more frequent source reviews",
@@ -296,29 +296,29 @@
       "guides": {
         "title": "Guides"
       },
-      "spells": {
-        "title": "Spells"
+      "walkthrough": {
+        "title": "Walkthrough"
       },
-      "research": {
-        "title": "Research"
+      "achievements": {
+        "title": "Achievements"
       },
       "steam": {
-        "title": "Steam 1.0"
+        "title": "Steam"
       },
       "download": {
         "title": "Download"
       },
-      "discord": {
-        "title": "Discord"
+      "community": {
+        "title": "Community"
       }
     },
     "footer": {
-      "tagline": "Unofficial Orb of Creation wiki for play online, Steam 1.0, spells, research, rituals, alchemy, New Game+, and safe platform links.",
+      "tagline": "Unofficial Nophenia wiki for play online, beginner help, controls, walkthrough, endings, achievements, and official platform links.",
       "play": {
         "title": "Play",
         "items": {
           "online": "Play Online",
-          "steam": "Steam 1.0",
+          "steam": "Steam",
           "itchIo": "itch.io",
           "download": "Download"
         }
@@ -328,16 +328,16 @@
         "items": {
           "all": "All Guides",
           "beginner": "Beginner Guide",
-          "spells": "Spells",
-          "research": "Research",
-          "rituals": "Rituals"
+          "controls": "Controls",
+          "walkthrough": "Walkthrough",
+          "achievements": "Achievements"
         }
       },
       "official": {
         "title": "Official",
         "items": {
-          "discord": "Discord",
-          "mobile": "Mobile Safety",
+          "community": "Community",
+          "comfort": "Comfort Guide",
           "disclaimer": "Disclaimer"
         }
       },

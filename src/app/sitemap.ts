@@ -1,4 +1,4 @@
-import { guides } from '@/data/orbofcreation/guides';
+import { guides } from '@/data/nophenia/guides';
 import { Routes } from '@/routes';
 import type { MetadataRoute } from 'next';
 import { routing } from '../i18n/routing';
@@ -8,14 +8,11 @@ const coreRoutes = [
   Routes.Root,
   Routes.Play,
   Routes.Guides,
-  Routes.Spells,
-  Routes.Research,
-  Routes.Rituals,
   Routes.Steam,
   Routes.Download,
   Routes.ItchIo,
-  Routes.Discord,
-  Routes.Mobile,
+  Routes.Community,
+  Routes.Comfort,
   Routes.PrivacyPolicy,
   Routes.TermsOfService,
   Routes.CookiePolicy,
@@ -26,7 +23,7 @@ const guideRoutes = guides
   .map((guide) => guide.path)
   .filter((path) => !coreRoutes.includes(path as Routes));
 
-const stableLastModified = new Date('2026-06-24T00:00:00.000Z');
+const stableLastModified = new Date('2026-06-28T00:00:00.000Z');
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const sitemapList: MetadataRoute.Sitemap = [];
@@ -55,10 +52,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
               ? 0.95
               : route === Routes.Guides ||
                   route === Routes.Steam ||
-                  route === Routes.Spells ||
-                  route === Routes.Research ||
-                  route === Routes.Rituals ||
-                  route === Routes.Download
+                  route === Routes.Download ||
+                  route === Routes.Community ||
+                  route === Routes.Comfort
                 ? 0.9
                 : 0.8,
       });

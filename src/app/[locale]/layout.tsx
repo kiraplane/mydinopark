@@ -43,11 +43,11 @@ const MARKETING_NAVBAR_KEYS = [
   'home',
   'play',
   'guides',
-  'spells',
-  'research',
+  'walkthrough',
+  'achievements',
   'steam',
   'download',
-  'discord',
+  'community',
 ] as const;
 
 const MARKETING_FOOTER_KEYS = [
@@ -60,9 +60,9 @@ const MARKETING_FOOTER_KEYS = [
 const MARKETING_FOOTER_GUIDE_ITEM_KEYS = [
   'all',
   'beginner',
-  'spells',
-  'research',
-  'rituals',
+  'controls',
+  'walkthrough',
+  'achievements',
 ] as const;
 const MARKETING_FOOTER_PLAY_ITEM_KEYS = [
   'online',
@@ -71,8 +71,8 @@ const MARKETING_FOOTER_PLAY_ITEM_KEYS = [
   'download',
 ] as const;
 const MARKETING_FOOTER_OFFICIAL_ITEM_KEYS = [
-  'discord',
-  'mobile',
+  'community',
+  'comfort',
   'disclaimer',
 ] as const;
 

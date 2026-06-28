@@ -1,7 +1,7 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "main": ".open-next/worker.js",
-  "name": "orbofcreation",
+  "name": "nophenia",
   "workers_dev": true,
   "preview_urls": true,
   "keep_vars": true,
@@ -12,14 +12,14 @@
   "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
   "routes": [
     {
-      "pattern": "orbofcreation.wiki",
+      "pattern": "nophenia.wiki",
       "custom_domain": true,
-      "zone_name": "orbofcreation.wiki"
+      "zone_name": "nophenia.wiki"
     },
     {
-      "pattern": "www.orbofcreation.wiki",
+      "pattern": "www.nophenia.wiki",
       "custom_domain": true,
-      "zone_name": "orbofcreation.wiki"
+      "zone_name": "nophenia.wiki"
     }
   ],
   "build": {

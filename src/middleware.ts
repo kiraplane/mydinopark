@@ -45,18 +45,40 @@ const retiredPublicRouteRedirects: Array<{
   { pattern: /^\/save-editor(?:\/.*)?$/, target: '/guides' },
   { pattern: /^\/updates(?:\/.*)?$/, target: '/guides' },
   { pattern: /^\/itchio\/?$/, target: '/itch-io' },
-  { pattern: /^\/itch-io-orb-of-creation\/?$/, target: '/itch-io' },
-  { pattern: /^\/orb-of-creation-itch-io\/?$/, target: '/itch-io' },
-  { pattern: /^\/download-orb-of-creation\/?$/, target: '/download' },
-  { pattern: /^\/orb-of-creation-download\/?$/, target: '/download' },
-  { pattern: /^\/orb-of-creation-apk\/?$/, target: '/mobile' },
-  { pattern: /^\/android-download\/?$/, target: '/mobile' },
-  { pattern: /^\/orb-of-creation-mobile\/?$/, target: '/mobile' },
-  { pattern: /^\/orb-of-creation-discord\/?$/, target: '/discord' },
-  { pattern: /^\/orb-of-creation-steam\/?$/, target: '/steam' },
-  { pattern: /^\/orb-of-creation-research\/?$/, target: '/research' },
-  { pattern: /^\/orb-of-creation-spells\/?$/, target: '/spells' },
-  { pattern: /^\/orb-of-creation-rituals\/?$/, target: '/rituals' },
+  { pattern: /^\/itch-io-nophenia\/?$/, target: '/itch-io' },
+  { pattern: /^\/nophenia-itch-io\/?$/, target: '/itch-io' },
+  { pattern: /^\/nophenia-play-online\/?$/, target: '/play-online' },
+  { pattern: /^\/paly-online\/?$/, target: '/play-online' },
+  { pattern: /^\/nophenia-paly-online\/?$/, target: '/play-online' },
+  { pattern: /^\/play-nophenia-online\/?$/, target: '/play-online' },
+  { pattern: /^\/download-nophenia\/?$/, target: '/download' },
+  { pattern: /^\/nophenia-download\/?$/, target: '/download' },
+  { pattern: /^\/nophenia-apk\/?$/, target: '/download' },
+  { pattern: /^\/android-download\/?$/, target: '/download' },
+  { pattern: /^\/nophenia-mobile\/?$/, target: '/comfort' },
+  { pattern: /^\/nophenia-discord\/?$/, target: '/community' },
+  { pattern: /^\/nophenia-steam\/?$/, target: '/steam' },
+  { pattern: /^\/community\/discord\/?$/, target: '/community' },
+  { pattern: /^\/controls\/?$/, target: '/guides/controls-and-comfort' },
+  {
+    pattern: /^\/nophenia-controls\/?$/,
+    target: '/guides/controls-and-comfort',
+  },
+  { pattern: /^\/walkthrough\/?$/, target: '/guides/walkthrough-ending' },
+  { pattern: /^\/ending\/?$/, target: '/guides/walkthrough-ending' },
+  { pattern: /^\/nophenia-ending\/?$/, target: '/guides/walkthrough-ending' },
+  {
+    pattern: /^\/nophenia-walkthrough\/?$/,
+    target: '/guides/walkthrough-ending',
+  },
+  {
+    pattern: /^\/achievements?(?:\/.*)?$/,
+    target: '/guides/achievements-100-percent',
+  },
+  {
+    pattern: /^\/nophenia-100-percent\/?$/,
+    target: '/guides/achievements-100-percent',
+  },
 ];
 
 export default async function middleware(req: NextRequest) {
@@ -64,11 +86,8 @@ export default async function middleware(req: NextRequest) {
   const hostHeader = req.headers.get('host');
   const hostname = hostHeader?.split(':')[0].toLowerCase();
   const forwardedProto = req.headers.get('x-forwarded-proto');
-  const productionHosts = new Set([
-    'orbofcreation.wiki',
-    'www.orbofcreation.wiki',
-  ]);
-  const canonicalHost = 'www.orbofcreation.wiki';
+  const productionHosts = new Set(['nophenia.wiki', 'www.nophenia.wiki']);
+  const canonicalHost = 'www.nophenia.wiki';
 
   if (
     hostname &&
