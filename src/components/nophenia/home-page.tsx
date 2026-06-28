@@ -118,6 +118,9 @@ const coreModules = [
 
 const homeTrailer = {
   title: 'nophenia pre-release trailer thingy',
+  description:
+    'A short nophenia trailer showing dreamlike spaces, quiet exploration, and the walking pace players can expect.',
+  uploadDate: '2025-09-29T13:27:41+00:00',
   embedUrl: 'https://www.youtube-nocookie.com/embed/brHDlSkKQMQ?rel=0&hl=en',
   watchUrl: 'https://www.youtube.com/watch?v=brHDlSkKQMQ',
 };
@@ -162,7 +165,9 @@ export function NopheniaHomePage({ locale }: { locale?: Locale }) {
         '@type': 'VideoObject',
         '@id': `${siteFacts.domain}/#trailer`,
         name: homeTrailer.title,
+        description: homeTrailer.description,
         thumbnailUrl: ['https://i.ytimg.com/vi/brHDlSkKQMQ/hq720.jpg'],
+        uploadDate: homeTrailer.uploadDate,
         url: homeTrailer.watchUrl,
         embedUrl: homeTrailer.embedUrl,
         author: {

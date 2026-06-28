@@ -12,6 +12,7 @@ const videos = {
     channel: 'emiwa',
     url: 'https://www.youtube.com/watch?v=brHDlSkKQMQ',
     thumbnailUrl: videoCover('brHDlSkKQMQ'),
+    publishedAt: '2025-09-29T13:27:41+00:00',
     checkedAt,
   },
   fullWalkthrough: {

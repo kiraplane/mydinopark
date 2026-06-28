@@ -20,6 +20,7 @@ import Image from 'next/image';
 
 const gameSrc = siteFacts.browserGameUrl;
 const posterSrc = siteFacts.officialHeroImage;
+const trailerUploadDate = '2025-09-29T13:27:41+00:00';
 
 const guideIcons = {
   gamepad: Gamepad2,
@@ -76,6 +77,7 @@ export function NopheniaPlayOnlinePage({ locale }: { locale?: Locale }) {
         name: content.media.video.title,
         description: content.media.body,
         thumbnailUrl: [videoThumbnailUrl],
+        uploadDate: trailerUploadDate,
         url: videoWatchUrl,
         embedUrl: videoEmbedUrl,
         author: {
