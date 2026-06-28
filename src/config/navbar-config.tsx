@@ -8,7 +8,6 @@ import {
   MessageCircle,
   Route,
   Sparkles,
-  Trophy,
 } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 
@@ -33,12 +32,6 @@ export function useNavbarLinks(): NestedMenuItem[] {
       href: Routes.Walkthrough,
       external: false,
       icon: <Route className="size-4" />,
-    },
-    {
-      title: t('achievements.title'),
-      href: Routes.Achievements,
-      external: false,
-      icon: <Trophy className="size-4" />,
     },
     {
       title: t('steam.title'),

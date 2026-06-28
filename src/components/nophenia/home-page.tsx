@@ -191,9 +191,6 @@ export function NopheniaHomePage({ locale }: { locale?: Locale }) {
 
         <Container className="relative grid grid-cols-1 items-center gap-8 px-4 py-8 md:py-10 lg:grid-cols-[minmax(0,1fr)_420px] lg:py-12 xl:grid-cols-[minmax(0,1fr)_520px]">
           <div className="min-w-0">
-            <Badge className="mb-4 bg-[#6DDFC4] text-[#06120F]">
-              {content.badge}
-            </Badge>
             <h1 className="max-w-4xl font-display text-4xl font-black leading-tight text-white sm:text-5xl md:text-6xl">
               {content.title}
             </h1>

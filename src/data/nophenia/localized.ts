@@ -4,7 +4,6 @@ import { gameFacts, keywordMatrix, siteFacts } from './sources';
 import type { GameFact, Guide, GuideFaq } from './types';
 
 export interface HomeContent {
-  badge: string;
   metadataTitle: string;
   title: string;
   intro: string;
@@ -139,9 +138,8 @@ export function getHomeContent(_locale?: Locale | string): HomeContent {
     }));
 
   return {
-    badge: 'nophenia guide hub',
-    metadataTitle: 'nophenia Wiki Guides - nophenia guide and play online',
-    title: 'nophenia Wiki Guides',
+    metadataTitle: 'nophenia Wiki - Guides、Walkthrough and Play Online',
+    title: 'Nophenia Wiki',
     intro:
       'A player-first nophenia wiki for the lo-fi 3D dream explorer: play nophenia online, use a practical nophenia guide, learn controls, and find a spoiler-light walkthrough route.',
     primaryCta: 'Start with the beginner guide',
@@ -161,7 +159,7 @@ export function getHomeContent(_locale?: Locale | string): HomeContent {
       {
         question: 'Can I play nophenia online here?',
         answer:
-          'Yes. Use the play-online page to launch nophenia in your browser, then keep this nophenia guide hub open for controls and route help.',
+          'Yes. Use the play-online page to launch nophenia in your browser, then keep this nophenia guide page open for controls and route help.',
       },
       {
         question: 'Why does the site focus on guides instead of a database?',

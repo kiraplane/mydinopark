@@ -44,7 +44,6 @@ const MARKETING_NAVBAR_KEYS = [
   'play',
   'guides',
   'walkthrough',
-  'achievements',
   'steam',
   'download',
   'community',
