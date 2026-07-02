@@ -9,7 +9,8 @@ export const siteFacts = {
   gameName: 'nophenia',
   creator: 'lane',
   officialSteamUrl: 'https://store.steampowered.com/app/3979330/nophenia/',
-  officialSteamDemoUrl: 'https://store.steampowered.com/app/4172800/nophenia_Demo/',
+  officialSteamDemoUrl:
+    'https://store.steampowered.com/app/4172800/nophenia_Demo/',
   officialItchUrl: 'https://emiwa.itch.io/nophenia',
   officialSiteUrl: 'https://nophenia.net/',
   officialTwitterUrl: 'https://x.com/emiwau',
@@ -205,7 +206,8 @@ export const keywordMatrix: KeywordMatrixItem[] = [
   },
   {
     keyword: 'nophenia demo',
-    intent: 'Find the Steam Demo, browser-play option, and full release difference.',
+    intent:
+      'Find the Steam Demo, browser-play option, and full release difference.',
     route: '/demo',
     priority: 'P0',
     status: 'keep',

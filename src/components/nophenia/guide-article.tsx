@@ -1,7 +1,4 @@
-import {
-  AdsterraAdFrame,
-  AdsterraSideRails,
-} from '@/components/ads/adsterra-ad';
+import { AdsterraAdFrame } from '@/components/ads/adsterra-ad';
 import Container from '@/components/layout/container';
 import { FaqSection } from '@/components/nophenia/faq-section';
 import {
@@ -119,7 +116,6 @@ export function GuideArticle({
   return (
     <div className="bg-[#070911] py-10 text-[#F6F0EA]">
       <JsonLd data={jsonLd} />
-      <AdsterraSideRails />
       <Container className="px-4">
         <div className="grid items-start gap-8 lg:grid-cols-[minmax(0,1fr)_264px]">
           <article className="min-w-0 space-y-6">

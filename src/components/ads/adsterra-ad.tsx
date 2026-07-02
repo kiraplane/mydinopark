@@ -26,7 +26,7 @@ export function AdsterraAdFrame({
     <div className={cn('flex w-full justify-center', className)}>
       <div style={{ maxWidth: `${ad.width}px`, width: '100%' }}>
         {label ? (
-          <div className="mb-2 text-center text-xs text-[#FFB68A]">
+          <div className="mb-2 text-center text-xs text-[#F6D089]">
             Advertisement
           </div>
         ) : null}
@@ -38,7 +38,7 @@ export function AdsterraAdFrame({
           scrolling="no"
           title={ad.title}
           className={cn(
-            'block max-w-full border-0 bg-[#08100D]',
+            'block max-w-full border-0 bg-[#070911]',
             frameClassName
           )}
         />
@@ -55,7 +55,7 @@ export function AdsterraTopBanner() {
   }
 
   return (
-    <div className="border-[#4B6B66] border-b bg-[#08100D] py-2">
+    <div className="border-[#26384A] border-b bg-[#070911] py-2">
       <AdsterraAdFrame slot="banner-320x50" loading="eager" />
     </div>
   );
@@ -77,18 +77,16 @@ export function AdsterraAdStack({ className }: { className?: string }) {
     'banner-300x250',
     'banner-468x60',
   ];
-  const enabledSlots = slots.filter((slot) => getAdsterraSlot(slot).enabled);
+  const enabledSlot = slots.find((slot) => getAdsterraSlot(slot).enabled);
 
-  if (enabledSlots.length === 0) {
+  if (!enabledSlot) {
     return null;
   }
 
   return (
     <aside className={cn('space-y-8', className)} aria-label="Advertisement">
-      <div className="text-center text-xs text-[#FFB68A]">Advertisement</div>
-      {enabledSlots.map((slot) => (
-        <AdsterraAdFrame key={slot} slot={slot} />
-      ))}
+      <div className="text-center text-xs text-[#F6D089]">Advertisement</div>
+      <AdsterraAdFrame slot={enabledSlot} />
     </aside>
   );
 }
