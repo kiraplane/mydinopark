@@ -85,14 +85,30 @@ function readCloudflareEnv(name: string) {
     const env = getCloudflareContext().env as Record<string, unknown>;
     const value = env[name];
 
-    return typeof value === 'string' ? cleanEnvValue(value) : '';
+    return {
+      available: true,
+      value: typeof value === 'string' ? cleanEnvValue(value) : '',
+    };
   } catch {
-    return '';
+    return {
+      available: false,
+      value: '',
+    };
   }
 }
 
 function readEnv(name: string) {
-  return cleanEnvValue(process.env[name]) || readCloudflareEnv(name);
+  const cloudflareEnv = readCloudflareEnv(name);
+
+  if (cloudflareEnv.available) {
+    return cloudflareEnv.value;
+  }
+
+  if (process.env.NODE_ENV === 'production') {
+    return '';
+  }
+
+  return cleanEnvValue(process.env[name]);
 }
 
 export function isAdsterraEnabled() {
