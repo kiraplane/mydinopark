@@ -92,11 +92,11 @@ function readCloudflareEnv(name: string) {
 }
 
 function readEnv(name: string) {
-  return readCloudflareEnv(name) || cleanEnvValue(process.env[name]);
+  return cleanEnvValue(process.env[name]) || readCloudflareEnv(name);
 }
 
 export function isAdsterraEnabled() {
-  return readEnv('ADSTERRA_ADS_ENABLED') === 'true';
+  return readEnv('ADSTERRA_ADS_ENABLED').toLowerCase() === 'true';
 }
 
 export function getAdsterraSlot(id: AdsterraSlotId): AdsterraSlotConfig {
@@ -138,7 +138,7 @@ export function getAdsterraDisplayScriptBaseUrl() {
 export function getAdsterraNativeScriptBaseUrl() {
   return (
     readEnv('ADSTERRA_NATIVE_SCRIPT_BASE_URL') ||
-    'https://pl30171442.effectivecpmnetwork.com'
+    'https://pl30171417.effectivecpmnetwork.com'
   ).replace(/\/+$/, '');
 }
 

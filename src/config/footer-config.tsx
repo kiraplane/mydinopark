@@ -9,26 +9,26 @@ export function useFooterLinks(): NestedMenuItem[] {
 
   return [
     {
-      title: t('play.title'),
+      title: t('wiki.title'),
       items: [
         {
-          title: t('play.items.online'),
-          href: Routes.Play,
+          title: t('wiki.items.eggs'),
+          href: Routes.Eggs,
           external: false,
         },
         {
-          title: t('play.items.steam'),
-          href: Routes.Steam,
+          title: t('wiki.items.dinosaurs'),
+          href: Routes.Dinosaurs,
           external: false,
         },
         {
-          title: t('play.items.browserVersion'),
-          href: Routes.BrowserVersion,
+          title: t('wiki.items.upgrades'),
+          href: Routes.Upgrades,
           external: false,
         },
         {
-          title: t('play.items.download'),
-          href: Routes.Download,
+          title: t('wiki.items.codes'),
+          href: Routes.Codes,
           external: false,
         },
       ],
@@ -47,38 +47,13 @@ export function useFooterLinks(): NestedMenuItem[] {
           external: false,
         },
         {
-          title: t('guides.items.controls'),
-          href: Routes.Controls,
+          title: t('guides.items.money'),
+          href: Routes.FastMoneyGuide,
           external: false,
         },
         {
-          title: t('guides.items.walkthrough'),
-          href: Routes.Walkthrough,
-          external: false,
-        },
-        {
-          title: t('guides.items.achievements'),
-          href: Routes.Achievements,
-          external: false,
-        },
-      ],
-    },
-    {
-      title: t('links.title'),
-      items: [
-        {
-          title: t('links.items.community'),
-          href: Routes.Community,
-          external: false,
-        },
-        {
-          title: t('links.items.comfort'),
-          href: Routes.Comfort,
-          external: false,
-        },
-        {
-          title: t('links.items.disclaimer'),
-          href: Routes.Disclaimer,
+          title: t('guides.items.eggs'),
+          href: Routes.EggsGuide,
           external: false,
         },
       ],
@@ -99,6 +74,11 @@ export function useFooterLinks(): NestedMenuItem[] {
         {
           title: t('legal.items.cookiePolicy'),
           href: Routes.CookiePolicy,
+          external: false,
+        },
+        {
+          title: t('legal.items.disclaimer'),
+          href: Routes.Disclaimer,
           external: false,
         },
       ],

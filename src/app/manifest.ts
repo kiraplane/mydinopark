@@ -23,12 +23,12 @@ import type { MetadataRoute } from 'next';
 export default function manifest(): MetadataRoute.Manifest {
   return {
     name: defaultMessages.Metadata.name,
-    short_name: 'nophenia',
+    short_name: 'Dino Wiki',
     description: defaultMessages.Metadata.description,
     start_url: '/',
     display: 'standalone',
-    background_color: '#070911',
-    theme_color: '#6DDFC4',
+    background_color: '#0C1F14',
+    theme_color: '#36B56A',
     icons: [
       {
         src: '/favicon-32x32.png',

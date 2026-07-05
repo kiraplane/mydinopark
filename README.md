@@ -1,15 +1,14 @@
-# Nophenia Wiki
+# My Dino Park Wiki
 
-Unofficial fan-made wiki, guide, and browser play site for lane's
-small dream explorer game Nophenia.
+Independent guide site for My Dino Park at `https://www.my-dino-park.wiki`.
 
 The site is built on the existing Next.js / MkSaaS stack and focuses on:
 
-- Browser play page at `/play-online`
-- Beginner guide, controls, comfort, walkthrough, ending, and achievement pages
-- Steam release and official download guidance
-- itch.io, community, and unsupported APK safety pages
-- English SEO pages for long-tail Nophenia search demand
+- My Dino Park Roblox codes and safe redemption notes
+- Egg routes, hatching priorities, visitor Cash, Teeth, and park upgrades
+- Official Roblox page, group, Discord, and update-signal guidance
+- Wrong-game safety for Crazy Dino Park, Be Dino, APK, and script search overlap
+- Conservative best-dinosaur watch content until reliable dinosaur data exists
 
 ## Development
 
@@ -20,16 +19,10 @@ pnpm lint
 pnpm build
 ```
 
-The production domain is:
-
-```txt
-https://www.nophenia.wiki
-```
-
 ## Content Rules
 
-- Keep the site clearly labeled as an unofficial fan-made wiki.
-- Prefer official Steam, itch.io, Steam Community, and lane information.
-- Do not recommend unsafe APKs, modified clients, save editors, cheats, or copied paid Steam files.
-- Use guide videos only as supporting references; write original, decision-first guide copy.
-- Treat mechanics as version-sensitive and update pages when Nophenia changes.
+- Do not publish unverified redeem codes as guaranteed active.
+- Treat tier-list demand as watch material until My Dino Park-specific data is reliable.
+- Prefer the official Roblox page, Roblox API facts, official group/community updates, current code sources, and current creator videos.
+- Keep the site clearly labeled as an independent guide hub.
+- Do not reintroduce historical project names or content from earlier wiki builds.

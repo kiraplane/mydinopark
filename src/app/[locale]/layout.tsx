@@ -9,6 +9,7 @@ import {
 import GoogleAdsense from '@/components/ads/google-adsense';
 import AffonsoScript from '@/components/affiliate/affonso';
 import PromotekitScript from '@/components/affiliate/promotekit';
+import { TailwindIndicator } from '@/components/layout/tailwind-indicator';
 import { getMessagesForLocale } from '@/i18n/messages';
 import { routing } from '@/i18n/routing';
 import { cn } from '@/lib/utils';
@@ -41,38 +42,22 @@ const CLIENT_MESSAGE_NAMESPACES = [
 
 const MARKETING_NAVBAR_KEYS = [
   'home',
-  'play',
+  'codes',
+  'eggs',
+  'dinosaurs',
+  'upgrades',
+  'discord',
   'guides',
-  'walkthrough',
-  'steam',
   'download',
-  'community',
+  'updates',
 ] as const;
 
-const MARKETING_FOOTER_KEYS = [
-  'tagline',
-  'play',
-  'guides',
-  'links',
-  'legal',
-] as const;
+const MARKETING_FOOTER_KEYS = ['tagline', 'wiki', 'guides', 'legal'] as const;
 const MARKETING_FOOTER_GUIDE_ITEM_KEYS = [
   'all',
   'beginner',
-  'controls',
-  'walkthrough',
-  'achievements',
-] as const;
-const MARKETING_FOOTER_PLAY_ITEM_KEYS = [
-  'online',
-  'steam',
-  'browserVersion',
-  'download',
-] as const;
-const MARKETING_FOOTER_LINK_ITEM_KEYS = [
-  'community',
-  'comfort',
-  'disclaimer',
+  'money',
+  'eggs',
 ] as const;
 
 function pickKeys<T extends MessageMap, K extends readonly string[]>(
@@ -88,31 +73,13 @@ function pickKeys<T extends MessageMap, K extends readonly string[]>(
 
 function pickMarketingFooter(footer: MessageMap | undefined) {
   const selectedFooter = pickKeys(footer, MARKETING_FOOTER_KEYS) as MessageMap;
-  const play = selectedFooter.play as MessageMap | undefined;
-  const playItems = play?.items as MessageMap | undefined;
   const guides = selectedFooter.guides as MessageMap | undefined;
   const guideItems = guides?.items as MessageMap | undefined;
-  const links = selectedFooter.links as MessageMap | undefined;
-  const linkItems = links?.items as MessageMap | undefined;
-
-  if (play && playItems) {
-    selectedFooter.play = {
-      ...play,
-      items: pickKeys(playItems, MARKETING_FOOTER_PLAY_ITEM_KEYS),
-    };
-  }
 
   if (guides && guideItems) {
     selectedFooter.guides = {
       ...guides,
       items: pickKeys(guideItems, MARKETING_FOOTER_GUIDE_ITEM_KEYS),
-    };
-  }
-
-  if (links && linkItems) {
-    selectedFooter.links = {
-      ...links,
-      items: pickKeys(linkItems, MARKETING_FOOTER_LINK_ITEM_KEYS),
     };
   }
 
@@ -193,6 +160,7 @@ export default async function LocaleLayout({
               {children}
 
               <Toaster richColors position="top-right" offset={64} />
+              <TailwindIndicator />
               <Analytics />
             </Providers>
           </NextIntlClientProvider>

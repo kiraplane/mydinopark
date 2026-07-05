@@ -20,13 +20,13 @@ export const websiteConfig: WebsiteConfig = {
   },
   metadata: {
     images: {
-      ogImage: '/nophenia/nophenia-og.png',
+      ogImage: '/mydinopark/og-image.png',
       logoLight: '/logo.png',
       logoDark: '/logo.png',
     },
     social: {
       github: '',
-      twitter: 'https://x.com/emiwau',
+      twitter: '',
       blueSky: '',
       discord: '',
       mastodon: '',
@@ -44,7 +44,7 @@ export const websiteConfig: WebsiteConfig = {
     enableTurnstileCaptcha: process.env.NEXT_PUBLIC_DEMO_WEBSITE === 'true',
   },
   routes: {
-    defaultLoginRedirect: '/settings/profile',
+    defaultLoginRedirect: '/',
   },
   analytics: {
     enableVercelAnalytics: false,
@@ -59,7 +59,7 @@ export const websiteConfig: WebsiteConfig = {
     defaultLocale: 'en',
     locales: {
       en: {
-        flag: '🌙',
+        flag: '🇺🇸',
         name: 'English',
         hreflang: 'en-US',
       },
@@ -75,8 +75,8 @@ export const websiteConfig: WebsiteConfig = {
   },
   mail: {
     provider: 'resend',
-    fromEmail: 'Nophenia <hello@nophenia.wiki>',
-    supportEmail: 'hello@nophenia.wiki',
+    fromEmail: 'My Dino Park Wiki <hello@my-dino-park.wiki>',
+    supportEmail: 'hello@my-dino-park.wiki',
   },
   newsletter: {
     enable: false,

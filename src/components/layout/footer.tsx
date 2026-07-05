@@ -17,7 +17,7 @@ export function Footer({ className }: React.HTMLAttributes<HTMLElement>) {
   return (
     <footer
       className={cn(
-        'border-[#26384A] border-t bg-[#070911] text-[#F6F0EA]',
+        'border-[#2E5B3C] border-t bg-[#0C1F14] text-[#F7FFE9]',
         className
       )}
     >
@@ -48,7 +48,7 @@ export function Footer({ className }: React.HTMLAttributes<HTMLElement>) {
                       target="_blank"
                       rel="noreferrer"
                       aria-label={link.title}
-                      className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-[#26384A] text-[#D8E8EF] hover:border-[#6DDFC4] hover:bg-[#111827] hover:text-[#F6F0EA]"
+                      className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-[#2E5B3C] text-[#C9D8BD] hover:border-[#9BEA74] hover:bg-[#163521] hover:text-[#F7FFE9]"
                     >
                       <span className="sr-only">{link.title}</span>
                       {link.icon ? link.icon : null}
@@ -123,7 +123,7 @@ export function Footer({ className }: React.HTMLAttributes<HTMLElement>) {
         </div>
       </Container>
 
-      <div className="border-[#26384A] border-t py-8">
+      <div className="border-[#2E5B3C] border-t py-8">
         <Container className="px-4 flex items-center justify-between gap-x-4">
           <span className="text-muted-foreground text-sm">
             &copy; {new Date().getFullYear()} {t('Metadata.name')} All Rights
@@ -131,8 +131,8 @@ export function Footer({ className }: React.HTMLAttributes<HTMLElement>) {
           </span>
 
           <span className="text-muted-foreground text-sm">
-            Nophenia wiki guides for play online, controls, walkthrough, and
-            Steam release help.
+            Independent guide site. Not affiliated with Roblox, Dino Community,
+            or the official My Dino Park team.
           </span>
         </Container>
       </div>

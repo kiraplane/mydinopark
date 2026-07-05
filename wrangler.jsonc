@@ -2,21 +2,19 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "main": ".open-next/worker.js",
   "name": "nophenia",
-  "workers_dev": true,
-  "preview_urls": true,
   "keep_vars": true,
   "compatibility_date": "2025-04-01",
   "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
   "routes": [
     {
-      "pattern": "nophenia.wiki",
+      "pattern": "my-dino-park.wiki",
       "custom_domain": true,
-      "zone_name": "nophenia.wiki"
+      "zone_name": "my-dino-park.wiki"
     },
     {
-      "pattern": "www.nophenia.wiki",
+      "pattern": "www.my-dino-park.wiki",
       "custom_domain": true,
-      "zone_name": "nophenia.wiki"
+      "zone_name": "my-dino-park.wiki"
     }
   ],
   "build": {

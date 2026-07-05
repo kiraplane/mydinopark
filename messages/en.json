@@ -1,8 +1,8 @@
 {
   "Metadata": {
-    "name": "Nophenia",
-    "title": "Nophenia Wiki - Guides, Play Online and Walkthrough",
-    "description": "Nophenia wiki guides with play online, beginner guide, controls, walkthrough, ending, Steam, and comfort help."
+    "name": "My Dino Park Wiki",
+    "title": "My Dino Park Wiki - Codes, Eggs, Dinosaurs and Roblox Guide",
+    "description": "My Dino Park Wiki for Roblox codes, eggs, dinosaurs, visitor Cash, Teeth, upgrades, Discord, and safe official links."
   },
   "Common": {
     "premium": "Premium",
@@ -54,8 +54,8 @@
   },
   "PricingPage": {
     "title": "Pricing",
-    "description": "Optional supporter plans for keeping Nophenia Wiki maintained",
-    "subtitle": "Simple support options for readers who want to help maintain current guides and hosting",
+    "description": "Optional supporter plans for keeping My Dino Park Wiki maintained",
+    "subtitle": "Simple support options for readers who want to help maintain source-checked guides and data updates",
     "monthly": "Monthly",
     "yearly": "Yearly",
     "payAsYouGo": "Pay as you go",
@@ -80,32 +80,32 @@
   "PricePlans": {
     "free": {
       "name": "Free",
-      "description": "Browse Nophenia Wiki with no payment required",
+      "description": "Browse My Dino Park Wiki with no payment required",
       "features": {
-        "feature-1": "Play-online page and guide-route help",
-        "feature-2": "Beginner, controls, walkthrough, and achievement guides",
-        "feature-3": "Steam, community, and download option pages",
-        "feature-4": "Guide pages updated as sources change"
+        "feature-1": "My Dino Park code status and redemption notes",
+        "feature-2": "Eggs, hatching, upgrades, visitor Cash, and Teeth guidance",
+        "feature-3": "Guides for codes, dinosaurs, Discord links, and beginner progression",
+        "feature-4": "Core pages updated as game information changes"
       },
       "limits": {
-        "limit-1": "Some mechanics may change after game updates",
-        "limit-2": "Guide updates depend on available sources",
-        "limit-3": "Community feedback helps improve coverage",
-        "limit-4": "This site is not affiliated with the creator"
+        "limit-1": "Supporter features may be added later",
+        "limit-2": "Some data can change after game updates",
+        "limit-3": "Guide updates depend on available sources",
+        "limit-4": "Community feedback helps improve coverage"
       }
     },
     "pro": {
       "name": "Supporter",
-      "description": "For readers who want to support ongoing walkthrough updates",
+      "description": "For readers who want to support ongoing guide updates",
       "features": {
         "feature-1": "Support site maintenance",
-        "feature-2": "Help fund future source checks",
-        "feature-3": "Keep system guide pages fresh",
-        "feature-4": "Support cleaner wiki coverage",
+        "feature-2": "Help fund future My Dino Park data checks",
+        "feature-3": "Keep code and guide pages fresh",
+        "feature-4": "Support cleaner walkthrough coverage",
         "feature-5": "Help improve page speed and hosting stability",
-        "feature-6": "Support future guide experiments",
+        "feature-6": "Support future wiki improvements",
         "feature-7": "No gameplay advantage is sold",
-        "feature-8": "Reader-first guide coverage",
+        "feature-8": "No official affiliation claimed",
         "feature-9": "Reader-first site improvements",
         "feature-10": "Priority-ready support path"
       },
@@ -113,16 +113,16 @@
     },
     "max": {
       "name": "Backer",
-      "description": "For heavier support of Nophenia Wiki maintenance",
+      "description": "For heavier support of My Dino Park Wiki maintenance",
       "features": {
         "feature-1": "Support expanded guide coverage",
         "feature-2": "Help fund more frequent source reviews",
-        "feature-3": "Support long-form walkthrough pages",
+        "feature-3": "Support long-form strategy pages",
         "feature-4": "Keep hosting and tooling stable",
         "feature-5": "Back future wiki improvements",
-        "feature-6": "Useful for teams maintaining community resources",
+        "feature-6": "Useful for teams maintaining community rewards",
         "feature-7": "No gameplay advantage is sold",
-        "feature-8": "Reader-first guide coverage",
+        "feature-8": "No official affiliation claimed",
         "feature-9": "Best fit for strong supporters",
         "feature-10": "Highest support tier"
       },
@@ -177,7 +177,7 @@
     },
     "premium": {
       "name": "Premium",
-      "description": "For heavy usage, launches, and multi-asset campaigns",
+      "description": "For heavy usage, launches, and multi-asset game modes",
       "features": {
         "feature-1": "1,500 credits",
         "feature-2": "High-volume image generation",
@@ -290,37 +290,44 @@
       "home": {
         "title": "Home"
       },
-      "play": {
-        "title": "Play Online"
+      "codes": {
+        "title": "Codes"
+      },
+      "tierList": {
+        "title": "Meta Watch"
       },
       "guides": {
         "title": "Guides"
       },
-      "walkthrough": {
-        "title": "Walkthrough"
-      },
-      "achievements": {
-        "title": "100% Guide"
-      },
-      "steam": {
-        "title": "Steam"
-      },
       "download": {
         "title": "Download"
       },
-      "community": {
-        "title": "Community"
+      "eggs": {
+        "title": "Eggs"
+      },
+      "dinosaurs": {
+        "title": "Dinosaurs"
+      },
+      "upgrades": {
+        "title": "Upgrades"
+      },
+      "discord": {
+        "title": "Discord"
+      },
+      "updates": {
+        "title": "Updates"
       }
     },
     "footer": {
-      "tagline": "Nophenia wiki guides for play online, beginner help, controls, walkthrough, endings, Steam, and comfort notes.",
-      "play": {
-        "title": "Play",
+      "tagline": "An independent My Dino Park Wiki for Roblox codes, eggs, dinosaurs, visitor Cash, upgrades, and safe official links.",
+      "wiki": {
+        "title": "Wiki",
         "items": {
-          "online": "Play Online",
-          "steam": "Steam",
-          "browserVersion": "Browser Version",
-          "download": "Download"
+          "eggs": "Eggs",
+          "dinosaurs": "Dinosaurs",
+          "upgrades": "Upgrades",
+          "codes": "Codes",
+          "updates": "Updates"
         }
       },
       "guides": {
@@ -328,17 +335,8 @@
         "items": {
           "all": "All Guides",
           "beginner": "Beginner Guide",
-          "controls": "Controls",
-          "walkthrough": "Walkthrough",
-          "achievements": "Achievements"
-        }
-      },
-      "links": {
-        "title": "Links",
-        "items": {
-          "community": "Community",
-          "comfort": "Comfort Guide",
-          "disclaimer": "Disclaimer"
+          "money": "Money Guide",
+          "eggs": "Eggs Guide"
         }
       },
       "legal": {
@@ -418,7 +416,7 @@
       },
       "users": {
         "title": "Users",
-        "fakeData": "Note: Sample data is shown, some features are disabled",
+        "fakeData": "Note: Faked data for demonstration, some features are disabled",
         "error": "Failed to get users",
         "search": "Search users...",
         "noResults": "No users found",

@@ -22,7 +22,6 @@
       "node_modules/**",
       "dist/**",
       "build/**",
-      "public/games/**",
       "scripts/**",
       "scripts/get-video-duration.ts",
       "src/db/**",

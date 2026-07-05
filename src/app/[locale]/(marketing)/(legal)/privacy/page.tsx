@@ -10,9 +10,9 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   return constructMetadata({
-    title: 'Privacy Policy | Nophenia Wiki',
+    title: 'Privacy Policy | My Dino Park Wiki',
     description:
-      'Privacy policy for Nophenia Wiki, an unofficial guide and play-online site.',
+      'Privacy policy for the independent My Dino Park Wiki and Roblox guide site.',
     locale,
     pathname: '/privacy',
   });
@@ -20,25 +20,25 @@ export async function generateMetadata({
 
 export default function PrivacyPolicyPage() {
   return (
-    <div className="bg-[#070911] py-12 text-[#F6F0EA]">
+    <div className="bg-[#0F1117] py-12 text-[#F8FAFC]">
       <Container className="max-w-3xl space-y-6 px-4">
         <h1 className="font-display text-4xl font-black">Privacy Policy</h1>
-        <p className="leading-8 text-[#CDEAE7]">
-          Nophenia Wiki is an unofficial fan guide and browser play site. We do
-          not require accounts for browsing the wiki, guide pages, official-link
-          pages, or the play-online page.
+        <p className="leading-8 text-[#CBD5E1]">
+          My Dino Park Wiki is an independent Roblox guide site. We do not
+          require accounts for browsing codes, pack routes, card upgrade notes,
+          mutation guides, community links, or safety pages.
         </p>
-        <p className="leading-8 text-[#CDEAE7]">
+        <p className="leading-8 text-[#CBD5E1]">
           Standard analytics or hosting logs may record aggregate traffic data
           such as page views, referrers, device type, and approximate region. We
           use this to improve guides and fix broken pages.
         </p>
-        <p className="leading-8 text-[#CDEAE7]">
-          Remote media may be loaded from Steam, itch.io, or YouTube when a page
-          embeds official artwork, store links, or guide videos.
+        <p className="leading-8 text-[#CBD5E1]">
+          Local image assets are used for faster page loading. We do not sell
+          asset files or provide downloads as standalone packs.
         </p>
-        <p className="leading-8 text-[#CDEAE7]">
-          Privacy questions can be sent to hello@nophenia.wiki.
+        <p className="leading-8 text-[#CBD5E1]">
+          Privacy questions can be sent to hello@my-dino-park.wiki.
         </p>
       </Container>
     </div>

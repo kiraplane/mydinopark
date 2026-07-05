@@ -92,10 +92,6 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'img.youtube.com',
       },
-      {
-        protocol: 'https',
-        hostname: 'img.itch.zone',
-      },
     ],
   },
 };

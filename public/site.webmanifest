@@ -1,11 +1,11 @@
 {
-  "name": "Nophenia Wiki",
-  "short_name": "Nophenia",
-  "description": "Nophenia wiki guides for play online, beginner guides, controls, walkthrough, endings, Steam, and comfort help.",
+  "name": "My Dino Park Wiki",
+  "short_name": "Dino Wiki",
+  "description": "My Dino Park Wiki for Roblox codes, eggs, dinosaurs, visitor Cash, Teeth, upgrades, Discord, and safe official links.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#070911",
-  "theme_color": "#6DDFC4",
+  "background_color": "#0C1F14",
+  "theme_color": "#36B56A",
   "icons": [
     {
       "src": "/favicon-32x32.png",

@@ -1,26 +1,38 @@
 'use client';
 
+import { websiteConfig } from '@/config/website';
 import { cn } from '@/lib/utils';
+import { useTheme } from 'next-themes';
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
 
 export function Logo({ className }: { className?: string }) {
+  const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+  const logoLight = websiteConfig.metadata.images?.logoLight ?? '/logo.png';
+  const logoDark = websiteConfig.metadata.images?.logoDark ?? logoLight;
+
+  // During server-side rendering and initial client render, always use logoLight
+  // This prevents hydration mismatch
+  const logo = mounted && theme === 'dark' ? logoDark : logoLight;
+
+  // Only show theme-dependent UI after hydration to prevent mismatch
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   return (
-    <span
-      aria-label="Nophenia logo"
-      title="Nophenia"
+    <Image
+      src={logo}
+      alt="My Dino Park Wiki logo"
+      title="My Dino Park Wiki"
+      width={96}
+      height={96}
+      priority
       className={cn(
-        'relative inline-flex size-11 shrink-0 items-center justify-center overflow-hidden rounded-md',
-        'border border-[#6DDFC4]/60 bg-[#070911] shadow-[0_0_30px_rgba(109,223,196,0.22)]',
+        'h-9 w-auto rounded-sm bg-[#0C1F14] object-contain',
         className
       )}
-    >
-      <Image
-        src="/nophenia/nophenia-icon.png"
-        alt=""
-        fill
-        sizes="44px"
-        className="object-cover"
-      />
-    </span>
+    />
   );
 }

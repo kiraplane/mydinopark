@@ -1,63 +1,46 @@
-import { guides } from '@/data/nophenia/guides';
+import { allCoreRoutes } from '@/data/mydinopark/guides';
 import { Routes } from '@/routes';
 import type { MetadataRoute } from 'next';
 import { routing } from '../i18n/routing';
 import { getCanonicalBaseUrl } from '../lib/urls/urls';
 
-const coreRoutes = [
-  Routes.Root,
-  Routes.Play,
-  Routes.Guides,
-  Routes.Steam,
-  Routes.Demo,
-  Routes.Download,
-  Routes.BrowserVersion,
-  Routes.Community,
-  Routes.Comfort,
-  Routes.PrivacyPolicy,
-  Routes.TermsOfService,
-  Routes.CookiePolicy,
-  Routes.Disclaimer,
-];
+const stableLastModified = new Date('2026-07-05T00:00:00.000Z');
 
-const guideRoutes = guides
-  .map((guide) => guide.path)
-  .filter((path) => !coreRoutes.includes(path as Routes));
+function getLocalizedRoute(locale: string, route: string) {
+  if (locale === routing.defaultLocale) {
+    return route;
+  }
 
-const stableLastModified = new Date('2026-06-28T00:00:00.000Z');
+  return route === Routes.Root ? `/${locale}` : `/${locale}${route}`;
+}
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const sitemapList: MetadataRoute.Sitemap = [];
   const baseUrl = getCanonicalBaseUrl();
-  const allRoutes = [...coreRoutes, ...guideRoutes];
 
   routing.locales.forEach((locale) => {
-    allRoutes.forEach((route) => {
-      const localizedRoute =
-        locale === routing.defaultLocale ? route : `/${locale}${route}`;
+    allCoreRoutes.forEach((route) => {
+      const localizedRoute = getLocalizedRoute(locale, route);
 
       sitemapList.push({
         url: `${baseUrl}${localizedRoute}`,
         lastModified: stableLastModified,
         changeFrequency:
-          route === Routes.Root ||
-          route === Routes.Play ||
-          route === Routes.Guides ||
-          route === Routes.Steam
-            ? 'daily'
-            : 'weekly',
+          route === Routes.Root || route === Routes.Codes ? 'daily' : 'weekly',
         priority:
           route === Routes.Root
             ? 1
-            : route === Routes.Play
-              ? 0.95
-              : route === Routes.Guides ||
-                  route === Routes.Steam ||
-                  route === Routes.Demo ||
-                  route === Routes.Download ||
-                  route === Routes.Community ||
-                  route === Routes.Comfort
-                ? 0.9
+            : route === Routes.Codes ||
+                route === Routes.Eggs ||
+                route === Routes.Dinosaurs ||
+                route === Routes.Money ||
+                route === Routes.Upgrades ||
+                route === Routes.TierList ||
+                route === Routes.Download ||
+                route === Routes.Updates
+              ? 0.9
+              : route.startsWith('/guides/')
+                ? 0.85
                 : 0.8,
       });
     });
