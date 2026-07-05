@@ -13,6 +13,6 @@ my dino park Wiki
 如果某些需求搜索词，没有数据支持，可以搜索youtube视频，将视频翻译成中文，并写成文章即可
 另外也尽可能的去竞品站和官方去获取基础数据和玩法。以及判断适合不适合做一些工具，供用户使用。
 
-6.开发完成后在github上创建仓库nophenia，将本项目上传
-7.在cloudflare上面的worker创建项目nophenia部署并关联域名，域名我已经加好
+6.开发完成后在github上创建仓库mydinopark，将本项目上传
+7.在cloudflare上面的worker创建项目mydinopark部署并关联域名，域名我已经加好
 8.去ga上创建媒体资源
