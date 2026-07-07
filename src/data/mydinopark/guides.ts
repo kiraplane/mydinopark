@@ -209,6 +209,19 @@ export const guides: Guide[] = [
         ],
       },
       {
+        heading: 'Save Teeth until the sink is obvious',
+        paragraphs: [
+          'Teeth are the reward most likely to be wasted by a new player because they look like bonus currency. Treat them differently from Cash. Cash should usually become eggs, hatching, placement, or park upgrades right away. Teeth should wait until the game shows a clear Teeth sink that changes your dinosaur lineup, upgrade path, or Update 2 progress.',
+          'If a code gives Teeth and Cash together, spend the Cash on the repeatable park loop first, then decide whether the Teeth purchase supports that loop. Do not spend Teeth only because the balance is new.',
+        ],
+        bullets: [
+          'Use Cash to fix eggs, placement, income, or capacity.',
+          'Use Teeth only when the purchase has a visible long-term payoff.',
+          'Do not trade Teeth into a cosmetic or side route before the park earns reliably.',
+          'If a Teeth sink is unclear, save it and keep the egg loop moving.',
+        ],
+      },
+      {
         heading: 'Handle failed codes without risky shortcuts',
         paragraphs: [
           'A failed code does not prove the whole list is fake. My Dino Park code sources currently disagree on one spelling: most list THX4PLAYING, while Pro Game Guides lists THXFORPLAYING. That variant is tracked as a watch item. Copy the code exactly, confirm you are in the Roblox experience by Dino Community, and try a fresh server if the panel appears stuck.',
