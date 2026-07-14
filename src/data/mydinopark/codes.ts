@@ -1,9 +1,44 @@
 import { officialGameFacts } from './sources';
 import type { GameCode } from './types';
 
-export const CODE_CHECKED_AT = '2026-07-11';
+export const CODE_CHECKED_AT = '2026-07-14';
 
 export const activeCodes: GameCode[] = [
+  {
+    code: 'MERCHANTACOS',
+    reward: '10,000 Money',
+    status: 'active',
+    firstSeen: '2026-07-14',
+    lastChecked: CODE_CHECKED_AT,
+    sourceLabel: 'Pocket Tactics, PCGamesN, Beebom, Destructoid',
+    confidence: 'medium',
+    notes:
+      'Newest merchant-event code cross-checked on July 14. Spend the cash on the next concrete egg or park upgrade, not random decoration churn.',
+  },
+  {
+    code: 'MBDELAYUPDTLOL',
+    reward:
+      '200 Teeth, 20,000 Money, 2x Money for 5 minutes, and 2x Luck for 10 minutes',
+    status: 'active',
+    firstSeen: '2026-07-14',
+    lastChecked: CODE_CHECKED_AT,
+    sourceLabel: 'Pocket Tactics, PCGamesN, Beebom, Destructoid',
+    confidence: 'medium',
+    notes:
+      'Delay-compensation code from the Update 3 source refresh. Redeem only when ready to use the temporary money and luck boosts.',
+  },
+  {
+    code: 'UPDATE3',
+    reward:
+      '1,500 Teeth, 25,000 Money, 2x Money for 5 minutes, and 2x Luck for 10 minutes',
+    status: 'active',
+    firstSeen: '2026-07-14',
+    lastChecked: CODE_CHECKED_AT,
+    sourceLabel: 'Pocket Tactics, PCGamesN, Beebom, Destructoid',
+    confidence: 'medium',
+    notes:
+      'Newest Update 3 reward code reported by several current July 2026 trackers. Use before a hatch or merchant-buying route.',
+  },
   {
     code: 'UPDATE2',
     reward: '20,000 Cash and 200 Teeth',

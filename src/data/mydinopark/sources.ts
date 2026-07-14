@@ -1,7 +1,7 @@
 import type { DataSource } from './types';
 
-export const CHECKED_AT = '2026-07-11';
-export const OFFICIAL_CHECKED_AT = '2026-07-11';
+export const CHECKED_AT = '2026-07-14';
+export const OFFICIAL_CHECKED_AT = '2026-07-14';
 
 export const officialGameFacts = {
   name: 'My Dino Park!',
@@ -16,11 +16,11 @@ export const officialGameFacts = {
   genre: 'Roblox dinosaur park simulation tycoon',
   status: '[UPD 2] live Roblox experience',
   createdAt: '2026-04-20T02:17:30.874Z',
-  updatedAt: '2026-07-05T08:20:57.9096423Z',
+  updatedAt: '2026-07-12T22:06:59.2683011Z',
   maxPlayers: 6,
-  activePlayersAtCheck: 11331,
-  visitsAtCheck: 2641432,
-  favoritesAtCheck: 159230,
+  activePlayersAtCheck: 4790,
+  visitsAtCheck: 10202691,
+  favoritesAtCheck: 538807,
   upVotesAtCheck: 9569,
   downVotesAtCheck: 520,
   officialRobloxUrl: 'https://www.roblox.com/games/80701570784699/My-Dino-Park',
