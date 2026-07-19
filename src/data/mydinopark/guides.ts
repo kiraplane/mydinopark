@@ -54,7 +54,7 @@ export const guideCategoryIntro: Record<GuideCategory, string> = {
   Safety:
     'Keep this Roblox game separate from Crazy Dino Park, Dinosaur Park Tycoon, Be Dino, APKs, and scripts.',
   Updates:
-    'Track Update 2 codes and Roblox API changes without inventing patch notes or fake stats.',
+    'Track the current Update 4 signal, codes, and Roblox API changes without inventing patch notes or fake stats.',
 };
 
 export const relatedRouteLabels: Record<string, string> = {
@@ -68,7 +68,7 @@ export const relatedRouteLabels: Record<string, string> = {
   '/tier-list': 'Spending Tier List',
   '/download': 'Official Roblox Page',
   '/discord': 'Discord and Group Links',
-  '/updates': 'Update 2 Tracker',
+  '/updates': 'Update 4 Tracker',
   '/guides/beginner-guide': 'Beginner Guide',
   '/guides/codes-redeem-guide': 'Codes Redeem Guide',
   '/guides/eggs-and-hatching-guide': 'Eggs and Hatching Guide',

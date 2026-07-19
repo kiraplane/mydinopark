@@ -1,7 +1,7 @@
 import type { DataSource } from './types';
 
-export const CHECKED_AT = '2026-07-17';
-export const OFFICIAL_CHECKED_AT = '2026-07-17';
+export const CHECKED_AT = '2026-07-19';
+export const OFFICIAL_CHECKED_AT = '2026-07-19';
 
 export const officialGameFacts = {
   name: 'My Dino Park!',
@@ -14,13 +14,13 @@ export const officialGameFacts = {
   creatorType: 'Roblox Group',
   creatorId: '532484073',
   genre: 'Roblox dinosaur park simulation tycoon',
-  status: '[UPD 2] live Roblox experience',
+  status: '[UPD 4!] live Roblox experience',
   createdAt: '2026-04-20T02:17:30.874Z',
-  updatedAt: '2026-07-12T22:06:59.2683011Z',
+  updatedAt: '2026-07-19T01:08:26.338128Z',
   maxPlayers: 6,
-  activePlayersAtCheck: 4790,
-  visitsAtCheck: 10202691,
-  favoritesAtCheck: 538807,
+  activePlayersAtCheck: 5483,
+  visitsAtCheck: 13492254,
+  favoritesAtCheck: 691349,
   upVotesAtCheck: 9569,
   downVotesAtCheck: 520,
   officialRobloxUrl: 'https://www.roblox.com/games/80701570784699/My-Dino-Park',
@@ -39,7 +39,7 @@ export const officialSources: DataSource[] = [
     url: officialGameFacts.officialRobloxUrl,
     checkedAt: OFFICIAL_CHECKED_AT,
     confidence: 'high',
-    note: 'Primary source for the title, developer group, Update 2 marker, max players, and official gameplay loop: buy eggs, hatch dinosaurs, attract visitors, upgrade the park.',
+    note: 'Primary source for the title, developer group, Update 4 marker, max players, and official gameplay loop: buy eggs, hatch dinosaurs, attract visitors, upgrade the park.',
   },
   {
     type: 'roblox_api',
@@ -47,7 +47,7 @@ export const officialSources: DataSource[] = [
     url: `https://games.roblox.com/v1/games?universeIds=${officialGameFacts.robloxUniverseId}`,
     checkedAt: OFFICIAL_CHECKED_AT,
     confidence: 'high',
-    note: 'Confirmed root place ID, Simulation/Tycoon genre, visits, favorites, active players, creator group, creation date, and July 5, 2026 update timestamp.',
+    note: 'Confirmed root place ID, Simulation/Tycoon genre, visits, favorites, active players, creator group, creation date, and July 19, 2026 update timestamp.',
   },
   {
     type: 'codes_site',

@@ -157,7 +157,7 @@ export function useNavbarLinks(): NestedMenuItem[] {
         },
         {
           title: 'Updates',
-          description: 'Update 2 status, code freshness, and watch items.',
+          description: 'Update 4 status, code freshness, and watch items.',
           href: Routes.Updates,
           external: false,
           icon: <RadioTower className="size-4" />,

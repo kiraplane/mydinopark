@@ -318,7 +318,7 @@ export const topicPages: Record<string, TopicPage> = {
     seoDescription:
       'Track My Dino Park Update 2 status, Roblox API timestamps, code check dates, source conflicts, and guide changes without fake patch notes.',
     summary:
-      'The Roblox title shows Update 2, and current code sources report new Teeth, Cash, and Frozen Egg rewards. Exact balance data remains watch-only.',
+      'The Roblox title now shows Update 4. Public API data confirms the July 19 refresh, while exact mechanics and balance changes remain watch-only until stronger patch evidence appears.',
     image: commonImage,
     updatedAt: CHECKED_AT,
     featuredRoutes: ['/codes', '/guides/update-2-codes-guide', '/tier-list'],
@@ -326,7 +326,7 @@ export const topicPages: Record<string, TopicPage> = {
       {
         heading: 'Official Roblox update signal',
         paragraphs: [
-          `Roblox API data checked on ${OFFICIAL_CHECKED_AT} reports the experience was last updated at ${officialGameFacts.updatedAt}. The public title includes [UPD 2], but detailed official patch notes were not exposed in the checked public data.`,
+          `Roblox API data checked on ${OFFICIAL_CHECKED_AT} reports the experience was last updated at ${officialGameFacts.updatedAt}. The public title includes [UPD 4!], but detailed official patch notes were not exposed in the checked public data.`,
           'Because official patch detail is thin, this wiki updates pages only when the mechanic or code evidence is strong enough.',
         ],
       },
@@ -339,7 +339,7 @@ export const topicPages: Record<string, TopicPage> = {
     ],
     faq: [
       {
-        question: 'Did the site find official Update 2 patch notes?',
+        question: 'Did the site find official Update 4 patch notes?',
         answer:
           'No detailed official patch notes were found in public Roblox data during this pass. The page records the Roblox title and API timestamp instead.',
       },
