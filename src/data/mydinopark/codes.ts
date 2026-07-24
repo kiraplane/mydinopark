@@ -1,9 +1,42 @@
 import { officialGameFacts } from './sources';
 import type { GameCode } from './types';
 
-export const CODE_CHECKED_AT = '2026-07-21';
+export const CODE_CHECKED_AT = '2026-07-24';
 
 export const activeCodes: GameCode[] = [
+  {
+    code: 'UPD4',
+    reward: '35,000 Money and 2x Money for 5 minutes',
+    status: 'active',
+    firstSeen: '2026-07-18',
+    lastChecked: CODE_CHECKED_AT,
+    sourceLabel: 'PCGamesN and MrGuider',
+    confidence: 'medium',
+    notes:
+      'Update 4 code confirmed by two current trackers. Redeem immediately before a focused earning route so the temporary money boost is not wasted.',
+  },
+  {
+    code: 'TRADINGSOON',
+    reward: '20,000 Money and 200 Teeth',
+    status: 'active',
+    firstSeen: '2026-07-18',
+    lastChecked: CODE_CHECKED_AT,
+    sourceLabel: 'PCGamesN and MrGuider',
+    confidence: 'medium',
+    notes:
+      'Update 4 trading teaser code. PCGamesN reports 400 Teeth while MrGuider reports 200, so the site uses the more conservative amount until the in-game popup confirms it.',
+  },
+  {
+    code: 'OSMENORBOM',
+    reward: '30,000 Money',
+    status: 'active',
+    firstSeen: '2026-07-18',
+    lastChecked: CODE_CHECKED_AT,
+    sourceLabel: 'PCGamesN and MrGuider',
+    confidence: 'medium',
+    notes:
+      'Update 4 cash code with matching reward values across two current trackers.',
+  },
   {
     code: 'MERCHANTACOS',
     reward: '10,000 Money',
@@ -128,6 +161,10 @@ export const codeCheckSummary = {
     {
       label: 'PCGamesN',
       url: 'https://www.pcgamesn.com/my-dino-park/codes',
+    },
+    {
+      label: 'MrGuider',
+      url: 'https://www.mrguider.org/roblox/my-dino-park-codes/',
     },
     {
       label: 'Destructoid',
