@@ -1,7 +1,7 @@
 import { officialGameFacts } from './sources';
 import type { GameCode } from './types';
 
-export const CODE_CHECKED_AT = '2026-08-17';
+export const CODE_CHECKED_AT = '2026-08-20';
 
 export const activeCodes: GameCode[] = [
   {
@@ -17,14 +17,14 @@ export const activeCodes: GameCode[] = [
   },
   {
     code: 'TRADINGSOON',
-    reward: '20,000 Money and 200 Teeth',
+    reward: '20,000 Money and 400 Teeth',
     status: 'active',
     firstSeen: '2026-07-18',
     lastChecked: CODE_CHECKED_AT,
     sourceLabel: 'PCGamesN and MrGuider',
     confidence: 'medium',
     notes:
-      'Update 4 trading teaser code. PCGamesN reports 400 Teeth while MrGuider reports 200, so the site uses the more conservative amount until the in-game popup confirms it.',
+      'Update 4 trading teaser code. Current August sources now agree on 400 Teeth alongside 20,000 Money.',
   },
   {
     code: 'OSMENORBOM',
@@ -148,7 +148,7 @@ export const expiredCodes: GameCode[] = [];
 export const codeCheckSummary = {
   checkedAt: CODE_CHECKED_AT,
   status:
-    'Codes are source-checked from current July 2026 code pages and Roblox search results. This site has not redeemed them inside Roblox.',
+    'Eleven Update 4 and earlier codes remain source-checked on August 20, 2026. UPD 5 is delayed and has not produced a new code batch yet.',
   sourcesChecked: [
     {
       label: 'Roblox game page',

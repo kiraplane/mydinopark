@@ -1,7 +1,7 @@
 import type { DataSource } from './types';
 
-export const CHECKED_AT = '2026-08-17';
-export const OFFICIAL_CHECKED_AT = '2026-08-17';
+export const CHECKED_AT = '2026-08-20';
+export const OFFICIAL_CHECKED_AT = '2026-08-20';
 
 export const officialGameFacts = {
   name: 'My Dino Park!',
@@ -16,11 +16,11 @@ export const officialGameFacts = {
   genre: 'Roblox dinosaur park simulation tycoon',
   status: '[UPD 4!] live Roblox experience',
   createdAt: '2026-04-20T02:17:30.874Z',
-  updatedAt: '2026-07-19T01:08:26.338128Z',
+  updatedAt: '2026-08-19T22:47:43.9553635Z',
   maxPlayers: 6,
-  activePlayersAtCheck: 5483,
-  visitsAtCheck: 13492254,
-  favoritesAtCheck: 691349,
+  activePlayersAtCheck: 746,
+  visitsAtCheck: 23284790,
+  favoritesAtCheck: 1064360,
   upVotesAtCheck: 9569,
   downVotesAtCheck: 520,
   officialRobloxUrl: 'https://www.roblox.com/games/80701570784699/My-Dino-Park',
@@ -39,7 +39,7 @@ export const officialSources: DataSource[] = [
     url: officialGameFacts.officialRobloxUrl,
     checkedAt: OFFICIAL_CHECKED_AT,
     confidence: 'high',
-    note: 'Primary source for the title, developer group, Update 4 marker, max players, and official gameplay loop: buy eggs, hatch dinosaurs, attract visitors, upgrade the park.',
+    note: 'Rechecked August 20, 2026. Primary source for the Update 4 title, developer group, max players, and official gameplay loop.',
   },
   {
     type: 'roblox_api',
@@ -47,7 +47,7 @@ export const officialSources: DataSource[] = [
     url: `https://games.roblox.com/v1/games?universeIds=${officialGameFacts.robloxUniverseId}`,
     checkedAt: OFFICIAL_CHECKED_AT,
     confidence: 'high',
-    note: 'Confirmed root place ID, Simulation/Tycoon genre, visits, favorites, active players, creator group, creation date, and July 19, 2026 update timestamp.',
+    note: 'Confirmed root place ID, Simulation/Tycoon genre, current metrics, creator group, creation date, and August 19, 2026 update timestamp.',
   },
   {
     type: 'codes_site',
@@ -55,7 +55,7 @@ export const officialSources: DataSource[] = [
     url: 'https://www.pcgamesn.com/my-dino-park/codes',
     checkedAt: CHECKED_AT,
     confidence: 'medium',
-    note: 'Current July 5 code source listing Update 2 rewards, teeth, Frozen Egg, and redeem steps.',
+    note: 'Rechecked August 20, 2026. Lists the full eleven-code Update 4 batch, 400 Teeth for TRADINGSOON, and confirms UPD 5 remains delayed.',
   },
   {
     type: 'codes_site',
