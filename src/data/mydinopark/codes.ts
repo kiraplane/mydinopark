@@ -1,7 +1,7 @@
 import { officialGameFacts } from './sources';
 import type { GameCode } from './types';
 
-export const CODE_CHECKED_AT = '2026-08-24';
+export const CODE_CHECKED_AT = '2026-09-07';
 
 export const activeCodes: GameCode[] = [
   {
@@ -148,7 +148,7 @@ export const expiredCodes: GameCode[] = [];
 export const codeCheckSummary = {
   checkedAt: CODE_CHECKED_AT,
   status:
-    'Eleven Update 4 and earlier codes remain source-checked on August 20, 2026. UPD 5 is delayed and has not produced a new code batch yet.',
+    'Eleven Update 4 and earlier codes remain source-checked on September 7, 2026. Update 5 is live, but current sources agree that it did not add a new code batch.',
   sourcesChecked: [
     {
       label: 'Roblox game page',

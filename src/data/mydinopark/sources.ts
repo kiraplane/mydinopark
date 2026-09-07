@@ -1,7 +1,7 @@
 import type { DataSource } from './types';
 
-export const CHECKED_AT = '2026-08-24';
-export const OFFICIAL_CHECKED_AT = '2026-08-24';
+export const CHECKED_AT = '2026-09-07';
+export const OFFICIAL_CHECKED_AT = '2026-09-07';
 
 export const officialGameFacts = {
   name: 'My Dino Park!',
@@ -14,13 +14,13 @@ export const officialGameFacts = {
   creatorType: 'Roblox Group',
   creatorId: '532484073',
   genre: 'Roblox dinosaur park simulation tycoon',
-  status: '[UPD 4!] live Roblox experience',
+  status: '[UPD 5!] live Roblox experience',
   createdAt: '2026-04-20T02:17:30.874Z',
-  updatedAt: '2026-08-19T22:47:43.9553635Z',
+  updatedAt: '2026-09-04T21:30:58.283Z',
   maxPlayers: 6,
-  activePlayersAtCheck: 746,
-  visitsAtCheck: 23284790,
-  favoritesAtCheck: 1064360,
+  activePlayersAtCheck: 372,
+  visitsAtCheck: 24955125,
+  favoritesAtCheck: 1127269,
   upVotesAtCheck: 9569,
   downVotesAtCheck: 520,
   officialRobloxUrl: 'https://www.roblox.com/games/80701570784699/My-Dino-Park',
@@ -39,7 +39,7 @@ export const officialSources: DataSource[] = [
     url: officialGameFacts.officialRobloxUrl,
     checkedAt: OFFICIAL_CHECKED_AT,
     confidence: 'high',
-    note: 'Rechecked August 20, 2026. Primary source for the Update 4 title, developer group, max players, and official gameplay loop.',
+    note: 'Rechecked September 7, 2026. Primary source for the Update 5 title, developer group, max players, and official gameplay loop.',
   },
   {
     type: 'roblox_api',
@@ -47,7 +47,7 @@ export const officialSources: DataSource[] = [
     url: `https://games.roblox.com/v1/games?universeIds=${officialGameFacts.robloxUniverseId}`,
     checkedAt: OFFICIAL_CHECKED_AT,
     confidence: 'high',
-    note: 'Confirmed root place ID, Simulation/Tycoon genre, current metrics, creator group, creation date, and August 19, 2026 update timestamp.',
+    note: 'Confirmed root place ID, Simulation/Tycoon genre, current metrics, creator group, creation date, and September 4, 2026 update timestamp.',
   },
   {
     type: 'codes_site',
@@ -55,7 +55,7 @@ export const officialSources: DataSource[] = [
     url: 'https://www.pcgamesn.com/my-dino-park/codes',
     checkedAt: CHECKED_AT,
     confidence: 'medium',
-    note: 'Rechecked August 20, 2026. Lists the full eleven-code Update 4 batch, 400 Teeth for TRADINGSOON, and confirms UPD 5 remains delayed.',
+    note: 'Rechecked September 7, 2026. Lists the eleven-code batch and confirms Update 5 has not produced a new code.',
   },
   {
     type: 'codes_site',

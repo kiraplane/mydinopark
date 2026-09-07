@@ -252,7 +252,7 @@ export const topicPages: Record<string, TopicPage> = {
       {
         heading: 'Check the exact game before using guides',
         paragraphs: [
-          'Search results mix several dinosaur park games. The correct page title currently includes [UPD 2] My Dino Park!, and the root place ID is 80701570784699.',
+          'Search results mix several dinosaur park games. The correct page title currently includes [UPD 5!] My Dino Park!, and the root place ID is 80701570784699.',
         ],
       },
     ],
@@ -318,7 +318,7 @@ export const topicPages: Record<string, TopicPage> = {
     seoDescription:
       'Track My Dino Park Update 2 status, Roblox API timestamps, code check dates, source conflicts, and guide changes without fake patch notes.',
     summary:
-      'The Roblox title now shows Update 4. Public API data confirms the July 19 refresh, while exact mechanics and balance changes remain watch-only until stronger patch evidence appears.',
+      'The Roblox title now shows Update 5. Public API data confirms a September 4 refresh; current code sources report no new Update 5 code.',
     image: commonImage,
     updatedAt: CHECKED_AT,
     featuredRoutes: ['/codes', '/guides/update-2-codes-guide', '/tier-list'],
@@ -326,20 +326,20 @@ export const topicPages: Record<string, TopicPage> = {
       {
         heading: 'Official Roblox update signal',
         paragraphs: [
-          `Roblox API data checked on ${OFFICIAL_CHECKED_AT} reports the experience was last updated at ${officialGameFacts.updatedAt}. The public title includes [UPD 4!], but detailed official patch notes were not exposed in the checked public data.`,
+          `Roblox API data checked on ${OFFICIAL_CHECKED_AT} reports the experience was last updated at ${officialGameFacts.updatedAt}. The public title includes [UPD 5!], but detailed official patch notes were not exposed in the checked public data.`,
           'Because official patch detail is thin, this wiki updates pages only when the mechanic or code evidence is strong enough.',
         ],
       },
       {
         heading: 'Current code freshness result',
         paragraphs: [
-          `The site tracks ${activeCodes.length} active or reported active codes. Update 2 code rewards are source-checked with medium confidence, and THXFORPLAYING is kept as a watch spelling variant.`,
+          `The site tracks ${activeCodes.length} active or reported active codes. Current September sources say Update 5 added no new code, while THXFORPLAYING remains a watch spelling variant.`,
         ],
       },
     ],
     faq: [
       {
-        question: 'Did the site find official Update 4 patch notes?',
+        question: 'Did the site find official Update 5 patch notes?',
         answer:
           'No detailed official patch notes were found in public Roblox data during this pass. The page records the Roblox title and API timestamp instead.',
       },
